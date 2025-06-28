@@ -12,4 +12,10 @@ export default defineConfig({
   },
 
   integrations: [preact()],
+  env: {
+    schema: {
+      API_URL: envField.string({context: "client", access: "public"}),
+      API_TEST: envField.string({context: "client", access:"public"})
+    }
+  }
 });
