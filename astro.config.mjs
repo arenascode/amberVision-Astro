@@ -14,8 +14,8 @@ export default defineConfig({
   integrations: [preact()],
   env: {
     schema: {
-      API_URL: envField.string({context: "client", access: "public"}),
-      API_TEST: envField.string({context: "client", access:"public"})
+      PUBLIC_API_URL: envField.string({context: "client", access: "public"}),
+      PUBLIC_API_TEST: envField.string({context: "client", access:"public"})
     }
   }
 });
