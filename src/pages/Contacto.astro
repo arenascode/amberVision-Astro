@@ -1,0 +1,47 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ContactForm from '../components/ContactForm'
+---
+<Layout>
+  <div class="max-w-6xl mx-auto p-6 grid grid-cols-1 md:grid-cols-2 gap-10 mt-18 xl:mt-24">
+  {/* Información de contacto */}
+  <div class="text-gray-800 dark:text-gray-200">
+    <h2 class="text-3xl font-bold mb-4">Contáctanos</h2>
+    <p class="mb-6">
+      Estamos aquí para ayudarte. Si tienes preguntas sobre tu pedido,
+      nuestros productos o cualquier otra inquietud, no dudes en
+      escribirnos.
+    </p>
+    <div class="space-y-4 text-sm">
+      <div>
+        <span class="font-semibold">Teléfono / WhatsApp:</span>{" "}
+        <a
+          href="tel:+573001234567"
+          class="text-blue-600 hover:underline"
+        >
+          +57 316 427 8515
+        </a>
+      </div>
+      <div>
+        <span class="font-semibold">Correo electrónico:</span>{" "}
+        <a
+          href="mailto:ventas@focusfitshop.com"
+          class="text-blue-600 hover:underline"
+        >
+          ventas@focusfitshop.com
+        </a>
+      </div>
+      <div>
+        <span class="font-semibold">Horario de atención:</span> Lunes a
+        viernes de 8:00 a.m. a 7:00 p.m. / Sábados: 09:00 AM - 02:00 PM
+      </div>
+      <div>
+        <span class="font-semibold">Ubicación:</span> Bogotá, Colombia
+      </div>
+    </div>
+  </div>
+
+  {/* Formulario de contacto */}
+  <ContactForm client:visible/>
+</div>
+</Layout>

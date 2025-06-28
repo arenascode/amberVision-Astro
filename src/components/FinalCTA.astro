@@ -1,0 +1,60 @@
+---
+import FadeIn from "./FadeIn";
+
+
+---
+<section class="py-8 md:py-12 xl:py-20 xl:flex xl:justify-center">
+  <div class="container px-4 md:px-6 ">
+    <FadeIn delay={100} client:visible>
+      <div class="max-w-[800px] mx-auto rounded-xl p-2 sm:p-4 text-center border shadow-md backdrop-blur-lg bg-white/10 border-white/10">
+        <h2 class="text-3xl font-bold tracking-tight mb-4">
+          ¿Listo para Transformar tu Descanso?
+        </h2>
+        <p class="text-sidebar-primary-foreground mb-6 md:text-lg">
+          Únete a cientos de clientes que han mejorado la calidad de su
+          sueño y han reducido la fatiga ocular gracias a nuestras gafas
+          bloqueadoras de luz azul.
+        </p>
+        <button
+          
+          class="inline-flex items-center justify-center gap-2 whitespace-nowrap ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover:bg-primary/90 h-10 px-4 bg-gradient-to-r from-amber-500 to-red-500 hover:from-amber-500 hover:to-red-500 py-6 sm:px-6 sm:py-3 rounded-lg shadow-lg transition-transform transform hover:scale-105 text-white font-semibold mb-4 text-[16px] xl:text-lg"
+        >
+          <a
+            href="#pricing"
+            class="flex items-center flex-col sm:flex-row"
+          >
+            ¡Ordena Ahora – Stock Limitado!
+            <svg
+                    width="30"
+                    height="30"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                    <path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                    <path d="M17 17h-11v-14h-2" />
+                    <path d="M6 5l14 1l-1 7h-13" />
+                  </svg>
+          </a>
+        </button>
+        <div class="flex flex-col items-center lg:flex-row justify-center gap-4 text-sm">
+          <div class="flex flex-col lg:flex-row items-center gap-1 ">
+            <svg  width="30"  height="30"  viewBox="0 0 24 24"  fill="none"  stroke="#ffffff"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-shield"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3a12 12 0 0 0 8.5 3a12 12 0 0 1 -8.5 15a12 12 0 0 1 -8.5 -15a12 12 0 0 0 8.5 -3" /></svg>
+            <span>Garantía de Devolución de Dinero por 30 Días</span>
+          </div>
+          <div class="flex flex-col lg:flex-row items-center gap-1">
+            <svg width="30"  height=30"  viewBox="0 0 24 24"  fill="none"  stroke="#ffffff"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-truck"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M5 17h-2v-11a1 1 0 0 1 1 -1h9v12m-4 0h6m4 0h2v-6h-8m0 -5h5l3 5" /></svg>
+            <span>Envío Gratis</span>
+          </div>
+        </div>
+        <p class="text-sm xl:text-sm mt-4">
+          *Pruébalas por 30 días – ¡Ámalas o te devolvemos tu dinero!
+        </p>
+      </div>
+    </FadeIn>
+  </div>
+</section>

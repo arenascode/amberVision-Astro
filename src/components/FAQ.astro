@@ -1,0 +1,135 @@
+---
+import FadeIn from "./FadeIn";
+
+// src/components/FAQ.astro
+---
+
+<style>
+  details > summary {
+    list-style: none;
+  }
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+  details[open] summary .plus-icon {
+    transform: rotate(45deg);
+  }
+</style>
+
+<div id="faq" class="max-w-[800px] xl:max-w-[1000px] mx-auto shadow-md  p-4">
+  {/* Section Title */}
+  <div class="flex flex-col items-center text-center gap-4 mb-8">
+    <FadeIn delay={100} client:visible>
+      <h2 class="text-3xl font-bold tracking-tight">
+        Preguntas Frecuentes
+      </h2>
+    </FadeIn>
+
+    <p class="text-sidebar-primary-foreground md:text-lg lg:text-xl max-w-[800px]">
+      Todo lo que necesitas saber sobre nuestras gafas bloqueadoras
+      de luz azul
+    </p>
+  </div>
+  <div class="faqContainer max-w-[800px] xl:max-w-[1000px] mx-auto shadow-md backdrop-blur-lg bg-white/10 border border-white/10 p-4 rounded-xl">
+    <div class="w-full lg:text-xl xl:text-2xl">
+    <!-- Pregunta 1 -->
+    <details class="border-b border-gray-300 py-2">
+      <summary class="flex justify-between items-center cursor-pointer py-2 text-left underline font-semibold text-lg">
+        ¿Puedo usarlas para conducir?
+        <span class="plus-icon transition-transform duration-300 text-xl">+</span>
+      </summary>
+      <div class="pt-2 lg:text-lg flex flex-col gap-3">
+        <p>
+          Estas gafas no restan visibilidad y pueden brindar mayor comodidad al conducir, especialmente frente al brillo intenso de las luces de los vehículos en sentido contrario. Las hemos probado personalmente y hemos podido manejar con ellas durante la noche. Sin embargo, <span class="font-extrabold">dejamos a tu criterio</span> su uso para la conducción nocturna, ya que nuestra preferencia es no recomendarlas específicamente para este propósito.
+        </p>
+        <p>
+          <span class="font-semibold">Y un dato importante:</span> no recomendamos usarlas durante la noche cuando está lloviendo, ya que las condiciones de visibilidad pueden reducirse y lo más importante siempre es tu seguridad.
+        </p>
+        <p>
+          Lo que sí te garantizamos es que son perfectas para interiores con luces intensas, como pantallas de dispositivos, centros comerciales, hospitales o cualquier ambiente donde la luz blanca o azul pueda perjudicar tu descanso y salud. Además, son ideales para trabajos nocturnos donde la luz artificial resulta molesta.
+        </p>
+      </div>
+    </details>
+
+    <!-- Pregunta 2 -->
+    <details class="border-b border-gray-300 py-2">
+      <summary class="flex justify-between items-center cursor-pointer py-2 text-left underline font-semibold text-lg">
+        ¿Tienen aumento o graduación visual?
+        <span class="plus-icon transition-transform duration-300 text-xl">+</span>
+      </summary>
+      <div class="pt-2 lg:text-lg flex flex-col gap-3">
+        <p>
+          <strong>No, estas gafas no tienen aumento o graduación alguna.</strong> Están diseñadas exclusivamente para proteger tus ojos de la luz azul nociva emitida por dispositivos electrónicos y luces LED. Gracias a su ligereza y comodidad, puedes usarlas fácilmente sobre tus gafas graduadas sin sentir molestias.
+        </p>
+        <p>
+          ¡Protege tu visión sin renunciar a tu corrección visual!
+        </p>
+      </div>
+    </details>
+
+    <!-- Pregunta 3 -->
+    <details class="border-b border-gray-300 py-2">
+      <summary class="flex justify-between items-center cursor-pointer py-2 text-left underline font-semibold text-lg">
+        ¿Son cómodas para usarlas por varias horas?
+        <span class="plus-icon transition-transform duration-300 text-xl">+</span>
+      </summary>
+      <div class="pt-2 lg:text-lg flex flex-col gap-3">
+        <p>
+          <strong>¡Absolutamente!</strong> Nuestras gafas están diseñadas pensando en tu comodidad. Las monturas son ligeras y ergonómicas, lo que evita la presión en la cabeza y las orejas, incluso después de horas de uso.
+        </p>
+        <p>
+          Muchos de nuestros clientes las llevan puestas durante más de 5 horas sin sentir ninguna molestia. ¡Son tan cómodas que te olvidarás de que las llevas puestas! Úsalas el tiempo que necesites sin preocuparte por la incomodidad.
+        </p>
+      </div>
+    </details>
+
+    <!-- Pregunta 4 -->
+    <details class="border-b border-gray-300 py-2">
+      <summary class="flex justify-between items-center cursor-pointer py-2 text-left underline font-semibold text-lg">
+        ¿Cuándo debo usarlas?
+        <span class="plus-icon transition-transform duration-300 text-xl">+</span>
+      </summary>
+      <div class="pt-2 lg:text-lg flex flex-col gap-3">
+        <p>
+          Para obtener los mejores resultados, úsalas <strong>2-3 horas antes de dormir.</strong> Esto permite que tu cuerpo <strong>produzca melatonina de forma natural</strong>, ayudándote a conciliar el sueño más rápido y disfrutar de un descanso reparador.
+        </p>
+        <p>
+          Son ideales para actividades nocturnas como ver pantallas, leer o realizar tareas en interiores antes de acostarte. Además, durante el día también pueden ayudarte a <strong>reducir la fatiga ocular</strong>, especialmente en ambientes con luz artificial intensa.
+        </p>
+        <p>
+          ¡Incorpora este hábito y nota la diferencia en tu descanso y bienestar visual!
+        </p>
+      </div>
+    </details>
+
+    <!-- Pregunta 5 -->
+    <details class="py-2">
+      <summary class="flex justify-between items-center cursor-pointer py-2 text-left underline font-semibold text-lg">
+        ¿Cómo debo limpiar y cuidarlas?
+        <span class="plus-icon transition-transform duration-300 text-xl">+</span>
+      </summary>
+      <div class="pt-2">
+        <div class="space-y-4">
+          <ul class="list-disc pl-5 flex flex-col gap-3 lg:text-lg">
+            <li>
+              <strong>Limpieza diaria:</strong> Utiliza el <span class="font-semibold">paño de microfibra</span> incluido en todos los paquetes para retirar polvo y huellas sin rayar los lentes.
+            </li>
+            <li>
+              <strong>Limpieza profunda:</strong> Lava los lentes con <span class="font-semibold">agua tibia y jabón neutro</span> para eliminar suciedad persistente y restos de grasa. Luego, sécalos con el paño de microfibra para evitar marcas.
+            </li>
+            <li>
+              <strong>Cuidados importantes:</strong> Evita usar <span class="font-semibold">papel, pañuelos o productos químicos agresivos</span>, ya que pueden rayar los lentes o afectar los recubrimientos especiales.
+            </li>
+            <li>
+              <strong>Almacenamiento seguro:</strong> Guarda tus gafas siempre en su estuche cuando no las uses. Así las proteges de golpes y rayones, asegurando que te acompañen por mucho tiempo.
+            </li>
+          </ul>
+          <p class="mt-4 lg:text-lg font-medium">
+            ¡Cuídalas como se merecen y disfruta de su comodidad y estilo por más tiempo!
+          </p>
+        </div>
+      </div>
+    </details>
+  </div>
+  </div>
+</div>

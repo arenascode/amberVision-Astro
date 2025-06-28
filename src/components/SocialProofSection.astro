@@ -1,0 +1,78 @@
+---
+import FadeIn from "./FadeIn";
+import TestimonialCarousel from "./testimonial-carousel";
+---
+
+<section
+          id="testimonials"
+          class="py-8 pb-2 md:py-4 overflow-hidden xl:flex xl:justify-center min-h-[850px] md:h-[600px] md:min-h-[418px] lg:min-h-[650px]"
+        >
+          <div class="container px-4 md:px-6 overflow-hidden h-full md:h-full">
+            {/* Section Heading */}
+            <div class="flex flex-col items-center text-center gap-4 mb-12 lg:mt-10">
+              <FadeIn delay={100} client:load>
+                <h2 class="text-3xl lg:text-4xl font-bold tracking-tight">
+                  Lo Que Dicen Nuestros Clientes
+                </h2>
+              </FadeIn>
+
+              <p class="text-sidebar-primary-foreground md:text-lg lg:text-xl max-w-[800px]">
+                Cientos de personas han mejorado su sueño y reducido la fatiga
+                ocular con nuestras gafas.
+              </p>
+            </div>
+
+            {/* Testimonial Carousel */}
+            <TestimonialCarousel client:load />
+
+            {/* Featured Testimonial */}
+            {/* <FadeIn delay={100}>
+              <div class="mt-16 rounded-xl p-2 flex flex-col md:flex-row gap-8 items-center shadow-md backdrop-blur-lg bg-white/10 border border-white/10 xl:mt-28">
+                
+                <div class="md:w-1/2 ">
+                  <div class="relative h-[300px] rounded-lg overflow-hidden">
+                    <img
+                      src="/placeholder.svg?height=600&width=600"
+                      alt="Video testimonial thumbnail"
+                      class="object-cover"
+                    />
+                    <div class="absolute inset-0 flex items-center justify-center">
+                      <div class="h-16 w-16 rounded-full bg-primary/90 flex items-center justify-center cursor-pointer hover:bg-primary transition-colors">
+                        <Play class="h-6 w-6 text-white" fill="white" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                
+                <div class="md:w-1/2">
+                  <div class="flex mb-4 gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star
+                        key={i}
+                        class="h-5 w-5 fill-[#FFD700] stroke-[#FFD700]"
+                      />
+                    ))}
+                  </div>
+                  <h3 class="text-xl font-bold mb-2 text-sidebar-primary-foreground">
+                    "Estas gafas cambiaron mi vida. ¡Duermo mejor que nunca!"
+                  </h3>
+                  <p class="text-sidebar-primary-foreground mb-4">
+                    Después de años de insomnio, dudaba que unas gafas pudieran
+                    ayudarme. Pero en solo una semana, comencé a dormir más
+                    rápido y despertar con más energía cada mañana.
+                  </p>
+                  <div class="flex items-center gap-3">
+                    <div class="h-10 w-10 rounded-full bg-muted-foreground/20"></div>
+                    <div>
+                      <p class="font-medium">Rodrigo Garcia</p>
+                      <p class="text-sm text-sidebar-primary-foreground">
+                        Desarrollador Web
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </FadeIn> */}
+          </div>
+        </section>

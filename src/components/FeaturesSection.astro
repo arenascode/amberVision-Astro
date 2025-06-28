@@ -1,0 +1,70 @@
+---
+import testingVideo from "../assets/video/testingVideo.mp4";
+import measure1 from "../assets/img/product/measure1.avif";
+import measure2 from "../assets/img/product/measure2.avif";
+import iconGlasses from "../assets/img/icons/iconGlasses.webp";
+import peopleUsingGlasses from "../assets/img/peopleUsingGlasses-desktop.avif";
+---
+
+<section id="features" class="py-6 md:py-10 lg:py-5 xl:flex xl:justify-center">
+  <div class="container px-4 md:px-6">
+    <!-- divide here -->
+    <section class="w-full rounded-xl shadow-md backdrop-blur-lg bg-white/10 border-white/10 border p-2 lg:p-5 flex flex-col lg:flex-row items-center mt-10 mb-6">
+      <div class="textContainer flex flex-col p-2 lg:self-start lg:flex-2 xl:flex-1">
+        <h2 class="text-2xl md:text-3xl font-bold text-center mb-2">
+          Prueba Real de Efectividad 🔎
+        </h2>
+        <p class="text-[1rem] md:text-xl text-start max-w-2xl mb-6 lg:mt-8">
+          Mira cómo nuestras gafas bloquean eficazmente la luz azul. Usamos una tarjeta sensible a esta luz junto con un LED azul intenso. El área sin protección se tiñe de morado, mientras que el área protegida por nuestras lentes permanece intacta.
+        </p>
+        <p class="text-sm hidden md:text-lg lg:text-xl lg:text-wrap text-center font-semibold italic lg:mt-10 lg:block">
+          Te regalamos esta misma tarjeta de prueba para que lo compruebes tú mismo desde casa. 🧪🏱
+        </p>
+      </div>
+
+      <div class="videoContainer flex flex-col items-center justify-center lg:flex-1.5 xl:flex-1">
+        <video class="rounded-xl shadow-lg w-full opacity-80 max-w-2xl mb-2 md:w-[40%] lg:w-[100%] xl:w-[60%]" autoplay loop muted playsinline>
+          <source src={testingVideo} type="video/mp4" />
+          Tu navegador no soporta la reproducción de video.
+        </video>
+        <p class="text-sm md:text-lg text-center font-semibold italic lg:hidden">
+          Te regalamos esta misma tarjeta de prueba para comprobarlo tú mismo desde casa. 🧪🏱
+        </p>
+      </div>
+    </section>
+
+    <div class="grid gap-8 mt-8 md:mt-12 lg:grid-cols-4 xl:px-20 md:flex md:flex-col md:items-center">
+      <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 mt-3 lg:mt-10 text-center">
+        Diseño que se adapta a cualquier rostro
+      </h2>
+      <div class="imgFeaturesContainer flex flex-col items-center justify-center md:w-[65%] lg:mt-10">
+        <img src={measure1.src} alt="Medidas gafas frente" class="object-cover" loading="lazy" />
+        <img src={measure2.src} alt="Medidas Gafas Lateral" loading="lazy" class="mt-5 object-cover" />
+      </div>
+      <div class="rounded-lg border text-card-foreground border-none shadow-md backdrop-blur-lg bg-white/10 border-white/10 h-full">
+        <div class="p-5 flex flex-col md:flex-row items-center text-center gap-4">
+          <div class="flex flex-col items-center gap-4 text-left md:flex-1">
+            <div class="h-12 lg:h-15 w-12 lg:w-15 rounded-full bg-amber-500/80 flex items-center justify-center">
+              <img src={iconGlasses.src} alt="" loading="lazy" />
+            </div>
+            <h3 class="font-bold text-sidebar-primary-foreground text-[1.3rem] lg:text-2xl xl:text-3xl lg:mb-8">
+              Estilo Unisex
+            </h3>
+            <p class="lg:text-xl text-sidebar-primary-foreground">
+              Inspiradas en el estilo atemporal <strong>Ray-Ban</strong>, estas gafas se ven bien en todo tipo de cara.
+            </p>
+            <p class="text-[1.1rem] lg:text-xl text-sidebar-primary-foreground">
+              Están fabricadas con <strong>TR90 suizo</strong>, un material premium reconocido por su <strong>ligereza, flexibilidad y resistencia</strong>.
+            </p>
+            <p class="text-[1.1rem] lg:text-xl text-sidebar-primary-foreground">
+              Se ajustan suavemente a tu rostro sin generar presión, incluso tras horas de uso.
+            </p>
+          </div>
+          <div class="cardImg rounded-xl overflow-hidden md:flex-1">
+            <img src={peopleUsingGlasses.src} alt="Personas usando gafas amber vision" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

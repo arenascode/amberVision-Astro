@@ -1,0 +1,94 @@
+---
+import CountdownTimer from "./CountdownTimer";
+import FadeIn from "./FadeIn";
+
+const products = [
+  {
+    id: "basic",
+    name: "1 Par de Gafas Amber Vision con filtro de luz azul",
+    price: 119999,
+    priceBefore: 150000,
+    image: "/assets/img/manCodingV2.avif",
+    features: [
+      "Lentes Amber Vision",
+      "Montura ligera y cómoda",
+      "Estuche protector rígido",
+      "Estuche de tela para evitar rayones",
+      "Paño de microfibra para limpieza",
+      "Tester de luz azul para comprobar su eficacia",
+      "Garantía de 6 meses por defectos de fábrica*",
+    ],
+  },
+  {
+    id: "promo",
+    name: "2 Pares de Gafas Amber Vision con filtro de luz azul",
+    price: 219999,
+    priceBefore: 300000,
+    image: "/assets/img/coupleWatchingMovies.avif",
+    features: [
+      "2 pares de lentes Amber Vision",
+      "Monturas ligeras y cómodas",
+      "2 estuches protectores rígidos",
+      "2 estuches de tela para evitar rayones",
+      "2 paños de microfibra para limpieza",
+      "2 testers de luz azul para comprobar su eficacia",
+      "Garantía de 6 meses por defectos de fábrica*",
+    ],
+  },
+];
+---
+
+<section id="pricing" class="py-6 pt-8 md:py-10 xl:flex xl:justify-center">
+  <div class="container px-4 md:px-6">
+    <div class="flex flex-col items-center text-center gap-4 mb-12">
+      <div class="px-3 py-1 bg-green-600 xl:text-lg rounded-full">
+        Oferta por Tiempo Limitado ⏳
+      </div>
+      <FadeIn client:visible>
+        <h2 class="text-3xl font-bold tracking-tight xl:mt-4 lg:text-4xl">
+          Descuento Especial de Lanzamiento
+        </h2>
+      </FadeIn>
+      <p class="text-sidebar-primary-foreground md:text-lg lg:text-xl max-w-[800px]">
+        Aprovecha nuestro precio exclusivo antes de que desaparezca
+      </p>
+      <div class="mt-4">
+        <CountdownTimer client:visible />
+      </div>
+    </div>
+    <div class="grid gap-8 xl:gap-12 md:grid-cols-2 max-w-[1000px] mx-auto">
+      {products.map((product) => (
+        <FadeIn client:visible>
+          <div class="border shadow-md backdrop-blur-lg bg-white/10 border-white/10 relative overflow-hidden h-full rounded-lg">
+            <div class="p-3 sm:p-6">
+              <h3 class="text-xl xl:text-2xl font-bold mb-2 text-sidebar-primary-foreground">
+                {product.name}
+              </h3>
+              <div class="imgContainer container rounded-lg overflow-hidden">
+                <img src={product.image} alt={product.name} class="w-full h-full object-cover" loading="lazy" />
+              </div>
+              <div class="flex items-end gap-1 mb-4 mt-2 text-sidebar-primary-foreground">
+                <span class="text-3xl font-bold">${product.price.toLocaleString("es-CO")}</span>
+                <span class="italic line-through">${product.priceBefore.toLocaleString("es-CO")}</span>
+              </div>
+              <ul class="space-y-2 mb-6">
+                {product.features.map((feature) => (
+                  <li class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                    <span class="text-[16px] xl:text-lg text-sidebar-primary-foreground">
+                      {feature}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+              <button class="btn-buy w-full text-lg tracking-wider cursor-pointer bg-gradient-to-r from-amber-500 to-red-500 hover:from-amber-500 hover:to-red-500 text-white font-semibold px-6 py-3 rounded-lg shadow-lg transition-transform transform hover:scale-105 flex items-center justify-center gap-2">
+                Elegir
+                <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+              </button>
+            </div>
+          </div>
+        </FadeIn>
+      ))}
+    </div>
+  </div>
+</section>

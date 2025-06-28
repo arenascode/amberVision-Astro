@@ -1,0 +1,102 @@
+---
+import AnnouncementCarousel from "../components/AnnoouncementCarousel"
+import Hero from "../components/Hero"
+import ProblemAndSolution from "../components/ProblemAndSolution.astro"
+import BeforeAndAfterSection from "./BeforeAndAfterSection.astro"
+import FeaturesSection from "./FeaturesSection.astro"
+import SocialProofSection from "./SocialProofSection.astro"
+import PurchaseGift from "./PurchaseGift.astro";
+import Pricing from "./Pricing.tsx"
+import FounderMessage from "./FounderMessage.astro"
+import FAQ from "./FAQ.astro"
+import PurchaseWarranty from "./PurchaseWarranty.astro"
+import MoreSocialProofSection from "./MoreSocialProofSection.astro"
+import FinalCTA from "./FinalCTA.astro"
+---
+
+
+<div id="container" class="pt-15">
+	<>
+  {/* Single fixed gradient background */}
+  <div class="fixed inset-0 z-[-1] bg-black">
+    {/* Main radial gradient with orange accents */}
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(244,160,0,0.4)_15%,transparent_55%),radial-gradient(ellipse_at_bottom_left,rgba(244,160,0,0.3)_15%,transparent_55%),radial-gradient(circle_at_center,#0f0f0f_0%,#111111_30%,#0a0a0a_80%)]"></div>
+
+    {/* Optional subtle noise texture overlay */}
+    <div class="absolute inset-0 opacity-[0.03] bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiPgo8cmVjdCB3aWR0aD0iNSIgaGVpZ2h0PSI1IiBmaWxsPSIjMDAwIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDVMNSAwWk02IDRMNCA2Wk0tMSAxTDEgLTFaIiBzdHJva2U9IiMyMjIiIHN0cm9rZS13aWR0aD0iMSI+PC9wYXRoPgo8L3N2Zz4=')]"></div>
+  </div>
+  {/* Announcement Carousel */}
+   <AnnouncementCarousel client:load/>
+	{/* Hero Section */}
+ <Hero client:load/>
+  {/* Problem And Solution Section */}
+  <ProblemAndSolution/>
+  {/* Testimonial Carousel */}
+  <SocialProofSection />
+  {/* Product Features Section */}
+  <FeaturesSection/>
+  {/* Before And After Section */}
+  <BeforeAndAfterSection/>
+  {/* Gifts Section */}
+  <PurchaseGift />
+  {/* Pricing Section*/}
+  <Pricing client:visible/>
+  {/* Personal Note founder Section */}
+  <FounderMessage/>
+  {/*FAQ Section */}
+  <FAQ/>
+  {/*Purchase Warranty */}
+  <PurchaseWarranty/>
+  {/*More Social Proof Section */}
+  <MoreSocialProofSection/>
+{/* Final CTA */}
+<FinalCTA/>
+	</main>
+</div>
+
+<style>
+	#container {
+		height: 100%;
+	}
+
+	main {
+		height: 100%;
+		display: flex;
+    flex-direction: column;
+    align-items: center;
+		/* justify-content: center; */
+	}
+
+
+
+	@media screen and (max-height: 368px) {
+		#news {
+			display: none;
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		#container {
+			display: flex;
+			flex-direction: column;
+		}
+
+		#hero {
+			display: block;
+			padding-top: 10%;
+		}
+
+		#links {
+			flex-wrap: wrap;
+		}
+
+		#links a.button {
+			padding: 14px 18px;
+		}
+
+
+		h1 {
+			line-height: 1.5;
+		}
+	}
+</style>

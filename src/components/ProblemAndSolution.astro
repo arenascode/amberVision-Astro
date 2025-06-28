@@ -1,0 +1,108 @@
+---
+import FadeIn from "./FadeIn.tsx"
+import imageSolution from "/src/assets/img/manUsingGlasses2.avif"; // ajusta la ruta si es necesario
+---
+
+<section id="benefits" class="py-8 lg:py-16 lg:flex lg:justify-center">
+  <div class="container px-4 md:px-6 lg:flex lg:flex-col lg:items-center">
+    <div class="flex flex-col items-center text-start gap-5 mb-12 lg:text-center lg:self-center lg:w-[70%]">
+      
+        <h2 class="text-2xl lg:text-4xl font-bold text-center">
+          La exposición a la luz azul de las pantallas desgasta tu vista y altera tu sueño
+        </h2>
+        <p class="text-xl text-center mt-6 lg:text-2xl lg:tracking-wider">
+          Nuestras gafas te devuelven el bienestar desde el primer uso.
+        </p>
+    </div>
+
+    <div class="grid gap-8 md:grid-cols-3">
+      <FadeIn delay={100} client:visible>
+        <div class="border rounded-xl shadow-md backdrop-blur-lg bg-white/10 border-white/10 h-full p-6 flex flex-col items-center text-center gap-4">
+          <div class="h-12 w-12 rounded-full bg-amber-500/80 flex items-center justify-center">
+            <svg  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="#ffffff"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-eye"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /><path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" /></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white">Menos Fatiga Visual</h3>
+          <p class="text-lg text-white/70">
+            ¿Pasas horas frente a pantallas? Estas gafas reducen el cansancio, la sequedad y la irritación ocular desde el primer uso.
+          </p>
+        </div>
+      </FadeIn>      
+        <FadeIn delay={100} client:visible>
+        <div class="border rounded-xl  shadow-md backdrop-blur-lg bg-white/10 border-white/10 h-full p-6 flex flex-col items-center text-center gap-4">
+          <div class="h-12 w-12 rounded-full bg-amber-500/80 flex items-center justify-center">
+            <svg  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="#ffffff"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-moon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" /></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white">Duerme Mejor</h3>
+          <p class="text-lg text-white/70">
+            La luz azul interfiere con la producción de melatonina, afectando tu descanso. Usa nuestras gafas antes de dormir y despierta renovado.
+          </p>
+        </div>
+        </FadeIn>
+      <FadeIn delay={100} client:visible>
+        <div class="border rounded-xl  shadow-md backdrop-blur-lg bg-white/10 border-white/10 h-full p-6 flex flex-col items-center text-center gap-4">
+          <div class="h-12 w-12 rounded-full bg-amber-500/80 flex items-center justify-center">
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="#ffffff"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-alert-triangle"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 9v4" /><path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z" /><path d="M12 16h.01" /></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white">Menos Dolores de Cabeza</h3>
+          <p class="text-lg text-white/70">
+            Despídete de las migrañas por tensión visual. Trabaja, estudia o mira series sin molestias.
+          </p>
+        </div>
+      </FadeIn>
+      
+    </div>
+
+    <div class="mt-14 rounded-xl p-1 shadow-md backdrop-blur-lg bg-white/10 border border-white/10">
+      <div class="grid gap-2 lg:grid-cols-2 items-center">
+        <div class="relative h-[300px] md:h-[400px] xl:h-[450px] rounded-lg overflow-hidden">
+          <img
+            src={imageSolution.src}
+            alt="Persona usando gafas con filtro de luz azul"
+            class="object-cover w-full h-full"
+            loading="lazy"
+          />
+        </div>
+        <div class="xl:self-baseline xl:pt-12">
+          <h3 class="text-2xl font-bold mb-8 xl:text-3xl">
+            Gafas con Filtro de Luz Azul Amber Vision
+          </h3>
+          <ul class="space-y-8">
+            <li class="flex items-start gap-2">
+              <svg width="60"  height="60"  viewBox="0 0 24 24"  fill="#05df72"  class="icon icon-tabler icons-tabler-filled icon-tabler-shield-check"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M11.998 2l.118 .007l.059 .008l.061 .013l.111 .034a.993 .993 0 0 1 .217 .112l.104 .082l.255 .218a11 11 0 0 0 7.189 2.537l.342 -.01a1 1 0 0 1 1.005 .717a13 13 0 0 1 -9.208 16.25a1 1 0 0 1 -.502 0a13 13 0 0 1 -9.209 -16.25a1 1 0 0 1 1.005 -.717a11 11 0 0 0 7.531 -2.527l.263 -.225l.096 -.075a.993 .993 0 0 1 .217 -.112l.112 -.034a.97 .97 0 0 1 .119 -.021l.115 -.007zm3.71 7.293a1 1 0 0 0 -1.415 0l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.32 1.497l2 2l.094 .083a1 1 0 0 0 1.32 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z" /></svg>
+              <div class="xl:flex xl:flex-col xl:gap-2">
+                <span class="font-semibold text-[17px] xl:text-lg">
+                  Reducen la fatiga ocular y los dolores de cabeza
+                </span>
+                <p class="text-white/85 mt-0.5">
+                  Úsalas durante tu jornada digital y nota el cambio en tus ojos: menos tensión visual y molestias provocadas por el uso prolongado de pantallas.
+                </p>
+              </div>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg  width="60"  height="60"   viewBox="0 0 24 24"  fill="#05df72"  class="icon icon-tabler icons-tabler-filled icon-tabler-shield-check"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M11.998 2l.118 .007l.059 .008l.061 .013l.111 .034a.993 .993 0 0 1 .217 .112l.104 .082l.255 .218a11 11 0 0 0 7.189 2.537l.342 -.01a1 1 0 0 1 1.005 .717a13 13 0 0 1 -9.208 16.25a1 1 0 0 1 -.502 0a13 13 0 0 1 -9.209 -16.25a1 1 0 0 1 1.005 -.717a11 11 0 0 0 7.531 -2.527l.263 -.225l.096 -.075a.993 .993 0 0 1 .217 -.112l.112 -.034a.97 .97 0 0 1 .119 -.021l.115 -.007zm3.71 7.293a1 1 0 0 0 -1.415 0l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.32 1.497l2 2l.094 .083a1 1 0 0 0 1.32 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z" /></svg>
+              <div class="xl:flex xl:flex-col xl:gap-2">
+                <span class="font-semibold text-[17px] xl:text-lg">
+                  Favorecen un sueño profundo y natural
+                </span>
+                <p class="text-white/85 mt-0.5">
+                  Ayudan a restaurar tu ciclo circadiano estimulando la producción de melatonina, para que concilies el sueño más rápido y descanses mejor.
+                </p>
+              </div>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg  width="60"  height="60"   viewBox="0 0 24 24"  fill="#05df72"  class="icon icon-tabler icons-tabler-filled icon-tabler-shield-check"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M11.998 2l.118 .007l.059 .008l.061 .013l.111 .034a.993 .993 0 0 1 .217 .112l.104 .082l.255 .218a11 11 0 0 0 7.189 2.537l.342 -.01a1 1 0 0 1 1.005 .717a13 13 0 0 1 -9.208 16.25a1 1 0 0 1 -.502 0a13 13 0 0 1 -9.209 -16.25a1 1 0 0 1 1.005 -.717a11 11 0 0 0 7.531 -2.527l.263 -.225l.096 -.075a.993 .993 0 0 1 .217 -.112l.112 -.034a.97 .97 0 0 1 .119 -.021l.115 -.007zm3.71 7.293a1 1 0 0 0 -1.415 0l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.32 1.497l2 2l.094 .083a1 1 0 0 0 1.32 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z" /></svg>
+              <div class="xl:flex xl:flex-col xl:gap-2">
+                <span class="font-semibold text-[17px] xl:text-lg">
+                  Bloquean hasta el 99% de la luz azul más dañina
+                </span>
+                <p class="text-white/85 mt-0.5">
+                  Nuestras gafas especializadas filtran las longitudes de onda más dañinas (415 a 455 nm), responsables de la fatiga ocular y la alteración del sueño.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

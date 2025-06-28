@@ -1,0 +1,89 @@
+---
+// src/components/SocialProof.astro
+const testimonials = [
+  {
+    review:
+      "No podía creer lo cómodas que son estas gafas. Paso muchas horas frente a la computadora y desde que las uso, ya no sufro de dolor de cabeza ni fatiga visual. ¡Definitivamente una gran inversión!",
+    name: "Sofía G.",
+    img: "/assets/img/person-review11.webp",
+  },
+  {
+    review:
+      "No sabía que la luz azul afectaba tanto mi sueño hasta que probé estas gafas. Ahora duermo mucho mejor después de usar el celular o ver TV en la noche. ¡Protegen mis ojos y me ayudan a descansar de verdad! Además, son cómodas y se ven bien.",
+    name: "Luis M.",
+    img: "/assets/img/person-review5.webp",
+  },
+  {
+    review:
+      "Son ligeras y si siento que me protegen del brillo de las pantallas. Las uso a partir de que la luz del día se comienza a ir (cuando ya hay que prender luces en la casa) y sigo trabajando en la computadora y/o viendo tele. Las uso de corrido hasta la hora de dormir para que también me protege de la luz de los focos de la casa. Mis ojos se cansan mucho menos. ¡Las recomiendo al 100%!",
+    name: "Valentina R.",
+    img: "/assets/img/person-review10.webp",
+  },
+  {
+    review:
+      "Soy programador y paso muchas horas frente a múltiples pantallas. Estas gafas han cambiado por completo mi rutina: ya no tengo ojos cansados y puedo concentrarme mucho mejor. ¡Una compra excelente!",
+    name: "Diego P.",
+    img: "/assets/img/person-review9.webp",
+  },
+  {
+    review:
+      "Me sorprendió lo ligeras que son. A veces olvido que las tengo puestas de lo cómodas que son ya que paso horas frente a la computadora ya que trabajo remoto. Además, me gusta su diseño estilo Rayban.",
+    name: "Camilo T.",
+    img: "/assets/img/person-review12.webp",
+  },
+];
+---
+
+<section id="moreSocialProof" class="py-6 md:py-10 xl:flex xl:justify-center">
+  <div class="container px-3 md:px-6">
+    <div class="flex flex-col items-center text-center gap-4 mb-12">
+      <h2 class="text-3xl font-bold tracking-tight">
+        Únete a Cientos de Clientes Satisfechos
+      </h2>
+      <p class="text-sidebar-primary-foreground md:text-lg xl:text-xl max-w-[800px]">
+        Descubre lo que dicen las personas sobre su experiencia con nuestras
+        gafas
+      </p>
+    </div>
+
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {testimonials.map((testimonial) => (
+        <div class="border shadow-md backdrop-blur-lg bg-white/10 border-white/10 h-full rounded-lg">
+          <div class="p-3 sm:p-6">
+            <div class="flex mb-4 gap-1">
+              {[...Array(5)].map(() => (
+                <svg
+                  class="h-4 w-4 fill-[#FFD700] text-primary"
+                  stroke="#FFD700"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-sidebar-primary-foreground mb-4">"{testimonial.review}"</p>
+            <div class="flex items-center gap-3">
+              <div class="h-20 w-20 rounded-full bg-muted-foreground/20 overflow-hidden">
+                <img
+                  src={testimonial.img}
+                  alt="customer review"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div>
+                <p class="font-medium text-sidebar-primary-foreground">
+                  {testimonial.name}
+                </p>
+                <p class="text-xs text-sidebar-primary-foreground">
+                  Comprador Verificado
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

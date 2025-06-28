@@ -1,0 +1,31 @@
+<div class="CTA-container flex flex-col justify-center mt-6 mb-8 xl:flex xl:justify-center">
+  <button
+    class="bg-gradient-to-r from-amber-500 to-red-500 hover:from-amber-500 hover:to-red-500 text-white font-semibold py-6 sm:px-6 sm:py-3 lg:mt-8 xl:py-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 flex items-center justify-center gap-2 w-[85%]
+    lg:w-[60%] xl:w-max mx-auto"
+  >
+    <a
+      href="#pricing"
+      class="flex items-center sm:gap-3 text-[16px] lg:text-xl xl:p-2 flex-col sm:flex-row"
+    >
+      <slot name="text"/>
+      <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+      <path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+      <path d="M17 17h-11v-14h-2" />
+      <path d="M6 5l14 1l-1 7h-13" />
+      </svg>
+    </a>
+  </button>
+  <small class="italic self-center lg:text-lg xl:mt-1">
+    envío GRATIS. Pocas unidades disponibles 📦
+  </small>
+</div>
