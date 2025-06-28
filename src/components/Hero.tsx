@@ -4,7 +4,6 @@ import MobileProductIntro from "./MobileProductIntro";
 import ProductIntro from "./ProductIntro";
 
 const Hero = () => {
-
   const [isMobile, setIsMobile] = useState<boolean>(false);
 
   useEffect(() => {
@@ -15,21 +14,18 @@ const Hero = () => {
       setIsMobile(false);
     }
   }, []);
-
+  //bg-[radial-gradient(circle,#2c2c2c,#1f1f1f,#000000)]
   return (
     <section
       id="hero"
-      class="relative overflow-hidden bg-[radial-gradient(circle,#2c2c2c,#1f1f1f,#000000)] py-6 md:py-8 lg:py-10 items-center lg:flex justify-center mt-10 xl:mt-27 text-white"
+      class="relative overflow-hidden  py-6 md:py-8 lg:py-10 items-center lg:flex justify-center mt-10 xl:mt-12 text-white"
     >
       <div class="container px-2 md:px-6 lg:px-2 lg:w-full justify-center">
         <div class="flex flex-col gap-8 md:gap-10 lg:flex-row items-center lg:items-start xl:gap-20 xl:w-full xl:px-10">
           <div class="flex flex-col justify-between w-full gap-5 lg:gap-9">
-            <span
-          class="w-fit border-1 border-white text-sm xl:text-lg text-white p-1 px-2 rounded-full font-bold"
-          
-        >
-          Protección Premium Para Tus Ojos
-        </span>
+            <span class="w-fit border-1 border-white text-sm xl:text-lg text-white p-1 px-2 rounded-full font-bold">
+              Protección Premium Para Tus Ojos
+            </span>
             <h1 class="text-xl font-bold tracking-wider text-center sm:text-2xl md:text-3xl lg:text-2xl xl:text-[2.2rem] font-body uppercase fade-in-up leading-tight">
               Bloquea la luz azul y protege tus ojos mientras trabajas, estudias
               o juegas.

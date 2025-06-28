@@ -137,10 +137,10 @@ export default function TestimonialCarousel() {
                   />
                 </div>
                 <div>
-                  <p className="font-medium text-sidebar-primary-foreground">
+                  <p className="font-medium text-white">
                     {testimonial.name}
                   </p>
-                  <p className="text-xs text-sidebar-primary-foreground">
+                  <p className="text-xs text-white/80">
                     {testimonial.role}
                   </p>
                 </div>

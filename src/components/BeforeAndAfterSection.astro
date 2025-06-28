@@ -5,7 +5,7 @@ import tiredMan from "../assets/img/tiredMan.avif";
 import comfortableMan from "../assets/img/comfortableMan.avif";
 ---
 
-<section id="beforeAndAfter" class="container px-4 md:px-6">
+<section id="beforeAndAfter" class="container px-4 md:px-6 ">
  <div class="w-full flex flex-col items-center text-center gap-4 mb-12">
   <FadeIn delay={100} client:load>
     <h2 class="text-3xl xl:text-4xl font-bold tracking-tight xl:mb-5">
@@ -19,8 +19,8 @@ import comfortableMan from "../assets/img/comfortableMan.avif";
 
 <div class="grid gap-8 md:grid-cols-2 mb-8 xl:px-20 max-w-full">
   <div class="rounded-xl p-2 shadow-md backdrop-blur-lg bg-white/10 border border-white/10 xl:flex xl:flex-col xl:place-items-center">
-    <h3 class="text-xl font-bold mb-4 text-center text-red-500">
-      Sin Protección: <br /> Estrés Visual Constante
+    <h3 class="text-xl font-bold mb-4 text-center ">
+      Sin Protección: <br /> <span class="text-red-500">Estrés Visual Constante</span> 
     </h3>
     <div class="relative h-[320px] xl:h-[400px] w-full xl:w-[400px] rounded-lg overflow-hidden mb-4">
       <img src={tiredMan.src} alt="Persona con ojos cansados e irritados" class="w-full h-full object-cover" loading="lazy" />
@@ -35,8 +35,8 @@ import comfortableMan from "../assets/img/comfortableMan.avif";
   </div>
 
   <div class="rounded-xl p-2 shadow-md backdrop-blur-lg bg-white/10 border-white/10 border xl:flex xl:flex-col xl:place-items-center">
-    <h3 class="text-xl font-bold mb-4 text-center text-[#05df72]">
-      Con Gafas Amber Vision: <br /> Comodidad y Descanso Total
+    <h3 class="text-xl font-bold mb-4 text-center ">
+      Con Gafas Amber Vision: <br /> <span class="text-[#05df72]">Comodidad y Descanso Total</span> 
     </h3>
     <div class="relative h-[320px] xl:h-[400px] w-full xl:w-[400px] rounded-lg overflow-hidden mb-4">
       <img src={comfortableMan.src} alt="Persona con visión relajada y enfocada" class="object-cover h-full w-full" loading="lazy" />
