@@ -18,7 +18,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      class="relative overflow-hidden  py-6 md:py-8 lg:py-10 items-center lg:flex justify-center mt-10 xl:mt-12 text-white"
+      class="relative overflow-hidden  pt-6 md:py-8 lg:py-10 items-center lg:flex justify-center mt-10 xl:mt-12 text-white"
     >
       <div class="container px-2 md:px-6 lg:px-2 lg:w-full justify-center">
         <div class="flex flex-col gap-8 md:gap-10 lg:flex-row items-center lg:items-start xl:gap-20 xl:w-full xl:px-10">
@@ -58,31 +58,12 @@ const Hero = () => {
               </div>
 
               <p class="text-lg text-start text-primary-foreground max-w-xl mx-auto">
-                Cientos de personas como tú sintieron alivio inmediato en sus
+                Miles de personas como tú sintieron alivio inmediato en sus
                 ojos al usarlas... y sin esperarlo, también comenzaron a dormir
                 mejor.
               </p>
             </div>
             <div class="flex flex-col sm:flex-row lg:flex-col gap-3 pt-1">
-              <div class="stars_qty_sold lg:flex self-start items-center gap-2 hidden">
-                <div class="flex gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="#D4AF37"
-                      class="icon icon-tabler icons-tabler-filled icon-tabler-star"
-                    >
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                      <path d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z" />
-                    </svg>
-                  ))}
-                </div>
-                <span class="text-lg lg:text-xl xl:text-nowrap  font-bold">
-                  + 500 Vendidas
-                </span>
-              </div>
               <div className="CTA-container flex flex-col justify-center mt-2 mb-8 xl:flex xl:justify-center">
                 <button
                   className="bg-gradient-to-r from-amber-500 to-red-500 hover:from-amber-500 hover:to-red-500 text-white font-semibold py-3 sm:px-2 sm:py-3 lg:mt-8 xl:py-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 flex items-center justify-center gap-2 w-[85%]

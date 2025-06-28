@@ -6,6 +6,4 @@ export const selectedProduct = signal<Product | null>(null)
 export const isSuccessModalOpen = signal(false)
 export const successfulOrderNumber = signal("")
 
-console.log({ isCheckoutModalOpen });
-console.log({ selectedProduct });
 

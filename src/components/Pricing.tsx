@@ -43,8 +43,6 @@ const Pricing = () => {
 
   const openCheckout = (productId: string) => {
     const product = products.find((p) => p.id === productId);
-    console.log(`hellooo`);
-    console.log({product});
     
     if (product) {
       selectedProduct.value = product

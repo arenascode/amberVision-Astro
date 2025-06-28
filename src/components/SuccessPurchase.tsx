@@ -3,7 +3,6 @@ import { isSuccessModalOpen, successfulOrderNumber } from "../state"
 const SuccessPurchase = () => {
 
   if (!isSuccessModalOpen.value) {
-    console.log({ succesModalValue: isSuccessModalOpen.value});
     
     return null
   }

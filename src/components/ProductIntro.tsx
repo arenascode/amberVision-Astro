@@ -18,10 +18,9 @@ import type { JSX } from "preact/jsx-runtime";
 
 const ProductIntro = () => {
   const changeSlide = (slideId: string) => {
-    console.log(`it works?`);
 
     const targetSlide = document.getElementById(slideId);
-    console.log(targetSlide);
+    
     if (targetSlide) {
       targetSlide.scrollIntoView({ block: "nearest", inline: "center" });
     }
@@ -35,7 +34,6 @@ const ProductIntro = () => {
   };
 
   const handleMiniImgs = (e: JSX.TargetedMouseEvent<HTMLDivElement>) => {
-    console.log(`it works handleMiniImgs?`);
 
     const target = e.target as HTMLElement;
     const parent = target.parentElement as HTMLElement | null; // Use parentElement (better than parentNode)
@@ -46,7 +44,6 @@ const ProductIntro = () => {
     if (slideNumber) changeSlide(slideNumber);
 
     const miniImgs = document.querySelectorAll<HTMLImageElement>(".miniImg");
-    console.log({ miniImgs });
 
     miniImgs.forEach((img) => (img.style.borderColor = "#697172"));
 
