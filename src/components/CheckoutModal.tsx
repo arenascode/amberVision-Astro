@@ -16,10 +16,10 @@ const CheckoutModal = () => {
     <div id="checkout-modal" className="fixed inset-0 bg-black/70 z-50">
       <div className="relative w-full max-w-xl xl:max-w-6xl md:max-w-full lg:max-w-full max-h-[100dvh] overflow-y-auto bg-[radial-gradient(circle,#4a4a4a,#333333,#1f1f1f)] border-none mx-auto">
         <div className="flex flex-col items-center justify-between px-4 xl:px-10 xl:gap-4 py-6">
-          <h2 className="text-sidebar-primary-foreground text-xl xl:text-2xl text-center font-bold tracking-wide text-pretty my-1">
+          <h2 className="text-white text-xl xl:text-2xl text-center font-bold tracking-wide text-pretty my-1">
             Obten Envío Gratis y Paga Al Recibir
           </h2>
-          <div className="text-lg xl:text-xl text-sidebar-primary-foreground text-center mt-2 lg:mt-0">
+          <div className="text-lg xl:text-xl text-white text-center mt-2 lg:mt-0">
             Por favor completa el formulario a continuación para que te llevemos tus Amber Vision directamente a la puerta de tu casa.
           </div>
           <button id="close-modal" onClick={closeModal} className="p-1.5 transition-colors absolute right-0 top-0 xl:right-[0.5rem] xl:top-[0.5rem] cursor-pointer">

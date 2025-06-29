@@ -332,9 +332,9 @@ const SimpleCheckoutForm: FunctionComponent<CheckOutFormProps> = ({
         <div>
           <div className="flex flex-col justify-center lg:hidden mb-4">
             <span className="text-red-500 font-semibold text-xl text-center xl:text-xl">
-              Atencion
+              🚨 Atencion 🚨
             </span>
-            <div className="text-lg text-sidebar-primary-foreground text-center w-[90%] lg:w-full lg:mb-4 self-center">
+            <div className="text-lg text-sidebar-white text-center w-[90%] lg:w-full lg:mb-4 self-center">
               Asegúrate de proporcionar la información correcta para el envío de
               tu pedido. Es crucial incluir un número de teléfono con WhatsApp.
             </div>
@@ -515,7 +515,7 @@ const SimpleCheckoutForm: FunctionComponent<CheckOutFormProps> = ({
                     className="border-b-gray-700 mb-0 flex h-10 w-full rounded-md border bg-white px-3 py-2 shadow-sm transition-all duration-300 focus:outline-none focus:shadow-lg disabled:cursor-not-allowed disabled:opacity-50"
                   />
                   <small className="text-[0.7rem] md:text-[0.9rem] italic">
-                    Debe ser exacta para que la transportadora pueda ubicarse. 
+                    Debe ser exacta para que la transportadora pueda ubicarse.
                   </small>
                   {errors.direccion && (
                     <span className="inputError text-red-500 text-[12px] mt-[-0.3rem]">
@@ -593,7 +593,7 @@ const SimpleCheckoutForm: FunctionComponent<CheckOutFormProps> = ({
                   )}
                   {isLoading ? "Procesando..." : "Confirmar Compra"}
                 </button>
-                <p className="text-sm mt-1 text-center">
+                <p className="text-sm mt-1 mb-2 text-center">
                   🔒 Solo pagas al recibir!
                 </p>
               </form>

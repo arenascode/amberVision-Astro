@@ -1,6 +1,24 @@
-import { isSuccessModalOpen, successfulOrderNumber } from "../state"
+import { useEffect } from "preact/hooks";
+import { isSuccessModalOpen, successfulOrderNumber, selectedProduct } from "../state"
+
+// Extend the Window interface to include fbq
+declare global {
+  interface Window {
+    fbq: (...args: any[]) => void;
+  }
+}
 
 const SuccessPurchase = () => {
+
+  useEffect(() => {
+    if (isSuccessModalOpen.value) {
+      window.fbq('track', 'Purchase', {
+        currency: "COL", 
+        value: selectedProduct.value?.price
+      });
+    }
+  }, [isSuccessModalOpen.value]);
+
 
   if (!isSuccessModalOpen.value) {
     
