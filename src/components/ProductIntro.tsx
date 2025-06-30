@@ -52,11 +52,11 @@ const ProductIntro = () => {
 
   return (
     <>
-      <div className="h-full w-full" id="product">
+      <div className="h-full w-full md:w-[70%] lg:w-full md:flex md:items-center lg:items-start" id="product">
         <div
           className="flex flex-col xl:flex-row gap-4 mt-2 p-2 rounded-[20px] h-full 
   shadow-[4px_4px_4px_4px_rgba(0,0,0,0.35)] 
-  bg-gradient-to-br from-gray-100 via-[#1e1e1e] to-slate-500"
+  bg-gradient-to-br from-gray-100 via-[#1e1e1e] to-slate-500 md:self-center"
           id="productSlider"
         >
           <div className="flex-1 max-w-full h-full items-center">

@@ -160,9 +160,9 @@ const SimpleCheckoutForm: FunctionComponent<CheckOutFormProps> = ({
     <div className="container max-w-6xl lg:px-4 lg:py-4">
       <div className="hidden justify-center lg:flex lg:flex-col">
         <span className="text-red-500 font-semibold text-lg text-center lg:text-2xl">
-          Atencion
+          🚨 Atencion 🚨
         </span>
-        <div className="text-lg lg:text-xl text-sidebar-primary-foreground text-center w-[80%] lg:w-[72%] lg:mb-10 mx-auto">
+        <div className="text-lg lg:text-xl text-gray-200 text-center w-[80%] lg:w-[72%] lg:mb-10 mx-auto">
           Asegúrate de proporcionar la información correcta para el envío de tu
           pedido. Es crucial incluir un número de teléfono con WhatsApp.
         </div>
@@ -334,7 +334,7 @@ const SimpleCheckoutForm: FunctionComponent<CheckOutFormProps> = ({
             <span className="text-red-500 font-semibold text-xl text-center xl:text-xl">
               🚨 Atencion 🚨
             </span>
-            <div className="text-lg text-sidebar-white text-center w-[90%] lg:w-full lg:mb-4 self-center">
+            <div className="text-lg text-white text-center w-[90%] lg:w-full lg:mb-4 self-center">
               Asegúrate de proporcionar la información correcta para el envío de
               tu pedido. Es crucial incluir un número de teléfono con WhatsApp.
             </div>

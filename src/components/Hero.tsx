@@ -8,7 +8,7 @@ const Hero = () => {
 
   useEffect(() => {
     const windowWidth = window.innerWidth;
-    if (windowWidth <= 480) {
+    if (windowWidth <= 768) {
       setIsMobile(true);
     } else {
       setIsMobile(false);
@@ -18,15 +18,15 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      class="relative overflow-hidden  pt-6 md:py-8 lg:py-10 items-center lg:flex justify-center mt-10 xl:mt-12 text-white"
+      class="relative overflow-hidden  pt-6 lg:py-5 items-center lg:flex justify-center mt-10 xl:mt-12 text-white"
     >
-      <div class="container px-2 md:px-6 lg:px-2 lg:w-full justify-center">
-        <div class="flex flex-col gap-8 md:gap-10 lg:flex-row items-center lg:items-start xl:gap-20 xl:w-full xl:px-10">
-          <div class="flex flex-col justify-between w-full gap-5 lg:gap-9">
+      <div class="container px-2 md:px-6 lg:px-4 lg:w-full justify-center">
+        <div class="flex flex-col gap-8 md:gap-10 lg:gap-0 lg:flex-row items-center lg:justify-between  xl:gap-20 xl:w-full xl:px-10">
+          <div class="flex flex-col justify-between w-full lg:w-[55%] gap-5 xl:gap-6">
             <span class="w-fit border-1 border-white text-sm xl:text-lg text-white p-1 px-2 rounded-full font-bold">
               Protección Premium Para Tus Ojos
             </span>
-            <h1 class="text-xl font-bold tracking-wider text-center sm:text-2xl md:text-3xl lg:text-2xl xl:text-[2.2rem] font-body uppercase fade-in-up leading-tight">
+            <h1 class="text-xl font-bold tracking-wider text-center sm:text-2xl md:text-3xl lg:text-2xl xl:text-[2.2rem] xl:text-start font-body uppercase fade-in-up leading-tight">
               Bloquea la luz azul y protege tus ojos mientras trabajas, estudias
               o juegas.
             </h1>
@@ -35,9 +35,9 @@ const Hero = () => {
               ayudan a recuperar el bienestar visual y tu descanso desde el
               primer uso.
             </p>
-            <div class="md:hidden mobile">{isMobile && <ProductIntro />}</div>
+            <div class="lg:hidden mobile md:flex md:justify-center">{isMobile && <ProductIntro />}</div>
             <div class="flex flex-col items-center lg:flex-row lg:flex-wrap items-flex-start gap-2 pt-2">
-              <div class="stars_qty_sold flex self-start items-center lg:hidden gap-2">
+              <div class="stars_qty_sold flex self-start md:self-center items-center lg:hidden gap-2">
                 <div class="flex gap-1">
                   {[...Array(5)].map((_, i) => (
                     <svg
@@ -63,11 +63,11 @@ const Hero = () => {
                 mejor.
               </p>
             </div>
-            <div class="flex flex-col sm:flex-row lg:flex-col gap-3 pt-1">
+            <div class="flex flex-col sm:flex-row lg:flex-col gap-3 pt-1 md:justify-center">
               <div className="CTA-container flex flex-col justify-center mt-2 mb-8 xl:flex xl:justify-center">
                 <button
-                  className="bg-gradient-to-r from-amber-500 to-red-500 hover:from-amber-500 hover:to-red-500 text-white font-semibold py-3 sm:px-2 sm:py-3 lg:mt-8 xl:py-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 flex items-center justify-center gap-2 w-[85%]
-            lg:w-[60%] xl:w-max mx-auto"
+                  className="bg-gradient-to-r from-amber-500 to-red-500 hover:from-amber-500 hover:to-red-500 text-white font-semibold py-3 sm:px-2 sm:py-3 lg:mt-8 xl:py-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 flex items-center justify-center gap-2 w-[85%] md:w-full
+            lg:w-[80%] xl:w-max xl:h-[4rem] mx-auto md:self-center"
                 >
                   <a
                     href="#pricing"
@@ -97,8 +97,7 @@ const Hero = () => {
               </div>
             </div>
           </div>
-
-          <div class="hidden md:flex md:justify-center xl:h-[600px] w-[60%] lg:w-[50%] xl:w-[45%]">
+          <div class="hidden md:flex md:justify-center xl:h-[600px] w-[60%] lg:w-[40%] xl:w-[45%]">
             {!isMobile && <ProductIntro />}
           </div>
         </div>

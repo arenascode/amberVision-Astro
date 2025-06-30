@@ -33,7 +33,7 @@ export default function BeforeAfterTransition() {
 
   return (
     <div className="flex flex-col items-center w-full max-w-2xl lg:flex-1 mx-auto">
-      <div className="relative w-full h-80 md:h-92 lg:h-full overflow-hidden rounded-lg shadow-lg mb-4">
+      <div className="relative w-full h-80 md:w-[70%] lg:w-full md:h-92 lg:h-full overflow-hidden rounded-lg shadow-lg mb-4">
         {/* Imagen de "Antes" (siempre visible) */}
         <img
           src={beforeImage}
