@@ -1,5 +1,5 @@
 import { useEffect, useState } from "preact/hooks";
-import CTAbutton from "./CTAbutton.astro";
+// import CTAbutton from "./CTAbutton.astro";
 import MobileProductIntro from "./MobileProductIntro";
 import ProductIntro from "./ProductIntro";
 
@@ -14,7 +14,7 @@ const Hero = () => {
       setIsMobile(false);
     }
   }, []);
-  //bg-[radial-gradient(circle,#2c2c2c,#1f1f1f,#000000)]
+
   return (
     <section
       id="hero"
@@ -23,19 +23,21 @@ const Hero = () => {
       <div class="container px-2 md:px-6 lg:px-4 lg:w-full justify-center">
         <div class="flex flex-col gap-8 md:gap-10 lg:gap-0 lg:flex-row items-center lg:justify-between  xl:gap-20 xl:w-full xl:px-10">
           <div class="flex flex-col justify-between w-full lg:w-[55%] gap-5 xl:gap-6">
-            <span class="w-fit border-1 border-white text-sm xl:text-lg text-white p-1 px-2 rounded-full font-bold">
-              Protección Premium Para Tus Ojos
+            <span class="w-fit border-1 border-white text-sm xl:text-lg text-white p-1 px-2 rounded-full font-normal">
+              ⭐ +3,000 personas protegen su vista diariamente
             </span>
             <h1 class="text-xl font-bold tracking-wider text-center sm:text-2xl md:text-3xl lg:text-2xl xl:text-[2.2rem] xl:text-start font-body uppercase fade-in-up leading-tight">
-              Bloquea la luz azul y protege tus ojos mientras trabajas, estudias
-              o juegas.
+              Protege Tu Vista y Recupera Tu Sueño Natural
             </h1>
-            <p class="text-lg md:text-xl text-center mt-2 text-primary-foreground tracking-wider">
-              Nuestras gafas con filtro ámbar bloquean la luz azul dañina y te
-              ayudan a recuperar el bienestar visual y tu descanso desde el
-              primer uso.
+            <p class="text-lg md:text-xl text-center mt-2 text-gray-200 tracking-wider">
+              Lentes con filtro ámbar certificado que bloquean la luz azul
+              dañina. Diseñadas para quienes pasan +8 horas frente a pantallas.
+              Elimina el ardor ocular y duerme profundamente desde la primera
+              noche.
             </p>
-            <div class="lg:hidden mobile md:flex md:justify-center">{isMobile && <ProductIntro />}</div>
+            <div class="lg:hidden mobile md:flex md:justify-center">
+              {isMobile && <ProductIntro />}
+            </div>
             <div class="flex flex-col items-center lg:flex-row lg:flex-wrap items-flex-start gap-2 pt-2">
               <div class="stars_qty_sold flex self-start md:self-center items-center lg:hidden gap-2">
                 <div class="flex gap-1">
@@ -56,12 +58,17 @@ const Hero = () => {
                   + 1000 Vendidas
                 </span>
               </div>
-
-              <p class="text-lg text-start text-primary-foreground max-w-xl mx-auto">
-                Miles de personas como tú sintieron alivio inmediato en sus
-                ojos al usarlas... y sin esperarlo, también comenzaron a dormir
-                mejor.
-              </p>
+              {/* Testimonial Quote */}
+              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-4 lg:p-5">
+                <p className="text-sm md:text-base text-gray-100 italic leading-relaxed">
+                  "Noté la diferencia desde el primer día trabajando. Mis ojos
+                  ya no arden después de 8 horas frente al computador, y por
+                  primera vez en meses duermo más profundo."
+                </p>
+                <p className="text-xs md:text-sm text-gray-300 font-semibold mt-2">
+                  — Carlos C., Ingeniero de Software en Bogotá
+                </p>
+              </div>
             </div>
             <div class="flex flex-col sm:flex-row lg:flex-col gap-3 pt-1 md:justify-center">
               <div className="CTA-container flex flex-col justify-center mt-2 mb-8 xl:flex xl:justify-center">
