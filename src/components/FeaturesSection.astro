@@ -5,37 +5,63 @@ import measure2 from "../assets/img/product/measure2.avif";
 import iconGlasses from "../assets/img/icons/iconGlasses.webp";
 import peopleUsingGlasses from "../assets/img/peopleUsingGlasses-desktop.avif";
 ---
-
 <section id="features" class="py-6 md:pt-0 lg:py-5 xl:flex xl:justify-center">
   <div class="container px-4 md:px-6">
     <!-- divide here -->
-    <section class="w-full rounded-xl shadow-md backdrop-blur-lg bg-white/10 border-white/10 border p-2 lg:p-5 flex flex-col lg:flex-row items-center mt-10 mb-6">
-      <div class="textContainer flex flex-col p-2 lg:self-start lg:flex-2 xl:flex-1">
-        <h2 class="text-2xl md:text-3xl font-bold text-center mb-2">
-          Prueba Real de Efectividad 🔎
-        </h2>
-        <p class="text-[1rem] md:text-xl text-start max-w-2xl mb-6 lg:mt-8">
-          Mira cómo nuestras gafas bloquean eficazmente la luz azul. Usamos una tarjeta sensible a esta luz junto con un LED azul intenso. El área sin protección se tiñe de morado, mientras que el área protegida por nuestras lentes permanece intacta.
-        </p>
-        <p class="text-sm hidden md:text-lg lg:text-xl lg:text-wrap text-center font-semibold italic lg:mt-10 lg:block">
-          Te regalamos esta misma tarjeta de prueba para que lo compruebes tú mismo desde casa. 🧪🏱
-        </p>
-      </div>
+     <section class="w-full rounded-2xl shadow-2xl  bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border-white/20 group border-2 p-4 px-4 lg:p-8 flex flex-col lg:flex-row items-center gap-6 lg:gap-8 mt-10 mb-6 relative overflow-hidden">
+  <!-- Subtle background effect -->
+  <div class="absolute inset-0 bg-gradient-to-tr from-amber-400/5 to-transparent pointer-events-none"></div>
+  
+  <div class="textContainer flex flex-col p-2 lg:self-center lg:flex-1 relative z-10">
+    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center lg:text-left mb-4 leading-tight">
+      Ve la <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-300">Protección Real</span> en Acción
+    </h2>
+    
+    <p class="text-base md:text-lg lg:text-xl text-center lg:text-left max-w-2xl mb-6 leading-relaxed text-brand-body">
+      No confíes solo en nuestra palabra. Esta demostración muestra exactamente cómo nuestras lentes bloquean la luz azul dañina. 
+    </p>
+    
+    <!-- Key benefits list -->
+    <ul class="space-y-3 mb-3 max-w-xl">
+      <li class="flex items-start gap-3">
+        <span class="text-amber-300 text-xl mt-0.5">✓</span>
+        <span class="text-sm md:text-base text-gray-100"><strong>Protección visible:</strong> La tarjeta sensible cambia de color donde NO hay protección</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <span class="text-amber-300 text-xl mt-0.5">✓</span>
+        <span class="text-sm md:text-base text-gray-100"><strong>Área protegida intacta:</strong> Nuestras lentes bloquean completamente la luz azul</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <span class="text-amber-300 text-xl mt-0.5">✓</span>
+        <span class="text-sm md:text-base text-gray-100"><strong>Pruébalo tú mismo:</strong> Incluimos la tarjeta de prueba con el led de luz azul en cada pedido</span>
+      </li>
+    </ul>
+    
+    
+  </div>
 
-      <div class="videoContainer flex flex-col items-center justify-center lg:flex-1.5 xl:flex-1">
+  <div class="videoContainer flex flex-col items-center justify-center lg:flex-1.5 xl:flex-1">
         <video class="rounded-xl shadow-lg w-full opacity-80 max-w-2xl mb-2 md:w-[40%] lg:w-[100%] xl:w-[60%]" autoplay loop muted playsinline>
           <source src={testingVideo} type="video/mp4" />
           Tu navegador no soporta la reproducción de video.
         </video>
-        <p class="text-sm md:text-lg text-center font-medium italic lg:hidden">
-          Te regalamos esta misma tarjeta de prueba para comprobarlo tú mismo desde casa. 🧪
-        </p>
+        <!-- Gift callout box -->
+    <div class="bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border-2 border-yellow-400/40 rounded-xl p-4 md:p-5 shadow-lg mt-3">
+      <div class="flex items-center justify-center gap-3 mb-2">
+        <span class="text-3xl">🎁</span>
+        <h3 class="text-lg md:text-xl font-bold text-yellow-100 text-center">REGALO INCLUIDO</h3>
       </div>
-    </section>
+      <p class="text-sm md:text-base text-gray-100 leading-relaxed">
+        Recibe tu propia <strong>tarjeta de prueba profesional</strong> junto con el <strong>led de luz azul</strong> y verifica la protección tu mismo desde casa.
+      </p>
+    </div>
+      </div>
+  
+</section>
 
     <div class="grid gap-8 mt-12 md:mt-12 lg:grid-cols-4 xl:px-20 md:flex md:flex-col md:items-center">
       <h2 class="text-3xl md:text-3xl lg:text-4xl font-bold mb-3 mt-3 lg:mt-10 text-center">
-        Diseño que se adapta a cualquier rostro
+        Diseño Que Se Adapta a Cualquier Rostro
       </h2>
       <div class="imgFeaturesContainer flex flex-col lg:flex-row lg:gap-10 xl:gap-16 items-center justify-center md:w-[65%] lg:w-full lg:mt-0">
         <img src={measure1.src} alt="Medidas gafas frente" class="object-cover" loading="lazy" />
@@ -44,19 +70,19 @@ import peopleUsingGlasses from "../assets/img/peopleUsingGlasses-desktop.avif";
       <div class="rounded-lg border text-card-foreground border-none shadow-md backdrop-blur-lg bg-white/10 border-white/10 h-full lg:mt-10">
         <div class="p-5 flex flex-col md:flex-row items-center text-center gap-4">
           <div class="flex flex-col items-center gap-4 text-left md:flex-1">
-            <div class="h-12 lg:h-15 w-12 lg:w-15 rounded-full bg-amber-500/80 flex items-center justify-center">
+            <div class="h-12 lg:h-15 w-12 lg:w-15 rounded-full bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center">
               <img src={iconGlasses.src} alt="" loading="lazy" />
             </div>
-            <h3 class="font-bold text-2xl lg:text-2xl xl:text-3xl lg:mb-8">
+            <h3 class="font-bold text-2xl lg:text-2xl xl:text-3xl lg:mb-8 text-brand-headline">
               Estilo Unisex
             </h3>
-            <p class="lg:text-xl text-sidebar-primary-foreground">
-              Inspiradas en el estilo atemporal <strong>Ray-Ban</strong>, estas gafas se ven bien en todo tipo de cara.
+            <p class="lg:text-xl text-brand-body">
+              Inspiradas en el estilo atemporal <strong class="text-brand-headline">Ray-Ban</strong>, estas gafas se ven bien en todo tipo de cara.
             </p>
-            <p class="text-[1.1rem] lg:text-xl text-sidebar-primary-foreground">
-              Están fabricadas con <strong>TR90 suizo</strong>, un material premium reconocido por su <strong>ligereza, flexibilidad y resistencia</strong>.
+            <p class="text-[1.1rem] lg:text-xl text-brand-body">
+              Están fabricadas con <strong class="text-brand-headline">TR90 suizo</strong>, un material premium reconocido por su <strong class="text-brand-headline">ligereza, flexibilidad y resistencia</strong>.
             </p>
-            <p class="text-[1.1rem] lg:text-xl text-sidebar-primary-foreground">
+            <p class="text-[1.1rem] lg:text-xl text-brand-body">
               Se ajustan suavemente a tu rostro sin generar presión, incluso tras horas de uso.
             </p>
           </div>

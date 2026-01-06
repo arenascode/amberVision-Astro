@@ -100,7 +100,7 @@ export default function TestimonialCarousel() {
         {currentTestimonials.map((testimonial) => (
           <div
             key={testimonial.id}
-            className="border rounded-xl shadow-md backdrop-blur-lg bg-white/10 border-white/10"
+            className="border rounded-xl shadow-md  bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border-white/20 hover:border-amber-500/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-amber-500/20 group"
           >
             <div className="p-2 sm:p-5 flex flex-col justify-between">
               <div className="flex mb-4 xl:gap-1">
@@ -124,7 +124,7 @@ export default function TestimonialCarousel() {
                   </svg>
                 ))}
               </div>
-              <p className="text-sidebar-primary-foreground mb-6">
+              <p className="text-brand-body mb-6">
                 "{testimonial.content}"
               </p>
               <div className="flex items-center gap-3 rounded-full">
