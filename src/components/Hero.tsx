@@ -189,7 +189,7 @@ const Hero = () => {
               <div className="CTA-container flex flex-col justify-center mt-2 mb-1 xl:flex xl:justify-center">
                 <button
                   className="bg-gradient-to-r from-amber-500 to-red-500 hover:from-amber-500 hover:to-red-500  font-semibold py-3 sm:px-2 sm:py-3 lg:mt-8 xl:py-6 shadow-lg transform flex items-center justify-center gap-2 w-[85%] md:w-full
-            lg:w-[80%] xl:w-max xl:h-[4rem] mx-auto md:self-center text-brand-dark 
+            lg:w-[80%] xl:w-max xl:h-[4rem] mx-auto md:self-center text-brand-headline 
   bg-brand-accent rounded-full 
   transition-all duration-300 ease-in-out 
   hover:bg-brand-accent-dark hover:scale-105 

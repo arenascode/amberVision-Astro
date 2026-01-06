@@ -2,77 +2,170 @@
 import FadeIn from "./FadeIn";
 import TestimonialCarousel from "./testimonial-carousel";
 ---
-
 <section
-          id="testimonials"
-          class="py-8 pb-2 md:py-4 overflow-hidden xl:flex xl:justify-center min-h-[850px] md:h-[600px] md:min-h-[418px] lg:min-h-[650px] "
-        >
-          <div class="container px-4 md:px-6 overflow-hidden h-full md:h-full">
-            {/* Section Heading */}
-            <div class="flex flex-col items-center text-center gap-4 mb-12 lg:mt-10">
-              <FadeIn delay={100} client:load>
-                <h2 class="text-3xl lg:text-4xl font-bold tracking-tight">
-                  Lo Que Dicen Nuestros Clientes
-                </h2>
-              </FadeIn>
+  id="testimonials"
+  class="py-3 md:py-16 lg:py-20 overflow-hidden"
+>
+  <div class="container px-4 md:px-6 mx-auto max-w-7xl">
+    
+    {/* Section Heading */}
+    <div class="flex flex-col items-center text-center gap-6 mb-12 lg:mb-16">
+      <FadeIn delay={100} client:load>
+        {/* Badge */}
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/10 border border-green-500/30">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#05df72" class="icon icon-tabler icons-tabler-filled icon-tabler-circle-check"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z" /></svg>
+          <span class="text-xs lg:text-sm font-semibold text-green-400 uppercase tracking-wide">
+            Resultados Reales
+          </span>
+        </div>
 
-              <p class="text-sidebar-primary-foreground text-lg lg:text-xl max-w-[800px]">
-                Miles de personas han mejorado su sueño y reducido la fatiga
-                ocular con nuestras gafas.
-              </p>
-            </div>
+        {/* Headline */}
+        <h2 class="mt-4 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-tight">
+          Profesionales Como Tú Ya Recuperaron Su Bienestar
+        </h2>
 
-            {/* Testimonial Carousel */}
-            <TestimonialCarousel client:load />
+        {/* Subheadline */}
+        <p class="mt-4 text-lg md:text-xl text-gray-300 max-w-3xl leading-relaxed">
+          Desde programadores hasta diseñadores y estudiantes: todos reportan el mismo patrón. 
+          <span class="text-white font-semibold">Alivio en las primeras 24 horas, mejor sueño en 2-3 días.</span>
+        </p>
+      </FadeIn>
+    </div>
 
-            {/* Featured Testimonial */}
-            {/* <FadeIn delay={100}>
-              <div class="mt-16 rounded-xl p-2 flex flex-col md:flex-row gap-8 items-center shadow-md backdrop-blur-lg bg-white/10 border border-white/10 xl:mt-28">
-                
-                <div class="md:w-1/2 ">
-                  <div class="relative h-[300px] rounded-lg overflow-hidden">
-                    <img
-                      src="/placeholder.svg?height=600&width=600"
-                      alt="Video testimonial thumbnail"
-                      class="object-cover"
-                    />
-                    <div class="absolute inset-0 flex items-center justify-center">
-                      <div class="h-16 w-16 rounded-full bg-primary/90 flex items-center justify-center cursor-pointer hover:bg-primary transition-colors">
-                        <Play class="h-6 w-6 text-white" fill="white" />
-                      </div>
-                    </div>
-                  </div>
+    {/* Stats Bar - Quick Social Proof */}
+    <FadeIn delay={100} client:load>
+      <div class="grid grid-cols-3 gap-4 md:gap-8 mb-16 max-w-4xl mx-auto">
+        <div class="text-center">
+          <div class="text-3xl md:text-4xl lg:text-5xl font-bold text-amber-400 mb-2">
+            3,000+
+          </div>
+          <p class="text-sm md:text-base text-gray-400">
+            Unidades Vendidas
+          </p>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl md:text-4xl lg:text-5xl font-bold text-green-400 mb-2">
+            4.8★
+          </div>
+          <p class="text-sm md:text-base text-gray-400">
+            Calificación Promedio
+          </p>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-400 mb-2">
+            24-48h
+          </div>
+          <p class="text-sm md:text-base text-gray-400">
+            Tiempo de Resultados
+          </p>
+        </div>
+      </div>
+    </FadeIn>
+
+    {/* Testimonial Carousel */}
+    <TestimonialCarousel client:load />
+
+    {/* Bottom Social Proof Card - Moved Here */}
+    <FadeIn delay={100} client:load>
+      <div class="mt-10 text-center">
+        <div class="inline-flex flex-col items-center gap-4 px-6 md:px-8 py-6 bg-gradient-to-br from-green-500/10 to-emerald-500/5 border border-green-500/30 rounded-2xl shadow-xl">
+          <div class="flex flex-col sm:flex-row items-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#05df72" class="icon icon-tabler icons-tabler-filled icon-tabler-circle-check"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z" /></svg>
+            <span class="text-green-400 font-bold text-lg md:text-xl">
+              Más de 3,000 Clientes Satisfechos en Colombia
+            </span>
+          </div>
+          <p class="text-brand-body text-sm md:text-base max-w-2xl">
+            Únete a miles de profesionales que ya protegen su salud visual y duermen mejor cada noche
+          </p>
+        </div>
+      </div>
+    </FadeIn>
+
+    {/* CTA Section */}
+    <div class="CTA-container flex flex-col justify-center mt-8 mb-1 xl:flex xl:justify-center">
+     <button
+                  class="bg-gradient-to-r from-amber-500 to-red-500 hover:from-amber-500 hover:to-red-500  font-semibold py-3 sm:px-2 sm:py-3 lg:mt-8 xl:py-6 shadow-lg transform flex items-center justify-center gap-2 w-[85%] md:w-full
+            lg:w-[80%] xl:w-max xl:h-[4rem] mx-auto md:self-center text-brand-headline 
+  bg-brand-accent rounded-full 
+  transition-all duration-300 ease-in-out 
+  hover:bg-brand-accent-dark hover:scale-105 
+  hover:shadow-glow-accent active:scale-95"
+                >
+                  <a
+                    href="#pricing"
+                    class="flex items-center gap-3 text-[16px] lg:text-xl xl:p-2 flex-row w-full justify-center"
+                  >
+                    Ver Precios y Opciones
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                      <path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                      <path d="M17 17h-11v-14h-2" />
+                      <path d="M6 5l14 1l-1 7h-13" />
+                    </svg>
+                  </a>
+                </button>
+                {/* <small className="italic self-center text-brand-body lg:text-lg mt-0.5 xl:mt-1">
+                  <span>
+                    Devolución de tu dinero si no sientes ningún cambio
+                  </span>
+                </small> */}
+    </div>
+    <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs md:text-sm text-gray-300">
+                <div class="flex items-center gap-1.5">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#10b981"
+                    stroke-width="2"
+                  >
+                    <path d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Envío gratis</span>
                 </div>
 
-                
-                <div class="md:w-1/2">
-                  <div class="flex mb-4 gap-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star
-                        key={i}
-                        class="h-5 w-5 fill-[#FFD700] stroke-[#FFD700]"
-                      />
-                    ))}
-                  </div>
-                  <h3 class="text-xl font-bold mb-2 text-sidebar-primary-foreground">
-                    "Estas gafas cambiaron mi vida. ¡Duermo mejor que nunca!"
-                  </h3>
-                  <p class="text-sidebar-primary-foreground mb-4">
-                    Después de años de insomnio, dudaba que unas gafas pudieran
-                    ayudarme. Pero en solo una semana, comencé a dormir más
-                    rápido y despertar con más energía cada mañana.
-                  </p>
-                  <div class="flex items-center gap-3">
-                    <div class="h-10 w-10 rounded-full bg-muted-foreground/20"></div>
-                    <div>
-                      <p class="font-medium">Rodrigo Garcia</p>
-                      <p class="text-sm text-sidebar-primary-foreground">
-                        Desarrollador Web
-                      </p>
-                    </div>
-                  </div>
+                <span class="text-gray-600">•</span>
+
+                <div class="flex items-center gap-1.5">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#10b981"
+                    stroke-width="2"
+                  >
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span>30 días de garantía</span>
+                </div>
+
+                <span class="text-gray-600">•</span>
+
+                <div class="flex items-center gap-1.5">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#10b981"
+                    stroke-width="2"
+                  >
+                    <path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                  </svg>
+                  <span>Pago 100% seguro</span>
                 </div>
               </div>
-            </FadeIn> */}
-          </div>
-        </section>
+  </div>
+</section>
