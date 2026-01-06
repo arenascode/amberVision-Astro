@@ -18,3 +18,19 @@ html {
     transform: none !important;
   }
 }
+
+@import "tailwindcss";
+
+@theme {
+  /* Colores de marca */
+  --color-brand-midnight: #0a0c10;
+  --color-brand-dark: #020202;
+  --color-brand-headline: #f8fafc;
+  --color-brand-body: #cbd5e1;
+  --color-brand-muted: #94a3b8;
+  --color-brand-accent: #fbbf24;
+  --color-brand-accent-dark: #d97706;
+
+  /* Sombra personalizada */
+  --shadow-glow-accent: 0 0 20px -5px rgba(251, 191, 36, 0.5);
+}
