@@ -1,11 +1,11 @@
 ---
 import testingVideo from "../assets/video/testingVideo.mp4";
 import measure1 from "../assets/img/product/measureFrontV2.avif";
-import measure2 from "../assets/img/product/measure2.avif";
+import measure2 from "../assets/img/product/measureSide.avif";
 import iconGlasses from "../assets/img/icons/iconGlasses.webp";
 import peopleUsingGlasses from "../assets/img/peopleUsingGlasses-desktop.avif";
 ---
-<section id="features" class="py-6 md:pt-0 lg:py-5 xl:flex xl:justify-center">
+<section id="features" class="py-4 md:pt-0 lg:py-5 xl:flex xl:justify-center">
   <div class="container px-4 md:px-6">
     <!-- divide here -->
      <section class="w-full rounded-2xl shadow-2xl  bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border-white/20 group border-2 p-4 px-4 lg:p-8 flex flex-col lg:flex-row items-center gap-6 lg:gap-8 mt-10 mb-6 relative overflow-hidden">
@@ -59,23 +59,14 @@ import peopleUsingGlasses from "../assets/img/peopleUsingGlasses-desktop.avif";
   
 </section>
 
-    <div class="grid gap-8 mt-12 md:mt-12 lg:grid-cols-4 xl:px-20 md:flex md:flex-col md:items-center">
-      <!-- <h2 class="text-3xl md:text-3xl lg:text-4xl font-bold mb-3 mt-3 lg:mt-10 text-center">
-        Diseño Que Se Adapta a Cualquier Rostro
-      </h2> -->
-      <!-- <div class="imgFeaturesContainer flex flex-col lg:flex-row lg:gap-10 xl:gap-16 items-center justify-center md:w-[65%] lg:w-full lg:mt-0">
-        <img src={measure1.src} alt="Medidas gafas frente" class="object-cover" loading="lazy" />
-        <img src={measure2.src} alt="Medidas Gafas Lateral" loading="lazy" class="mt-5 object-cover" />
-      </div> -->
-      <section class="py-5 md:py-16 lg:py-20">
+  <div class="grid gap-8 mt-12 md:mt-12 lg:grid-cols-4 xl:px-20 md:flex md:flex-col md:items-center">
+  <section class="py-5 md:py-16 lg:py-20">
   <div class="container mx-auto md:px-6 max-w-7xl">
     
     {/* Section Header */}
     <div class="flex flex-col items-center text-center gap-6 mb-12 lg:mb-16">
-      <div class="inline-flex items-center gap-2 py-2 rounded-full bg-amber-500/10 border border-amber-500/30">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="#f59e0b">
-          <path d="M12 2l.117.007a1 1 0 0 1 .876.876L13 3v1l.117.007a1 1 0 0 1 .876.876L14 5v1h1l.117.007a1 1 0 0 1 .993.883L16 7v1h1a2 2 0 0 1 1.995 1.85L19 10v9a2 2 0 0 1-1.85 1.995L17 21H7a2 2 0 0 1-1.995-1.85L5 19v-9a2 2 0 0 1 1.85-1.995L7 8h1V7a1 1 0 0 1 .883-.993L9 6h1V5a1 1 0 0 1 .883-.993L11 4V3a1 1 0 0 1 .883-.993L12 2z"/>
-        </svg>
+      <div class="inline-flex items-center gap-1 py-1 px-3 rounded-full bg-amber-500/10 border border-amber-500/30">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-ruler"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 4h14a1 1 0 0 1 1 1v5a1 1 0 0 1 -1 1h-7a1 1 0 0 0 -1 1v7a1 1 0 0 1 -1 1h-5a1 1 0 0 1 -1 -1v-14a1 1 0 0 1 1 -1" /><path d="M4 8l2 0" /><path d="M4 12l3 0" /><path d="M4 16l2 0" /><path d="M8 4l0 2" /><path d="M12 4l0 3" /><path d="M16 4l0 2" /></svg>
         <span class="text-xs lg:text-sm font-semibold text-amber-400 uppercase tracking-wide">
           Especificaciones Técnicas
         </span>
@@ -119,12 +110,10 @@ import peopleUsingGlasses from "../assets/img/peopleUsingGlasses-desktop.avif";
           <div class="space-y-4 p-5 pt-6 border-t border-gray-300">
             <div class="flex items-start gap-3">
               <div class="flex-shrink-0 w-10 h-10 rounded-full bg-amber-500/10 flex items-center justify-center">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="#f59e0b">
-                  <path d="M3 12h18M3 6h18M3 18h18"/>
-                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-ruler-3"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M19.875 8c.621 0 1.125 .512 1.125 1.143v5.714c0 .631 -.504 1.143 -1.125 1.143h-15.875a1 1 0 0 1 -1 -1v-5.857c0 -.631 .504 -1.143 1.125 -1.143h15.75" /><path d="M9 8v2" /><path d="M6 8v3" /><path d="M12 8v3" /><path d="M18 8v3" /><path d="M15 8v2" /></svg>
               </div>
               <div>
-                <p class="font-semibold text-gray-900 mb-1">Ancho Total</p>
+                <p class="font-semibold text-gray-900 mb-1">Ancho Total - <span class="text-gray-700 text-sm">14.5 cm</span > </p>
                 <p class="text-gray-600 text-sm">Diseño universal que se adapta a la mayoría de rostros</p>
               </div>
             </div>
@@ -137,7 +126,7 @@ import peopleUsingGlasses from "../assets/img/peopleUsingGlasses-desktop.avif";
                 </svg>
               </div>
               <div>
-                <p class="font-semibold text-gray-900 mb-1">Lentes Amplias</p>
+                <p class="font-semibold text-gray-900 mb-1">Lentes Amplias - <span class="text-gray-700 text-sm">5.3 cm</span> </p>
                 <p class="text-gray-600 text-sm">Máxima cobertura y protección para tus ojos</p>
               </div>
             </div>
@@ -148,7 +137,7 @@ import peopleUsingGlasses from "../assets/img/peopleUsingGlasses-desktop.avif";
       {/* Card 2: Side View */}
       <div class="relative group">
         {/* Card Container with White Background */}
-        <div class="bg-gradient-to-br from-white to-gray-100 rounded-2xl p-8 shadow-2xl border border-gray-200 hover:shadow-amber-500/20 transition-all duration-300 hover:scale-[1.02]">
+        <div class="bg-gradient-to-br from-white to-gray-100  rounded-2xl shadow-2xl border border-gray-200 hover:shadow-amber-500/20 transition-all duration-300 hover:scale-[1.02]">
           
           {/* Label Badge */}
           <div class="absolute -top-3 left-6 z-10">
@@ -158,7 +147,7 @@ import peopleUsingGlasses from "../assets/img/peopleUsingGlasses-desktop.avif";
           </div>
 
           {/* Image Container */}
-          <div class="relative aspect-[4/3] mb-6 flex items-center justify-center p-4">
+          <div class="relative aspect-[4/2.5] flex items-center justify-center">
             <img 
               src={measure2.src} 
               alt="Medidas gafas Amber Vision - Vista lateral"
@@ -168,27 +157,26 @@ import peopleUsingGlasses from "../assets/img/peopleUsingGlasses-desktop.avif";
           </div>
 
           {/* Specifications List */}
-          <div class="space-y-4 pt-6 border-t border-gray-300">
+          <div class="space-y-4 p-5 pt-6 border-t border-gray-300">
             <div class="flex items-start gap-3">
               <div class="flex-shrink-0 w-10 h-10 rounded-full bg-amber-500/10 flex items-center justify-center">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="#f59e0b">
                   <path d="M12 2v20M17 7l-5-5-5 5M17 17l-5 5-5-5"/>
                 </svg>
+                
               </div>
               <div>
-                <p class="font-semibold text-gray-900 mb-1">Varillas Ajustables</p>
+                <p class="font-semibold text-gray-900 mb-1">Patillas Ajustables - <span class="text-gray-700 text-sm">14.8 cm</span></p>
                 <p class="text-gray-600 text-sm">Se adaptan cómodamente sin presionar detrás de las orejas</p>
               </div>
             </div>
             
             <div class="flex items-start gap-3">
               <div class="flex-shrink-0 w-10 h-10 rounded-full bg-amber-500/10 flex items-center justify-center">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="#f59e0b">
-                  <path d="M12 3a9 9 0 0 0-9 9v7a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7a9 9 0 0 0-9-9z"/>
-                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-weight"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M6.835 9h10.33a1 1 0 0 1 .984 .821l1.637 9a1 1 0 0 1 -.984 1.179h-13.604a1 1 0 0 1 -.984 -1.179l1.637 -9a1 1 0 0 1 .984 -.821" /></svg>
               </div>
               <div>
-                <p class="font-semibold text-gray-900 mb-1">Peso Ligero</p>
+                <p class="font-semibold text-gray-900 mb-1">Peso Ultra Ligero - <span class="text-gray-700 text-sm">26 gr</span ></p>
                 <p class="text-gray-600 text-sm">Úsalas durante horas sin sentir presión ni molestias</p>
               </div>
             </div>
@@ -196,69 +184,131 @@ import peopleUsingGlasses from "../assets/img/peopleUsingGlasses-desktop.avif";
         </div>
       </div>
     </div>
-
-    {/* Key Features Grid Below */}
-    <!-- <div class="grid gap-6 md:grid-cols-3 mt-12 lg:mt-16">
-      <div class="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border border-white/20 rounded-xl p-6 text-center hover:border-amber-500/50 transition-all">
-        <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
-            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-          </svg>
-        </div>
-        <h3 class="font-bold text-white text-lg mb-2">Material Duradero</h3>
-        <p class="text-gray-300 text-sm">Montura resistente diseñada para uso diario prolongado</p>
+  </div>
+  </section>
+    <section class="pt-5 md:py-10">
+  <div class="container mx-auto md:px-6 max-w-7xl">
+    
+    {/* Section Header */}
+    <div class="text-center mb-12 lg:mb-16">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/10 border border-green-500/30 mb-6">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#05df72" class="icon icon-tabler icons-tabler-filled icon-tabler-circle-check"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"></path></svg>
+        <span class="text-xs lg:text-sm font-semibold text-green-400 uppercase tracking-wide">
+          Comodidad Garantizada
+        </span>
       </div>
 
-      <div class="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border border-white/20 rounded-xl p-6 text-center hover:border-amber-500/50 transition-all">
-        <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
-            <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/>
-          </svg>
-        </div>
-        <h3 class="font-bold text-white text-lg mb-2">Diseño Unisex</h3>
-        <p class="text-gray-300 text-sm">Estilo moderno y profesional para hombres y mujeres</p>
-      </div>
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
+        Tan Cómodas Que Olvidarás Que Las Llevas Puestas
+      </h2>
+      
+      <p class="text-lg md:text-xl text-brand-body max-w-3xl mx-auto">
+        Diseñadas para quienes pasan horas frente a pantallas. <span class="text-brand-headline font-semibold">Sin presión, sin marcas, sin molestias.</span>
+      </p>
+    </div>
 
-      <div class="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border border-white/20 rounded-xl p-6 text-center hover:border-amber-500/50 transition-all">
-        <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
-            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-          </svg>
+    {/* Main Content Card */}
+    <div class="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border border-white/20 rounded-2xl overflow-hidden shadow-2xl hover:border-amber-500/30 transition-all">
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-0">
+        
+        {/* Text Content */}
+        <div class="p-2 lg:p-12 flex flex-col justify-center order-2 lg:order-1">
+          
+          {/* Feature List */}
+          <div class="space-y-6 mb-8">
+            
+            {/* Feature 1 */}
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center shadow-lg">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                  <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/>
+                  <circle cx="12" cy="12" r="3"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-2">
+                  Diseño Clásico y Atemporal
+                </h3>
+                <p class="text-gray-300 leading-relaxed">
+                  Inspiradas en los marcos más icónicos de la historia, con líneas limpias que se ven profesionales en cualquier contexto: oficina, universidad o casa.
+                </p>
+              </div>
+            </div>
+
+            {/* Feature 2 */}
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center shadow-lg">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                  <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-2">
+                  Material TR90 de Grado Premium
+                </h3>
+                <p class="text-gray-300 leading-relaxed">
+                  Fabricadas con <strong class="text-white">TR90</strong>, el mismo material usado en gafas deportivas de alta gama. Ultra ligeras, flexibles y prácticamente irrompibles.
+                </p>
+              </div>
+            </div>
+
+            {/* Feature 3 */}
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center shadow-lg">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-2">
+                  Se Ajustan a Tu Rostro, No Al Revés
+                </h3>
+                <p class="text-gray-300 leading-relaxed">
+                  Las varillas flexibles se adaptan suavemente a diferentes tamaños de cabeza sin generar presión detrás de las orejas, incluso después de 8+ horas de uso continuo.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          {/* Trust Badge */}
+          <div class="bg-green-500/10 border border-green-500/30 rounded-xl p-4 flex items-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#05df72" class="icon icon-tabler icons-tabler-filled icon-tabler-circle-check"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"></path></svg>
+            <p class="text-green-400 font-semibold text-sm md:text-base">
+              Usadas por +3,000 profesionales que valoran comodidad y estilo
+            </p>
+          </div>
+
         </div>
-        <h3 class="font-bold text-white text-lg mb-2">Fácil Limpieza</h3>
-        <p class="text-gray-300 text-sm">Lentes anti-rayas que se limpian con un paño suave</p>
+
+        {/* Image Column */}
+        <div class="relative h-[400px] lg:h-full order-1 lg:order-2">
+          <img 
+            src={peopleUsingGlasses.src} 
+            alt="Profesionales usando gafas Amber Vision en diferentes contextos"
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+          {/* Overlay Badge */}
+          <div class="absolute bottom-[40%] left-[17%] bg-black/20 backdrop-blur-sm rounded-xl p-4 px-2 border border-white/20 w-max">
+            <div class="flex items-center gap-3">
+              <div class="flex-1 flex flex-col items-center">
+                <p class="text-brand-headline font-semibold text-sm text-center w-[80%]">
+                  Estilo Universal
+                </p>
+                <p class="text-brand-body text-xs text-center">
+                  Para hombres y mujeres de todas las edades
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
-    </div> -->
+    </div>
 
   </div>
 </section>
-<h2 class="text-3xl md:text-3xl lg:text-4xl font-bold mb-3 mt-3 lg:mt-10 text-center">
-        Diseño Que Se Adapta a Cualquier Rostro
-      </h2>
-      <div class="rounded-lg border text-card-foreground border-none shadow-md backdrop-blur-lg bg-white/10 border-white/10 h-full lg:mt-10">
-        <div class="p-5 flex flex-col md:flex-row items-center text-center gap-4">
-          <div class="flex flex-col items-center gap-4 text-left md:flex-1">
-            <div class="h-12 lg:h-15 w-12 lg:w-15 rounded-full bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center">
-              <img src={iconGlasses.src} alt="" loading="lazy" />
-            </div>
-            <h3 class="font-bold text-2xl lg:text-2xl xl:text-3xl lg:mb-8 text-brand-headline">
-              Estilo Unisex
-            </h3>
-            <p class="lg:text-xl text-brand-body">
-              Inspiradas en el estilo atemporal <strong class="text-brand-headline">Ray-Ban</strong>, estas gafas se ven bien en todo tipo de cara.
-            </p>
-            <p class="text-[1.1rem] lg:text-xl text-brand-body">
-              Están fabricadas con <strong class="text-brand-headline">TR90 suizo</strong>, un material premium reconocido por su <strong class="text-brand-headline">ligereza, flexibilidad y resistencia</strong>.
-            </p>
-            <p class="text-[1.1rem] lg:text-xl text-brand-body">
-              Se ajustan suavemente a tu rostro sin generar presión, incluso tras horas de uso.
-            </p>
-          </div>
-          <div class="cardImg rounded-xl overflow-hidden md:flex-1 lg:flex lg:justify-center">
-            <img src={peopleUsingGlasses.src} alt="Personas usando gafas amber vision" loading="lazy" class="rounded-xl" />
-          </div>
-        </div>
-      </div>
-    </div>
+  </div>
   </div>
 </section>

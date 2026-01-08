@@ -266,7 +266,7 @@ const SimpleCheckoutForm: FunctionComponent<CheckOutFormProps> = ({
                   </span>
                   <div className="font-medium text-center flex flex-col md:text-lg">
                     <span className="italic line-through text-end">
-                      $59.900
+                      $49.900
                     </span>
                     <span className="font-bold text-green-600">GRATIS</span>
                   </div>

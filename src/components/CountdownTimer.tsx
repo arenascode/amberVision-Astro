@@ -2,7 +2,7 @@ import { useState, useEffect } from "preact/hooks";
 
 export default function CountdownTimer() {
   const [timeLeft, setTimeLeft] = useState({
-    hours: 7,
+    hours: 5,
     minutes: 0,
     seconds: 0,
   });
@@ -31,8 +31,10 @@ export default function CountdownTimer() {
 
   return (
     <div className="flex flex-col items-center gap-2">
-      <div className="flex items-center gap-2 text-sidebar-primary-foreground">
-        <svg
+      <div className="flex flex-col items-center gap-2 text-sidebar-primary-foreground">
+        
+        <span className="text-lg lg:text-lg font-medium flex items-center gap-2">
+         <svg
           className="h-4 w-4"
           viewBox="0 0 24 24"
           fill="none"
@@ -43,27 +45,26 @@ export default function CountdownTimer() {
         >
           <circle cx="12" cy="12" r="10" />
           <polyline points="12 6 12 12 16 14" />
-        </svg>
-        <span className="text-lg lg:text-lg font-medium">
-          Oferta Limitada: 20% Off Termina En
+        </svg> Oferta Limitada: 
         </span>
+        <span>27% Off + 2 Guías Gratis Termina En</span>
       </div>
       <div className="flex gap-2 text-center xl:mt-4">
-        <div className="bg-black text-primary-foreground rounded-md px-3 py-2 min-w-[64px] xl:min-w-[84px] xl:h-auto">
+        <div className="bg-gradient-to-r from-amber-500 to-orange-600 text-primary-foreground rounded-md px-3 py-2 min-w-[64px] xl:min-w-[84px] xl:h-auto">
           <div className="text-2xl xl:text-3xl font-bold ">
             {formatTime(timeLeft.hours)}
           </div>
           <div className="text-xs uppercase">Horas</div>
         </div>
         <div className="text-xl font-bold pt-2">:</div>
-        <div className="bg-black text-primary-foreground rounded-md px-3 py-2 min-w-[64px] xl:min-w-[84px] xl:h-auto">
+        <div className="bg-gradient-to-r from-amber-500 to-orange-600 text-primary-foreground rounded-md px-3 py-2 min-w-[64px] xl:min-w-[84px] xl:h-auto">
           <div className="text-2xl xl:text-3xl font-bold">
             {formatTime(timeLeft.minutes)}
           </div>
           <div className="text-xs uppercase">Minutos</div>
         </div>
         <div className="text-xl font-bold pt-2">:</div>
-        <div className="bg-black text-primary-foreground rounded-md px-3 py-2 min-w-[64px] xl:min-w-[84px] xl:h-auto">
+        <div className="bg-gradient-to-r from-amber-500 to-orange-600 text-primary-foreground rounded-md px-3 py-2 min-w-[64px] xl:min-w-[84px] xl:h-auto">
           <div className="text-2xl xl:text-3xl font-bold">
             {formatTime(timeLeft.seconds)}
           </div>
