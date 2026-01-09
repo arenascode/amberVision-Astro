@@ -2,6 +2,136 @@
 import FadeIn from "./FadeIn";
 import founderImage from "/src/assets/img/imageFounder.avif";
 ---
+
+<section id="founderNote" class="py-12 md:py-16 lg:py-20">
+  <div class="container px-4 md:px-6 max-w-5xl mx-auto">
+    <FadeIn delay={100} client:load>
+      
+      {/* Section Badge */}
+      <div class="text-center mb-8">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/30 mb-4">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#3b82f6">
+            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2M12 3a4 4 0 100 8 4 4 0 000-8z"/>
+          </svg>
+          <span class="text-sm font-semibold text-blue-400 uppercase tracking-wide">
+            Historia Real
+          </span>
+        </div>
+      </div>
+
+      <div class="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border border-white/20 rounded-2xl overflow-hidden shadow-2xl">
+        <div class="p-8 md:p-10 lg:p-12">
+          
+          {/* Header with Image */}
+          <div class="flex flex-col md:flex-row items-center gap-6 mb-8 pb-8 border-b border-white/10">
+            {/* Founder Image */}
+            <div class="relative">
+              <div class="h-24 w-24 md:h-28 md:w-28 rounded-full overflow-hidden ring-4 ring-amber-500/30 shadow-xl">
+                <img
+                  src={founderImage.src}
+                  alt="Miguel Arenas, fundador de Amber Vision"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              {/* Verified Badge */}
+              <div class="absolute -bottom-2 -right-2 bg-blue-500 rounded-full p-1.5 shadow-lg">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+            </div>
+
+            {/* Name & Title */}
+            <div class="text-center md:text-left">
+              <h3 class="text-2xl lg:text-3xl font-bold text-white mb-1">
+                Miguel Arenas
+              </h3>
+              <p class="text-gray-300 text-base lg:text-lg">
+                Fundador de Amber Vision
+              </p>
+              <p class="text-sm text-gray-400 mt-1">
+                Ex ingeniero de software • 8 años usando pantallas 12h/día
+              </p>
+            </div>
+          </div>
+
+          {/* Headline */}
+          <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-8 leading-tight">
+            "Pasé de 3 Horas de Sueño y Migrañas Diarias a Dormir 7 Horas Sin Dolor"
+          </h2>
+
+          {/* Story Content */}
+          <div class="space-y-6 text-base md:text-lg text-gray-200 leading-relaxed">
+            
+            {/* Paragraph 1: The Problem */}
+            <p>
+              Durante años trabajé como ingeniero de software, pasando más de 12 horas diarias frente a pantallas. <strong class="text-white">Las migrañas eran mi rutina</strong>: cada tarde, ese dolor pulsante detrás de los ojos que no me dejaba concentrar. Por las noches, aunque estaba agotado, <strong class="text-white">mi cerebro simplemente no apagaba</strong>. Dormía 3-4 horas entrecortadas y despertaba peor que antes.
+            </p>
+
+            {/* Paragraph 2: The Discovery */}
+            <p>
+              Un día, investigando sobre fatiga visual, descubrí que <strong class="text-white">la luz azul de las pantallas confunde nuestro cerebro</strong>, haciéndole creer que es mediodía incluso a las 11 PM. Probé gafas "transparentes" con filtro de luz azul, pero apenas noté diferencia. Fue entonces cuando un optometrista me habló de las <strong class="text-white">lentes ámbar</strong>: bloquean hasta 99% de la luz azul, no solo el 20-30% de las transparentes.
+            </p>
+
+            {/* Paragraph 3: The Transformation */}
+            <p>
+              <strong class="text-white">La primera noche usando lentes ámbar</strong>, noté algo extraño: me sentí cansado a las 10 PM (algo que no me pasaba en años). <strong class="text-white">Dormí 6 horas seguidas esa noche</strong>. En una semana, las migrañas desaparecieron. En dos semanas, dormía 7 horas y despertaba sin ese ardor en los ojos. Era como si hubiera recuperado mi vida.
+            </p>
+
+            {/* Paragraph 4: The Mission (Less Sales-y) */}
+            <p>
+              No soy médico ni científico. Solo alguien que <strong class="text-white">sufrió lo mismo que tú estás sufriendo ahora</strong>. Por eso creé Amber Vision: para que no tengas que pasar años buscando una solución como lo hice yo. Si estás leyendo esto con los ojos cansados, con dolor de cabeza, o sabiendo que no dormirás bien esta noche, <strong class="text-white">te entiendo perfectamente</strong>. Y sé que estas gafas pueden ayudarte como me ayudaron a mí.
+            </p>
+          </div>
+
+          {/* Signature */}
+          <div class="mt-8 pt-6 border-t border-white/10">
+            <div class="flex items-center gap-4">
+              <div class="flex-1 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+              <div class="text-center">
+                <p class="text-2xl font-bold text-amber-400 mb-1" style="font-family: 'Brush Script MT', cursive;">
+                  Miguel Arenas
+                </p>
+                <p class="text-sm text-gray-400">
+                  Bogotá, Colombia • Enero 2026
+                </p>
+              </div>
+              <div class="flex-1 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+            </div>
+          </div>
+
+          {/* Optional: Before/After Stats */}
+          <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="bg-white/5 rounded-xl p-4 text-center border border-white/10">
+              <p class="text-red-400 text-2xl font-bold mb-1">3h</p>
+              <p class="text-xs text-gray-400">Sueño antes</p>
+            </div>
+            <div class="bg-white/5 rounded-xl p-4 text-center border border-white/10">
+              <p class="text-green-400 text-2xl font-bold mb-1">7h</p>
+              <p class="text-xs text-gray-400">Sueño ahora</p>
+            </div>
+            <div class="bg-white/5 rounded-xl p-4 text-center border border-white/10">
+              <p class="text-red-400 text-2xl font-bold mb-1">Diario</p>
+              <p class="text-xs text-gray-400">Migrañas antes</p>
+            </div>
+            <div class="bg-white/5 rounded-xl p-4 text-center border border-white/10">
+              <p class="text-green-400 text-2xl font-bold mb-1">0</p>
+              <p class="text-xs text-gray-400">Migrañas ahora</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </FadeIn>
+  </div>
+</section>
+
+<!-- ---
+import FadeIn from "./FadeIn";
+import founderImage from "/src/assets/img/imageFounder.avif";
+---
 <section
 id="founderNote"
 class="py-6 lg:py-14 xl:py-5 xl:flex xl:justify-center"
@@ -48,4 +178,4 @@ class="py-6 lg:py-14 xl:py-5 xl:flex xl:justify-center"
     </div>
   </FadeIn>
 </div>
-</section>
+</section> -->

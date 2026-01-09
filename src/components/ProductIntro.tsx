@@ -3,14 +3,14 @@
 import manUsingGlasses from "/src/assets/img/manUsingGlassesV2.avif";
 import amberLensesSideDesktop from "/src/assets/img/product/amberLensesSide.avif";
 import amberLensesSideMobile from "/src/assets/img/product/amberLensesSide.avif";
-import amberLensesBackDesktop from "/src/assets/img/product/amberLensesBackMobile.avif";
-import amberLensesBackMobile from "/src/assets/img/product/amberLensesBackMobile.avif";
+import womanUsingGlassesDesktop from "/src/assets/img/womanUsingAV.avif";
+import womanUsingGlassesMobile from "/src/assets/img/womanUsingAV.avif";
 import amberLensesSideTwoDesktop from "/src/assets/img/product/amberLensesSideTwoMobile.avif";
 import amberLensesSideTwoMobile from "/src/assets/img/product/amberLensesSideTwoMobile.avif";
 import amberLensesFrontDesktop from "/src/assets/img/product/amberLensesFrontMobile.avif";
 import amberLensesFrontMobile from "/src/assets/img/product/amberLensesFrontMobile.avif";
 import manUsingGlassesMini from "/src/assets/img/manUsingGlassesMiniV2.webp";
-import amberLensesBackMini from "/src/assets/img/product/amberLensesBackMini.avif";
+import womanUsingGlassesMini from "/src/assets/img/womanUsingAV-mini.avif";
 import amberLensesSideMini from "/src/assets/img/product/amberLensesSideMini.avif";
 import amberLensesSideTwoMini from "/src/assets/img/product/amberLensesSideTwoMini.avif";
 import amberLensesFrontMini from "/src/assets/img/product/amberLensesFrontMini.avif";
@@ -18,9 +18,8 @@ import type { JSX } from "preact/jsx-runtime";
 
 const ProductIntro = () => {
   const changeSlide = (slideId: string) => {
-
     const targetSlide = document.getElementById(slideId);
-    
+
     if (targetSlide) {
       targetSlide.scrollIntoView({ block: "nearest", inline: "center" });
     }
@@ -34,7 +33,6 @@ const ProductIntro = () => {
   };
 
   const handleMiniImgs = (e: JSX.TargetedMouseEvent<HTMLDivElement>) => {
-
     const target = e.target as HTMLElement;
     const parent = target.parentElement as HTMLElement | null; // Use parentElement (better than parentNode)
 
@@ -52,7 +50,10 @@ const ProductIntro = () => {
 
   return (
     <>
-      <div className="h-full w-full md:w-[70%] lg:w-full md:flex md:items-center lg:items-start" id="product">
+      <div
+        className="h-full w-full md:w-[70%] lg:w-full md:flex md:items-center lg:items-start"
+        id="product"
+      >
         <div
           className="flex flex-col xl:flex-row gap-4 mt-2 p-2 rounded-[20px] h-full 
   shadow-[4px_4px_4px_4px_rgba(0,0,0,0.35)] 
@@ -125,13 +126,13 @@ const ProductIntro = () => {
                   {/* <!-- Mobile --> */}
                   <source
                     media="(max-width: 480px)"
-                    srcSet={amberLensesFrontMobile.src}
+                    srcSet={womanUsingGlassesMobile.src}
                     rel="preload"
                   />
                   {/* <!-- Desktop --> */}
                   <source
                     media="(min-width: 1200px)"
-                    srcSet={amberLensesFrontDesktop.src}
+                    srcSet={womanUsingGlassesDesktop.src}
                     rel="preload"
                   />
                   <img
@@ -161,17 +162,17 @@ const ProductIntro = () => {
                   {/* <!-- Mobile --> */}
                   <source
                     media="(max-width: 480px)"
-                    srcSet={amberLensesBackMobile.src}
+                    srcSet={amberLensesFrontMobile.src}
                     rel="preload"
                   />
                   {/* <!-- Desktop --> */}
                   <source
                     media="(min-width: 1200px)"
-                    srcSet={amberLensesBackDesktop.src}
+                    srcSet={amberLensesFrontDesktop.src}
                     rel="preload"
                   />
                   <img
-                    src={amberLensesBackDesktop.src}
+                    src={amberLensesFrontDesktop.src}
                     className="w-full slide2"
                     alt="Amber lenses Side"
                     loading="lazy"
@@ -229,12 +230,12 @@ const ProductIntro = () => {
                 </div>
               </div>
             </div>
-            <div className="flex w-full gap-2 mt-6 xl:mt-8">
+            <div className="flex w-full gap-2 mt-2 xl:mt-8">
               {[
                 manUsingGlassesMini,
                 amberLensesSideMini,
+                womanUsingGlassesMini,
                 amberLensesFrontMini,
-                amberLensesBackMini,
                 amberLensesSideTwoMini,
               ].map((img, i) => (
                 <div
