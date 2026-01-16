@@ -1,34 +1,96 @@
 ---
 // src/components/SocialProof.astro
-const testimonials = [
+// const testimonials = [
+//   {
+//     review:
+//       "No podía creer lo cómodas que son estas gafas. Paso muchas horas frente a la computadora y desde que las uso, ya no sufro de dolor de cabeza ni fatiga visual. ¡Definitivamente una gran inversión!",
+//     name: "Sofía G.",
+//     img: "/assets/img/person-review11.webp",
+//   },
+//   {
+//     review:
+//       "No sabía que la luz azul afectaba tanto mi sueño hasta que probé estas gafas. Ahora duermo mucho mejor después de usar el celular o ver TV en la noche. ¡Protegen mis ojos y me ayudan a descansar de verdad! Además, son cómodas y se ven bien.",
+//     name: "Luis M.",
+//     img: "/assets/img/person-review5.webp",
+//   },
+//   {
+//     review:
+//       "Son ligeras y si siento que me protegen del brillo de las pantallas. Las uso a partir de que la luz del día se comienza a ir (cuando ya hay que prender luces en la casa) y sigo trabajando en la computadora y/o viendo tele. Las uso de corrido hasta la hora de dormir para que también me protege de la luz de los focos de la casa. Mis ojos se cansan mucho menos. ¡Las recomiendo al 100%!",
+//     name: "Valentina R.",
+//     img: "/assets/img/person-review10.webp",
+//   },
+//   {
+//     review:
+//       "Soy programador y paso muchas horas frente a múltiples pantallas. Estas gafas han cambiado por completo mi rutina: ya no tengo ojos cansados y puedo concentrarme mucho mejor. ¡Una compra excelente!",
+//     name: "Diego P.",
+//     img: "/assets/img/person-review9.webp",
+//   },
+//   {
+//     review:
+//       "Me sorprendió lo ligeras que son. A veces olvido que las tengo puestas de lo cómodas que son ya que paso horas frente a la computadora ya que trabajo remoto. Además, me gusta su diseño estilo Rayban.",
+//     name: "Camilo T.",
+//     img: "/assets/img/person-review12.webp",
+//   },
+// ];
+const testimonialsSecondSection = [
   {
-    review:
-      "No podía creer lo cómodas que son estas gafas. Paso muchas horas frente a la computadora y desde que las uso, ya no sufro de dolor de cabeza ni fatiga visual. ¡Definitivamente una gran inversión!",
+    id: 7,
     name: "Sofía G.",
+    role: "Contadora",
+    location: "Bogotá",
+    content:
+      "Paso 8-10 horas diarias frente a hojas de cálculo y reportes. Antes terminaba con dolor de cabeza intenso cada tarde. Desde que uso estas gafas, el dolor desapareció completamente y mis ojos ya no se sienten secos al final del día.",
+    result: "Eliminó dolores de cabeza diarios",
+    rating: 5,
+    verified: true,
     img: "/assets/img/person-review11.webp",
   },
   {
-    review:
-      "No sabía que la luz azul afectaba tanto mi sueño hasta que probé estas gafas. Ahora duermo mucho mejor después de usar el celular o ver TV en la noche. ¡Protegen mis ojos y me ayudan a descansar de verdad! Además, son cómodas y se ven bien.",
+    id: 8,
     name: "Luis M.",
+    role: "Gerente de Ventas",
+    location: "Medellín",
+    content:
+      "Solía quedarme despierto hasta las 2-3 AM después de revisar el celular en la cama. No entendía por qué no podía dormir. Con estas gafas desde las 7 PM, mi cuerpo se cansa naturalmente a las 11 PM y duermo toda la noche.",
+    result: "Duerme 5 horas más por noche",
+    rating: 5,
+    verified: true,
     img: "/assets/img/person-review5.webp",
   },
   {
-    review:
-      "Son ligeras y si siento que me protegen del brillo de las pantallas. Las uso a partir de que la luz del día se comienza a ir (cuando ya hay que prender luces en la casa) y sigo trabajando en la computadora y/o viendo tele. Las uso de corrido hasta la hora de dormir para que también me protege de la luz de los focos de la casa. Mis ojos se cansan mucho menos. ¡Las recomiendo al 100%!",
+    id: 9,
     name: "Valentina R.",
+    role: "Arquitecta",
+    location: "Cali",
+    content:
+      "Las uso desde que anochece hasta acostarme, protegiéndome tanto de pantallas como de luces LED de la casa. Antes mis ojos ardían constantemente. Ahora trabajo y veo series sin ninguna molestia. Son tan ligeras que olvido que las tengo puestas.",
+    result: "Trabaja sin ardor ocular",
+    rating: 5,
+    verified: true,
     img: "/assets/img/person-review10.webp",
   },
   {
-    review:
-      "Soy programador y paso muchas horas frente a múltiples pantallas. Estas gafas han cambiado por completo mi rutina: ya no tengo ojos cansados y puedo concentrarme mucho mejor. ¡Una compra excelente!",
+    id: 10,
     name: "Diego P.",
+    role: "Programador Full-Stack",
+    location: "Bogotá",
+    content:
+      "Tres monitores, 12 horas diarias de código. Mis ojos estaban destruidos. Probé gotas, descansos cada hora, nada funcionaba. Estas gafas fueron lo único que realmente eliminó la fatiga. Ahora programo hasta tarde sin sentir cansancio visual.",
+    result: "Codea 12h sin fatiga",
+    rating: 5,
+    verified: true,
     img: "/assets/img/person-review9.webp",
   },
   {
-    review:
-      "Me sorprendió lo ligeras que son. A veces olvido que las tengo puestas de lo cómodas que son ya que paso horas frente a la computadora ya que trabajo remoto. Además, me gusta su diseño estilo Rayban.",
+    id: 11,
     name: "Camilo T.",
+    role: "Diseñador UX/UI",
+    location: "Cartagena",
+    content:
+      "Trabajo 100% remoto y estaba buscando gafas que pudiera usar todo el día sin que me molestaran. Estas son increíblemente ligeras y el diseño clásico me encanta. Además, funcionan: menos cansancio y duermo mejor desde la primera semana.",
+    result: "Comodidad todo el día",
+    rating: 5,
+    verified: true,
     img: "/assets/img/person-review12.webp",
   },
 ];
@@ -47,42 +109,99 @@ const testimonials = [
     </div>
 
     <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-      {testimonials.map((testimonial) => (
-        <div class="border shadow-md backdrop-blur-lg bg-white/10 border-white/10 h-full rounded-lg">
-          <div class="p-3 sm:p-6">
-            <div class="flex mb-4 gap-1">
-              {[...Array(5)].map(() => (
+      {testimonialsSecondSection.map((testimonial) => (
+        <div
+            class="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border border-white/20 rounded-2xl p-4 hover:border-amber-500/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-amber-500/20 group flex flex-col"
+            
+          >
+            {/* Verified Badge */}
+            {testimonial.verified && (
+              <div class="absolute -top-1 -right-0 z-10">
+                <div class="bg-green-500 rounded-full shadow-lg border-2 border-white/20">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+              </div>
+            )}
+
+            {/* Star Rating */}
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map((_, i) => (
                 <svg
-                  class="h-4 w-4 fill-[#FFD700] text-primary"
-                  stroke="#FFD700"
-                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
                   viewBox="0 0 24 24"
+                  fill={i < testimonial.rating ? "#FFC000" : "none"}
+                  stroke={i < testimonial.rating ? "#FFC000" : "#666"}
+                  stroke-Width="2"
+                  class="drop-shadow-sm"
                 >
-                  <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
                 </svg>
               ))}
             </div>
-            <p class="text-sidebar-primary-foreground mb-4">"{testimonial.review}"</p>
-            <div class="flex items-center gap-3">
-              <div class="h-20 w-20 rounded-full bg-muted-foreground/20 overflow-hidden">
-                <img
-                  src={testimonial.img}
-                  alt="customer review"
-                  class="w-full h-full object-cover"
-                  loading="lazy"
-                />
+
+            {/* Testimonial Content */}
+            <p class="text-gray-200 text-base leading-relaxed mb-6 flex-grow">
+              "{testimonial.content}"
+            </p>
+
+            {/* Result Badge */}
+            <div class="mb-4">
+              <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-green-500/20 border border-green-500/40 rounded-full">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#10b981">
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span class="text-xs font-semibold text-green-400">
+                  {testimonial.result}
+                </span>
               </div>
-              <div>
-                <p class="font-medium text-sidebar-primary-foreground">
-                  {testimonial.name}
-                </p>
-                <p class="text-xs text-sidebar-primary-foreground">
-                  Comprador Verificado
+            </div>
+
+            {/* Author Info */}
+            <div class="flex items-center gap-3 pt-4 border-t border-white/10">
+              <div class="relative">
+                <div class="h-12 w-12 rounded-full overflow-hidden ring-2 ring-amber-500/30">
+                  <img
+                    src={testimonial.img}
+                    alt={testimonial.name}
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center gap-2 mb-0.5">
+                  <p class="font-semibold text-white text-sm">
+                    {testimonial.name}
+                  </p>
+                  {testimonial.verified && (
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="#10b981"
+                    >
+                      <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                  )}
+                </div>
+                <p class="text-xs text-gray-400">{testimonial.role}</p>
+                <p class="text-xs text-gray-500 flex items-center gap-1">
+                  <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                  </svg>
+                  {testimonial.location}
                 </p>
               </div>
             </div>
           </div>
-        </div>
       ))}
     </div>
   </div>

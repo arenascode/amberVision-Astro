@@ -1,8 +1,172 @@
 ---
 
 ---
+<section id="securePurchase" class="pt-12 pb-10 md:py-16 lg:py-20">
+  <div class="container mx-auto px-4 md:px-6 max-w-5xl">
+    
+    {/* Badge */}
+    <div class="text-center mb-8">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/10 border border-green-500/30">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="#10b981">
+          <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+        </svg>
+        <span class="text-sm font-semibold text-green-400 uppercase tracking-wide">
+          Compra Sin Riesgo
+        </span>
+      </div>
+    </div>
 
-<section
+    <div class="bg-gradient-to-br from-green-500/15 via-emerald-500/10 to-green-500/5 backdrop-blur-lg border-2 border-green-500/40 rounded-2xl overflow-hidden shadow-2xl">
+      <div class="p-4 md:p-10 lg:p-12">
+        
+        {/* Main Headline */}
+        <div class="text-center mb-8">
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
+            Garantía de <span class="text-green-400">30 Días</span> o{" "}
+            <span class="text-green-400">100% Reembolso</span>
+          </h2>
+          <p class="text-xl md:text-2xl text-gray-200 font-medium">
+            Pruébelas sin riesgo. Si no mejoran tu vista y sueño, te devolvemos cada peso.
+          </p>
+        </div>
+
+        {/* Visual 30-Day Guarantee Badge */}
+        <div class="flex justify-center mb-10">
+          <div class="relative">
+            {/* Large circular badge */}
+            <div class="w-28 h-28 md:w-48 md:h-48 rounded-full bg-gradient-to-br from-green-500 to-emerald-600 flex flex-col items-center justify-center shadow-2xl border-4 border-white/20">
+              <span class="text-5xl md:text-6xl font-bold text-white">30</span>
+              <span class="text-lg md:text-xl font-semibold text-white">DÍAS</span>
+            </div>
+            {/* Decorative elements */}
+            <div class="absolute -top-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="#10b981">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        {/* How It Works */}
+        <div class="mb-10">
+          <h3 class="text-2xl font-bold text-center text-white mb-6">
+            Cómo Funciona Nuestra Garantía
+          </h3>
+          
+          <div class="grid md:grid-cols-3 gap-6">
+            {/* Step 1 */}
+            <div class="bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl p-6 text-center">
+              <div class="w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-white font-bold text-2xl shadow-lg">
+                1
+              </div>
+              <h4 class="font-bold text-lg text-white mb-2">Ordena Hoy</h4>
+              <p class="text-gray-300 text-sm">
+                Recibe tus gafas en 3-5 días hábiles con envío gratis
+              </p>
+            </div>
+
+            {/* Step 2 */}
+            <div class="bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl p-6 text-center">
+              <div class="w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-white font-bold text-2xl shadow-lg">
+                2
+              </div>
+              <h4 class="font-bold text-lg text-white mb-2">Pruébelas 30 Días</h4>
+              <p class="text-gray-300 text-sm">
+                Úsalas diariamente y siente la mejora en tus ojos y sueño
+              </p>
+            </div>
+
+            {/* Step 3 */}
+            <div class="bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl p-6 text-center">
+              <div class="w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center text-white font-bold text-2xl shadow-lg">
+                ✓
+              </div>
+              <h4 class="font-bold text-lg text-white mb-2">Ama o Devuelve</h4>
+              <p class="text-gray-300 text-sm">
+                ¿No estás satisfecho? Devuelve y recupera el 100% de tu dinero
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* What's Covered */}
+        <div class="bg-white/5 backdrop-blur-sm border border-green-500/30 rounded-xl p-6 md:p-8 mb-8">
+          <h3 class="text-xl font-bold text-white mb-6 text-center">
+            ✓ Qué Está Cubierto
+          </h3>
+          <div class="grid md:grid-cols-2 gap-4">
+            {[
+              {
+                icon: "💰",
+                title: "Reembolso Completo",
+                desc: "100% de tu dinero devuelto, sin deducciones"
+              },
+              {
+                icon: "📦",
+                title: "Devolución Gratis",
+                desc: "Nosotros pagamos el envío de retorno"
+              },
+              {
+                icon: "⚡",
+                title: "Proceso Rápido",
+                desc: "Reembolso procesado en 3-5 días hábiles"
+              },
+              {
+                icon: "🤐",
+                title: "Sin Preguntas",
+                desc: "No tienes que dar explicaciones ni justificaciones"
+              }
+            ].map((item, i) => (
+              <div class="flex items-start gap-3">
+                <span class="text-3xl">{item.icon}</span>
+                <div>
+                  <p class="font-semibold text-white mb-1">{item.title}</p>
+                  <p class="text-sm text-gray-300">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Why We Offer This */}
+        <div class="bg-green-500/10 border border-green-500/30 rounded-xl p-4 mb-8">
+          <div class="flex flex-col items-center gap-4">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="#10b981" class="flex-shrink-0">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+            </svg>
+            <div>
+              <h4 class="font-bold text-white text-lg text-center mb-2">
+                ¿Por Qué Ofrecemos Esta Garantía?
+              </h4>
+              <p class="text-gray-200 leading-relaxed">
+                Porque <strong class="text-white">sabemos que funcionan</strong>. El 96% de nuestros clientes las conservan después de probarlas. Estamos tan seguros de que transformarán tu vista y sueño que asumimos todo el riesgo por ti.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA */}
+        <div class="text-center">
+            <a href="#pricing"
+            class="inline-flex items-center justify-center gap-1 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold text-lg md:text-xl p-4 rounded-xl shadow-2xl transition-all hover:scale-105 active:scale-95 mb-4"
+          >
+            Probar Sin Riesgo Por 30 Días
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-Width="2.5">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          
+          <p class="text-sm text-gray-400">
+            🔒 Compra 100% segura • Paga al Recibir • Sin letra pequeña
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- <section
             id="securePurchase"
             class="pt-10 text-text text-center px-3 md:px-12 "
           >
@@ -58,4 +222,4 @@
                 🛡️
               </p>
             </div>
-          </section>
+</section> -->

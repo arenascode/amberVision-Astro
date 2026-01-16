@@ -3,7 +3,7 @@ import CountdownTimer from "./CountdownTimer";
 import FadeIn from "./FadeIn";
 import amberLensesSingle from "/src/assets/img/product/singlePair.webp";
 import amberLensesPairPromo from "/src/assets/img/product/pairLenses.webp";
-import manCoding from "/src/assets/img/manCodingAVLogo.webp";
+import manCoding from "/src/assets/img/manCodingUsingAV.webp";
 import coupleWatchingMovies from "/src/assets/img/coupleWatchingTVAVLogo.webp";
 import type { Product } from "../types/Product";
 import { isCheckoutModalOpen, selectedProduct } from "../state";
