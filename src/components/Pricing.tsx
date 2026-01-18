@@ -183,7 +183,7 @@ const Pricing = () => {
                     { text: "1 Par de Gafas Amber Vision", bold: true },
                     { text: "Estuche rígido + funda protectora" },
                     { text: "Paño de limpieza de microfibra" },
-                    { text: "Tester de luz azul incluido" },
+                    { text: "Tester de luz azul incluido (Regalo)" },
                     { text: "2 Guías digitales (valor $109.800)" },
                     { text: "Garantía de 6 meses" },
                   ].map((item, index) => (
@@ -372,7 +372,7 @@ const Pricing = () => {
                     { text: "2 Pares de Gafas Amber Vision", bold: true },
                     { text: "2 Estuches rígidos + 2 fundas protectoras" },
                     { text: "2 Paños de limpieza de microfibra" },
-                    { text: "2 Testers de luz azul" },
+                    { text: "2 Testers de luz azul (Regalo)" },
                     { text: "2 Guías digitales (valor $109.800)" },
                     { text: "Garantía de 6 meses en ambos pares" },
                     { text: "Envío prioritario gratis" },

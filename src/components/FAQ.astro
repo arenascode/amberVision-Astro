@@ -1,9 +1,6 @@
 ---
 import FadeIn from "./FadeIn";
-
-// src/components/FAQ.astro
 ---
-
 <style>
   details > summary {
     list-style: none;
@@ -11,125 +8,462 @@ import FadeIn from "./FadeIn";
   details > summary::-webkit-details-marker {
     display: none;
   }
-  details[open] summary .plus-icon {
-    transform: rotate(45deg);
+  details[open] summary .chevron-icon {
+    transform: rotate(180deg);
   }
 </style>
 
-<div id="faq" class="max-w-[800px] xl:max-w-[1000px] mx-auto shadow-md  p-4">
-  {/* Section Title */}
-  <div class="flex flex-col items-center text-center gap-4 mb-8">
-    <FadeIn delay={100} client:visible>
-      <h2 class="text-3xl font-bold tracking-tight">
-        Preguntas Frecuentes
-      </h2>
-    </FadeIn>
+<section id="faq" class="py-6 md:py-16 lg:py-20">
+  <div class="container mx-auto px-4 md:px-6 max-w-5xl">
+    {/* Header */}
+    <div class="text-center mb-8">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/30 mb-4">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="#a855f7">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+        </svg>
+        <span class="text-sm font-semibold text-purple-400 uppercase tracking-wide">
+          Resuelve Tus Dudas
+        </span>
+      </div>
 
-    <p class="text-sidebar-primary-foreground md:text-lg lg:text-xl max-w-[800px]">
-      Todo lo que necesitas saber sobre nuestras gafas bloqueadoras
-      de luz azul
-    </p>
+      <FadeIn delay={100} client:visible>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          Preguntas Frecuentes
+        </h2>
+      </FadeIn>
+      
+      <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
+        Todo lo que necesitas saber antes de ordenar. Si tienes otra duda, <a href="https://wa.me/573001234567" class="text-amber-400 underline hover:text-amber-300">escríbenos</a>.
+      </p>
+    </div>
+
+    {/* FAQ Accordion */}
+    <div class="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border border-white/20 rounded-2xl p-3 md:p-8 lg:p-10 shadow-2xl">
+      <div class="space-y-4">
+        
+        {/* Question 1: Shipping */}
+        <details class="bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl overflow-hidden hover:border-white/30 transition-all">
+          <summary class="flex items-start justify-between gap-4 p-5 cursor-pointer group">
+            <div class="flex items-start gap-3 flex-1">
+              <span class="text-base md:text-lg font-semibold text-white group-hover:text-amber-400 transition-colors">
+                ¿Cuánto tiempo tarda el envío y cuánto cuesta?
+              </span>
+            </div>
+            <svg class="chevron-icon w-6 h-6 text-amber-400 flex-shrink-0 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="px-5 pb-5">
+            <div class="pt-3 border-t border-white/10 space-y-3">
+              <p class="text-gray-200">
+                <strong class="text-white">Envío gratis a toda Colombia</strong>. Tu pedido llega en:
+              </p>
+              <ul class="space-y-2">
+                <li class="flex items-start gap-2">
+                  <span class="text-green-400 mt-1">✓</span>
+                  <span class="text-gray-200"><strong class="text-white">Bogotá, Medellín, Cali:</strong> 2-3 días hábiles</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-green-400 mt-1">✓</span>
+                  <span class="text-gray-200"><strong class="text-white">Otras ciudades principales:</strong> 3-5 días hábiles</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-green-400 mt-1">✓</span>
+                  <span class="text-gray-200"><strong class="text-white">Zonas rurales:</strong> 7 días hábiles aprox</span>
+                </li>
+              </ul>
+              <p class="text-sm text-gray-400 italic">
+                Recibirás el código de seguimiento por wtsp para rastrear tu pedido en tiempo real.
+              </p>
+            </div>
+          </div>
+        </details>
+
+        {/* Question 2: Payment */}
+        <details class="bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl overflow-hidden hover:border-white/30 transition-all">
+          <summary class="flex items-start justify-between gap-4 p-5 cursor-pointer group">
+            <div class="flex items-start gap-3 flex-1">
+              <span class="text-base md:text-lg font-semibold text-white group-hover:text-amber-400 transition-colors">
+                ¿Qué métodos de pago aceptan?
+              </span>
+            </div>
+            <svg class="chevron-icon w-6 h-6 text-amber-400 flex-shrink-0 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="px-5 pb-5">
+            <div class="pt-3 border-t border-white/10 space-y-3">
+              <p class="text-gray-200">
+                Aceptamos todas las siguientes formas de pago para tu comodidad:
+              </p>
+              <div class="grid grid-cols-2 gap-3">
+                <div class="flex items-center gap-2 bg-white/5 p-3 rounded-lg">
+                  <span class="text-2xl">🏦</span>
+                  <span class="text-white font-semibold text-sm">Transferencia</span>
+                </div>
+                <div class="flex items-center gap-2 bg-white/5 p-3 rounded-lg">
+                  <span class="text-2xl">📱</span>
+                  <span class="text-white font-semibold text-sm">Nequi</span>
+                </div>
+                <div class="flex items-center gap-2 bg-white/5 p-3 rounded-lg">
+                  <span class="text-2xl">🚚</span>
+                  <span class="text-white font-semibold text-sm">Pago Contraentrega </span>
+                </div>
+                <div class="flex items-center gap-2 bg-white/5 p-3 rounded-lg">
+                  <span class="text-2xl">🔐</span>
+                  <span class="text-white font-semibold text-sm">Llave Bancolombia </span>
+                </div>
+              </div>
+              <p class="text-sm text-green-400 flex items-center text-center gap-2 self-center justify-center">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+                Compra 100% segura
+              </p>
+            </div>
+          </div>
+        </details>
+
+        {/* Question 3: Amber vs Clear */}
+        <details class="bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl overflow-hidden hover:border-white/30 transition-all">
+          <summary class="flex items-start justify-between gap-4 p-5 cursor-pointer group">
+            <div class="flex items-start gap-3 flex-1">
+              <span class="text-base md:text-lg font-semibold text-white group-hover:text-amber-400 transition-colors">
+                ¿Cuál es la diferencia entre estas gafas y las 'transparentes' de luz azul?
+              </span>
+            </div>
+            <svg class="chevron-icon w-6 h-6 text-amber-400 flex-shrink-0 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="px-5 pb-5">
+            <div class="pt-3 border-t border-white/10 space-y-4">
+              <p class="text-gray-200">
+                La diferencia es <strong class="text-white">enorme</strong> y explica por qué nuestras gafas funcionan mejor:
+              </p>
+              <div class="grid md:grid-cols-2 gap-4">
+                <div class="bg-red-500/10 border border-red-500/30 rounded-lg p-4">
+                  <p class="text-red-400 font-bold mb-2">❌ Gafas Transparentes</p>
+                  <ul class="space-y-2 text-sm text-gray-300">
+                    <li>• Bloquean solo 20-30% de luz azul</li>
+                    <li>• No filtran el rango más dañino</li>
+                    <li>• Efecto mínimo en melatonina</li>
+                    <li>• Resultados poco notorios</li>
+                  </ul>
+                </div>
+                <div class="bg-green-500/10 border border-green-500/30 rounded-lg p-4">
+                  <p class="text-green-400 font-bold mb-2">✓ Nuestras Gafas Ámbar</p>
+                  <ul class="space-y-2 text-sm text-gray-200">
+                    <li>• Bloquean hasta 99% de luz azul</li>
+                    <li>• Filtran TODO el rango dañino</li>
+                    <li>• Restauran producción de melatonina</li>
+                    <li>• Resultados desde la 1era noche</li>
+                  </ul>
+                </div>
+              </div>
+              <p class="text-sm text-gray-300">
+                <strong class="text-white">Sí, verás un tinte cálido</strong>, pero es precisamente ese filtrado profundo lo que protege tus ojos y te ayuda a dormir.
+              </p>
+            </div>
+          </div>
+        </details>
+
+        {/* Question 4: Unisex fit */}
+        <details class="bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl overflow-hidden hover:border-white/30 transition-all">
+          <summary class="flex items-start justify-between gap-4 p-5 cursor-pointer group">
+            <div class="flex items-start gap-3 flex-1">
+              <span class="text-base md:text-lg font-semibold text-white group-hover:text-amber-400 transition-colors">
+                ¿Son para hombres o mujeres? ¿Me quedarán bien?
+              </span>
+            </div>
+            <svg class="chevron-icon w-6 h-6 text-amber-400 flex-shrink-0 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="px-5 pb-5">
+            <div class="pt-3 border-t border-white/10 space-y-3">
+              <p class="text-gray-200">
+                <strong class="text-white">Diseño unisex</strong> con estilo clásico que se ve profesional en todos. Las monturas tienen:
+              </p>
+              <ul class="space-y-2 ml-4">
+                <li class="flex items-start gap-2">
+                  <span class="text-green-400 mt-1">✓</span>
+                  <span class="text-gray-200"><strong class="text-white">Ancho universal:</strong> Se adaptan a la mayoría de rostros</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-green-400 mt-1">✓</span>
+                  <span class="text-gray-200"><strong class="text-white">Varillas flexibles:</strong> Se ajustan sin presionar</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-green-400 mt-1">✓</span>
+                  <span class="text-gray-200"><strong class="text-white">Material TR90:</strong> Ligeras y cómodas</span>
+                </li>
+              </ul>
+              <div class="bg-blue-500/10 border border-blue-500/30 rounded-lg p-3 mt-3">
+                <p class="text-blue-300 text-sm flex items-center gap-2">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                  </svg>
+                  <span><strong>Recuerda:</strong> Tienes 30 días para probarlas. Si no te quedan bien, devolución gratis.</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        {/* Question 5: When to use */}
+        <details class="bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl overflow-hidden hover:border-white/30 transition-all">
+          <summary class="flex items-start justify-between gap-4 p-5 cursor-pointer group">
+  <div class="flex items-start gap-3 flex-1">
+    <span class="text-base md:text-lg font-semibold text-white group-hover:text-amber-400 transition-colors">
+      ¿Cuándo debo usarlas y cuándo NO?
+    </span>
   </div>
-  <div class="faqContainer max-w-[800px] xl:max-w-[1000px] mx-auto shadow-md backdrop-blur-lg bg-white/10 border border-white/10 p-4 rounded-xl">
-    <div class="w-full lg:text-xl xl:text-2xl">
-    <!-- Pregunta 1 -->
-    <details class="border-b border-gray-300 py-2">
-      <summary class="flex justify-between items-center cursor-pointer py-2 text-left underline font-semibold text-lg">
-        ¿Puedo usarlas para conducir?
-        <span class="plus-icon transition-transform duration-300 text-xl">+</span>
-      </summary>
-      <div class="pt-2 lg:text-lg flex flex-col gap-3">
-        <p>
-          Estas gafas no restan visibilidad y pueden brindar mayor comodidad al conducir, especialmente frente al brillo intenso de las luces de los vehículos en sentido contrario. Las hemos probado personalmente y hemos podido manejar con ellas durante la noche. Sin embargo, <span class="font-extrabold">dejamos a tu criterio</span> su uso para la conducción nocturna, ya que nuestra preferencia es no recomendarlas específicamente para este propósito.
+  <svg class="chevron-icon w-6 h-6 text-amber-400 flex-shrink-0 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+  </svg>
+</summary>
+<div class="px-5 pb-5">
+  <div class="pt-3 border-t border-white/10 space-y-4">
+    
+    <!-- Sleep Section -->
+    <div class="bg-gradient-to-r from-purple-500/15 to-indigo-500/10 border-2 border-purple-400/40 rounded-lg p-4">
+      <p class="text-purple-300 font-bold mb-2 flex items-center gap-2">
+        <span class="text-xl">🌙</span> Para Dormir Profundo
+      </p>
+      <p class="text-gray-100 text-sm md:text-base leading-relaxed">
+        Úsalas <strong class="text-white">2-3 horas antes de acostarte</strong> (generalmente desde las 7-8 PM). Esto le da tiempo a tu cuerpo para producir melatonina naturalmente y prepararse para un sueño reparador.
+      </p>
+    </div>
+    
+    <!-- Work/Study Section - Enhanced -->
+    <div class="bg-gradient-to-r from-blue-500/15 to-cyan-500/10 border-2 border-blue-400/40 rounded-lg p-4">
+      <p class="text-blue-300 font-bold mb-2 flex items-center gap-2">
+        <span class="text-xl">💻</span> Durante Trabajo o Estudio
+      </p>
+      <p class="text-gray-100 text-sm md:text-base leading-relaxed mb-3">
+        Úsalas cuando estés en <strong class="text-white">espacios cerrados con luz artificial</strong> (oficinas, bibliotecas, cuartos sin ventanas). Muchos clientes las usan 8-12 horas diarias sin molestias.
+      </p>
+      <div class="bg-yellow-500/20 border border-yellow-400/40 rounded-md p-3 mt-3">
+        <p class="text-yellow-100 text-sm md:text-base font-semibold mb-1.5">
+          ⚠️ Importante: Tus ojos necesitan luz natural
         </p>
-        <p>
-          <span class="font-semibold">Y un dato importante:</span> no recomendamos usarlas durante la noche cuando está lloviendo, ya que las condiciones de visibilidad pueden reducirse y lo más importante siempre es tu seguridad.
-        </p>
-        <p>
-          Lo que sí te garantizamos es que son perfectas para interiores con luces intensas, como pantallas de dispositivos, centros comerciales, hospitales o cualquier ambiente donde la luz blanca o azul pueda perjudicar tu descanso y salud. Además, son ideales para trabajos nocturnos donde la luz artificial resulta molesta.
-        </p>
-      </div>
-    </details>
-
-    <!-- Pregunta 2 -->
-    <details class="border-b border-gray-300 py-2">
-      <summary class="flex justify-between items-center cursor-pointer py-2 text-left underline font-semibold text-lg">
-        ¿Tienen aumento o graduación visual?
-        <span class="plus-icon transition-transform duration-300 text-xl">+</span>
-      </summary>
-      <div class="pt-2 lg:text-lg flex flex-col gap-3">
-        <p>
-          <strong>No, estas gafas no tienen aumento o graduación alguna.</strong> Están diseñadas exclusivamente para proteger tus ojos de la luz azul nociva emitida por dispositivos electrónicos y luces LED. Gracias a su ligereza y comodidad, puedes usarlas fácilmente sobre tus gafas graduadas sin sentir molestias.
-        </p>
-        <p>
-          ¡Protege tu visión sin renunciar a tu corrección visual!
+        <p class="text-gray-200 text-xs md:text-sm leading-relaxed">
+          <strong>NO las uses al aire libre durante el día.</strong> La luz solar natural es esencial para tu salud visual y ritmo circadiano. Sal a caminar, trabaja cerca de una ventana, o toma descansos al exterior — tus ojos necesitan ese contacto con luz natural.
         </p>
       </div>
-    </details>
-
-    <!-- Pregunta 3 -->
-    <details class="border-b border-gray-300 py-2">
-      <summary class="flex justify-between items-center cursor-pointer py-2 text-left underline font-semibold text-lg">
-        ¿Son cómodas para usarlas por varias horas?
-        <span class="plus-icon transition-transform duration-300 text-xl">+</span>
-      </summary>
-      <div class="pt-2 lg:text-lg flex flex-col gap-3">
-        <p>
-          <strong>¡Absolutamente!</strong> Nuestras gafas están diseñadas pensando en tu comodidad. Las monturas son ligeras y ergonómicas, lo que evita la presión en la cabeza y las orejas, incluso después de horas de uso.
-        </p>
-        <p>
-          Muchos de nuestros clientes las llevan puestas durante más de 5 horas sin sentir ninguna molestia. ¡Son tan cómodas que te olvidarás de que las llevas puestas! Úsalas el tiempo que necesites sin preocuparte por la incomodidad.
-        </p>
-      </div>
-    </details>
-
-    <!-- Pregunta 4 -->
-    <details class="border-b border-gray-300 py-2">
-      <summary class="flex justify-between items-center cursor-pointer py-2 text-left underline font-semibold text-lg">
-        ¿Cuándo debo usarlas?
-        <span class="plus-icon transition-transform duration-300 text-xl">+</span>
-      </summary>
-      <div class="pt-2 lg:text-lg flex flex-col gap-3">
-        <p>
-          Para obtener los mejores resultados, úsalas <strong>2-3 horas antes de dormir.</strong> Esto permite que tu cuerpo <strong>produzca melatonina de forma natural</strong>, ayudándote a conciliar el sueño más rápido y disfrutar de un descanso reparador.
-        </p>
-        <p>
-          Son ideales para actividades nocturnas como ver pantallas, leer o realizar tareas en interiores antes de acostarte. Además, durante el día también pueden ayudarte a <strong>reducir la fatiga ocular</strong>, especialmente en ambientes con luz artificial intensa.
-        </p>
-        <p>
-          ¡Incorpora este hábito y nota la diferencia en tu descanso y bienestar visual!
-        </p>
-      </div>
-    </details>
-
-    <!-- Pregunta 5 -->
-    <details class="py-2">
-      <summary class="flex justify-between items-center cursor-pointer py-2 text-left underline font-semibold text-lg">
-        ¿Cómo debo limpiar y cuidarlas?
-        <span class="plus-icon transition-transform duration-300 text-xl">+</span>
-      </summary>
-      <div class="pt-2">
-        <div class="space-y-4">
-          <ul class="list-disc pl-5 flex flex-col gap-3 lg:text-lg">
-            <li>
-              <strong>Limpieza diaria:</strong> Utiliza el <span class="font-semibold">paño de microfibra</span> incluido en todos los paquetes para retirar polvo y huellas sin rayar los lentes.
-            </li>
-            <li>
-              <strong>Limpieza profunda:</strong> Lava los lentes con <span class="font-semibold">agua tibia y jabón neutro</span> para eliminar suciedad persistente y restos de grasa. Luego, sécalos con el paño de microfibra para evitar marcas.
-            </li>
-            <li>
-              <strong>Cuidados importantes:</strong> Evita usar <span class="font-semibold">papel, pañuelos o productos químicos agresivos</span>, ya que pueden rayar los lentes o afectar los recubrimientos especiales.
-            </li>
-            <li>
-              <strong>Almacenamiento seguro:</strong> Guarda tus gafas siempre en su estuche cuando no las uses. Así las proteges de golpes y rayones, asegurando que te acompañen por mucho tiempo.
-            </li>
-          </ul>
-          <p class="mt-4 lg:text-lg font-medium">
-            ¡Cuídalas como se merecen y disfruta de su comodidad y estilo por más tiempo!
-          </p>
+    </div>
+    
+    <!-- NEW: Natural Light Section -->
+    <div class="bg-gradient-to-r from-green-500/15 to-emerald-500/10 border-2 border-green-400/40 rounded-lg p-4">
+      <p class="text-green-300 font-bold mb-2 flex items-center gap-2">
+        <span class="text-xl">☀️</span> Exposición a Luz Natural (Clave)
+      </p>
+      <p class="text-gray-100 text-sm md:text-base leading-relaxed mb-2">
+        <strong class="text-white">Quítate las gafas durante el día</strong> cuando estés al aire libre o cerca de ventanas con luz natural directa.
+      </p>
+      <p class="text-gray-200 text-xs md:text-sm leading-relaxed">
+        La luz solar regula tu reloj biológico y fortalece tu vista. Idealmente, busca <strong>15-30 minutos de luz natural cada mañana</strong> — esto optimiza los beneficios de usar las gafas por la noche.
+      </p>
+    </div>
+    
+    <!-- Quick Reference Guide -->
+    <div class="bg-white/5 border border-white/10 rounded-lg p-4">
+      <p class="text-gray-300 font-bold mb-3 text-sm md:text-base">📋 Guía Rápida de Uso</p>
+      <div class="space-y-2 text-xs md:text-sm">
+        <div class="flex items-start gap-2">
+          <span class="text-green-400 mt-0.5">✓</span>
+          <span class="text-gray-200"><strong>SÍ úsalas:</strong> En oficinas, frente al computador, viendo TV, usando el celular de noche</span>
+        </div>
+        <div class="flex items-start gap-2">
+          <span class="text-red-400 mt-0.5">✗</span>
+          <span class="text-gray-200"><strong>NO las uses:</strong> Al aire libre de día o conduciendo</span>
+        </div>
+        <div class="flex items-start gap-2">
+          <span class="text-yellow-400 mt-0.5">!</span>
+          <span class="text-gray-200"><strong>Balance ideal:</strong> Luz natural en la mañana + gafas en espacios cerrados + gafas antes de dormir</span>
         </div>
       </div>
-    </details>
-  </div>
+    </div>
+    
   </div>
 </div>
+        </details>
+
+        {/* Question 6: Prescription */}
+        <details class="bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl overflow-hidden hover:border-white/30 transition-all">
+          <summary class="flex items-start justify-between gap-4 p-5 cursor-pointer group">
+            <div class="flex items-start gap-3 flex-1">
+              <span class="text-base md:text-lg font-semibold text-white group-hover:text-amber-400 transition-colors">
+                ¿Tienen aumento o graduación visual?
+              </span>
+            </div>
+            <svg class="chevron-icon w-6 h-6 text-amber-400 flex-shrink-0 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="px-5 pb-5">
+            <div class="pt-3 border-t border-white/10 space-y-3">
+              <p class="text-gray-200">
+                <strong class="text-white">No, no tienen ninguna graduación.</strong> Son lentes diseñados exclusivamente para filtrar luz azul.
+              </p>
+              <div class="bg-green-500/10 border border-green-500/30 rounded-lg p-3">
+                <p class="text-green-300 font-semibold flex items-start gap-2 text-sm">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="flex-shrink-0 mt-0.5">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                  </svg>
+                  <span>
+                    <strong>¿Usas lentes graduados?</strong> Perfecto. Puedes usarlas cómodamente sobre tus gafas habituales sin sentir peso extra.
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        {/* Question 7: Driving */}
+        <details class="bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl overflow-hidden hover:border-white/30 transition-all">
+          <summary class="flex items-start justify-between gap-4 p-5 cursor-pointer group">
+            <div class="flex items-start gap-3 flex-1">
+              <span class="text-base md:text-lg font-semibold text-white group-hover:text-amber-400 transition-colors">
+                ¿Puedo usarlas para conducir de noche?
+              </span>
+            </div>
+            <svg class="chevron-icon w-6 h-6 text-amber-400 flex-shrink-0 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="px-5 pb-5">
+            <div class="pt-3 border-t border-white/10 space-y-3">
+              <div class="bg-red-500/10 border-2 border-red-500/40 rounded-lg p-4">
+                <p class="text-red-400 font-bold mb-2 flex items-center gap-2 text-sm">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L1 21h22L12 2zm0 3.94L19.53 19H4.47L12 5.94zM11 16h2v2h-2zm0-6h2v4h-2z"/>
+                  </svg>
+                  No las recomendamos para conducir de noche
+                </p>
+                <p class="text-gray-200 text-sm">
+                  El tinte ámbar puede afectar tu percepción de colores en condiciones de baja luz. Tu seguridad es lo primero.
+                </p>
+              </div>
+              <p class="text-gray-300 text-sm">
+                <strong class="text-white">Úsalas con confianza en:</strong> Trabajar, estudiar, gaming, ver TV, y cualquier actividad con pantallas o luces LED.
+              </p>
+            </div>
+          </div>
+        </details>
+
+        {/* Question 8: Guarantee */}
+        <details class="bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl overflow-hidden hover:border-white/30 transition-all">
+          <summary class="flex items-start justify-between gap-4 p-5 cursor-pointer group">
+            <div class="flex items-start gap-3 flex-1">
+              <span class="text-base md:text-lg font-semibold text-white group-hover:text-amber-400 transition-colors">
+                ¿Qué pasa si no me funcionan o no me gustan?
+              </span>
+            </div>
+            <svg class="chevron-icon w-6 h-6 text-amber-400 flex-shrink-0 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="px-5 pb-5">
+            <div class="pt-3 border-t border-white/10 space-y-3">
+              <p class="text-gray-200">
+                <strong class="text-white">Tienes 30 días para probarlas sin riesgo.</strong> Si no notas mejoría:
+              </p>
+              <div class="grid md:grid-cols-2 gap-3">
+                <div class="bg-white/5 p-3 rounded-lg">
+                  <p class="text-green-400 font-semibold mb-1 text-sm">✓ Reembolso 100%</p>
+                  <p class="text-xs text-gray-300">Sin deducciones</p>
+                </div>
+                <div class="bg-white/5 p-3 rounded-lg">
+                  <p class="text-green-400 font-semibold mb-1 text-sm">✓ Devolución Gratis</p>
+                  <p class="text-xs text-gray-300">Nosotros pagamos envío</p>
+                </div>
+              </div>
+              <p class="text-sm text-gray-400">
+                <a href="/PoliticaDeDevoluciones" class="text-amber-400 underline hover:text-amber-300">Ver detalles completos de la garantía</a>
+              </p>
+            </div>
+          </div>
+        </details>
+
+        {/* Question 9: Cleaning */}
+        <details class="bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl overflow-hidden hover:border-white/30 transition-all">
+          <summary class="flex items-start justify-between gap-4 p-5 cursor-pointer group">
+            <div class="flex items-start gap-3 flex-1">
+              <span class="text-base md:text-lg font-semibold text-white group-hover:text-amber-400 transition-colors">
+                ¿Cómo debo limpiar y cuidar mis gafas?
+              </span>
+            </div>
+            <svg class="chevron-icon w-6 h-6 text-amber-400 flex-shrink-0 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="px-5 pb-5">
+            <div class="pt-3 border-t border-white/10 space-y-3">
+              <div class="grid md:grid-cols-2 gap-3">
+                <div class="bg-white/5 p-4 rounded-lg">
+                  <p class="text-white font-semibold mb-2 text-sm">🧼 Limpieza Diaria</p>
+                  <p class="text-xs text-gray-300">
+                    Usa el paño de microfibra incluido.
+                  </p>
+                </div>
+                <div class="bg-white/5 p-4 rounded-lg">
+                  <p class="text-white font-semibold mb-2 text-sm">💧 Limpieza Profunda</p>
+                  <p class="text-xs text-gray-300">
+                    Agua tibia + jabón neutro. Seca con paño.
+                  </p>
+                </div>
+              </div>
+              <div class="bg-red-500/10 border border-red-500/30 rounded-lg p-3">
+                <p class="text-red-400 font-semibold text-sm mb-1">⚠️ Evita:</p>
+                <p class="text-gray-300 text-xs">
+                  Papel, pañuelos o productos químicos (pueden rayar).
+                </p>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        {/* Question 10: Science */}
+        <details class="bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl overflow-hidden hover:border-white/30 transition-all">
+          <summary class="flex items-start justify-between gap-4 p-5 cursor-pointer group">
+            <div class="flex items-start gap-3 flex-1">
+              <span class="text-base md:text-lg font-semibold text-white group-hover:text-amber-400 transition-colors">
+                ¿Realmente funcionan? ¿Hay estudios científicos?
+              </span>
+            </div>
+            <svg class="chevron-icon w-6 h-6 text-amber-400 flex-shrink-0 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="px-5 pb-5">
+            <div class="pt-3 border-t border-white/10 space-y-3">
+              <p class="text-gray-200">
+                <strong class="text-white">Sí, están respaldadas por ciencia.</strong> Estudios demuestran que el filtrado de luz azul mejora:
+              </p>
+              <ul class="space-y-2 ml-4">
+                <li class="flex items-start gap-2">
+                  <span class="text-green-400 mt-1">✓</span>
+                  <span class="text-gray-200 text-sm"><strong class="text-white">Producción de melatonina</strong></span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-green-400 mt-1">✓</span>
+                  <span class="text-gray-200 text-sm"><strong class="text-white">Reducción de fatiga ocular</strong></span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-green-400 mt-1">✓</span>
+                  <span class="text-gray-200 text-sm"><strong class="text-white">Calidad del sueño</strong></span>
+                </li>
+              </ul>
+              <div class="bg-blue-500/10 border border-blue-500/30 rounded-lg p-3">
+                <p class="text-blue-300 text-sm"> <strong>Mejor que estudios:</strong> +3,000 clientes reportan mejoras en 24-48 horas. <a href="#testimonials" class="text-amber-400 underline hover:text-amber-300">Lee sus historias</a> 
+              </p> 
+              </div>
+            </div>
+          </div> 
+        </details>
+      </div>
+    </div>
+  </div>
+</section>

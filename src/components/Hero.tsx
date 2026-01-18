@@ -1,6 +1,5 @@
 import { useEffect, useState } from "preact/hooks";
 // import CTAbutton from "./CTAbutton.astro";
-import MobileProductIntro from "./MobileProductIntro";
 import ProductIntro from "./ProductIntro";
 
 const Hero = () => {
@@ -24,17 +23,20 @@ const Hero = () => {
         <div class="flex flex-col gap-8 md:gap-10 lg:gap-0 lg:flex-row items-center lg:justify-between  xl:gap-20 xl:w-full xl:px-10">
           <div class="flex flex-col justify-between w-full lg:w-[55%] gap-5 xl:gap-6">
             <span class="w-fit border-1 border-white text-sm xl:text-lg text-white p-1 px-2 rounded-full font-normal">
-              ⭐ +3,000 Personas protegen su vista diariamente
+              ⭐ +3,147 Personas ya recuperaron su sueño natural
             </span>
             <h1 class="text-xl font-bold tracking-wider text-center sm:text-2xl md:text-3xl lg:text-2xl xl:text-[2.2rem] xl:text-start font-body uppercase fade-in-up leading-tight text-brand-headline">
-              Protege Tu Vista de las pantallas y Recupera Tu Sueño Natural
+              {/* <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
+                Duerme Profundo{" "}
+              </span>{" "}  */}
+              Duerme Profundo Aunque Estés Frente a Pantallas Toda La Noche
             </h1>
-            <p class="text-lg md:text-xl text-center mt-2 text-brand-body tracking-wider">
-              La luz azul de tus pantallas está engañando a tu cerebro para que
-              no descanse. Nuestros lentes con tecnología ámbar certificada
-              bloquean la luz artificial que sabotea tu enfoque y tu sueño.
-              Trabaja sin fatiga, protege tu retina y despierta con la mente
-              clara cada mañana.
+            <p class="text-lg md:text-xl mt-2 px-1 text-brand-body tracking-wider text-pretty">
+              Mientras lees esto, la luz azul de tu pantalla le dice a tu
+              cerebro que es de día, incluso a medianoche. Por eso das vueltas
+              en la cama por horas. <strong className="text-brand-headline">Nuestros lentes bloquean el 99% de esta
+              luz nociva en 3 segundos</strong>  — tus ojos se relajan al instante y tu
+              cerebro produce melatonina naturalmente. <strong className="text-brand-headline"> Duerme más profundo</strong> desde la primera noche, sin cambiar tu rutina.
             </p>
             <div class="lg:hidden mobile md:flex md:justify-center">
               {isMobile && <ProductIntro />}
@@ -65,22 +67,6 @@ const Hero = () => {
                       width="24"
                       height="24"
                       viewBox="0 0 24 24"
-                      fill="#63B3ED"
-                      class="icon icon-tabler icons-tabler-filled icon-tabler-shield-check"
-                    >
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                      <path d="M11.998 2l.118 .007l.059 .008l.061 .013l.111 .034a.993 .993 0 0 1 .217 .112l.104 .082l.255 .218a11 11 0 0 0 7.189 2.537l.342 -.01a1 1 0 0 1 1.005 .717a13 13 0 0 1 -9.208 16.25a1 1 0 0 1 -.502 0a13 13 0 0 1 -9.209 -16.25a1 1 0 0 1 1.005 -.717a11 11 0 0 0 7.531 -2.527l.263 -.225l.096 -.075a.993 .993 0 0 1 .217 -.112l.112 -.034a.97 .97 0 0 1 .119 -.021l.115 -.007zm3.71 7.293a1 1 0 0 0 -1.415 0l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.32 1.497l2 2l.094 .083a1 1 0 0 0 1.32 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z" />
-                    </svg>
-                  ),
-                  text: "Garantía de Satisfacción de 30 Días",
-                },
-                {
-                  icon: (
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
                       fill="none"
                       stroke="#68D391"
                       stroke-width="2"
@@ -95,7 +81,7 @@ const Hero = () => {
                       <path d="M21 21v-2a4 4 0 0 0 -3 -3.85" />
                     </svg>
                   ),
-                  text: "+3,000 Miradas Protegidas y Descansadas",
+                  text: "+3,147 Miradas Protegidas y Descansadas",
                 },
                 {
                   icon: (
@@ -117,7 +103,23 @@ const Hero = () => {
                       <path d="M15 19l2 2l4 -4" />
                     </svg>
                   ),
-                  text: "Filtro Ámbar Profesional Certificado",
+                  text: "Bloquean El 99% De Luz Azul Dañina",
+                },
+                {
+                  icon: (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="#63B3ED"
+                      class="icon icon-tabler icons-tabler-filled icon-tabler-shield-check"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M11.998 2l.118 .007l.059 .008l.061 .013l.111 .034a.993 .993 0 0 1 .217 .112l.104 .082l.255 .218a11 11 0 0 0 7.189 2.537l.342 -.01a1 1 0 0 1 1.005 .717a13 13 0 0 1 -9.208 16.25a1 1 0 0 1 -.502 0a13 13 0 0 1 -9.209 -16.25a1 1 0 0 1 1.005 -.717a11 11 0 0 0 7.531 -2.527l.263 -.225l.096 -.075a.993 .993 0 0 1 .217 -.112l.112 -.034a.97 .97 0 0 1 .119 -.021l.115 -.007zm3.71 7.293a1 1 0 0 0 -1.415 0l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.32 1.497l2 2l.094 .083a1 1 0 0 0 1.32 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z" />
+                    </svg>
+                  ),
+                  text: "Garantía de Satisfacción de 30 Días",
                 },
               ].map((item, idx) => (
                 <div key={idx} className="flex items-center gap-2">
@@ -145,7 +147,7 @@ const Hero = () => {
                   ))}
                 </div>
                 <span class="text-lg lg:text-xl font-medium xl:text-nowrap">
-                  + 3000 Vendidas
+                  + 3147 Vendidas
                 </span>
               </div>
               {/* Testimonial Quote */}

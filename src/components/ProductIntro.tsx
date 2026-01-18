@@ -1,6 +1,7 @@
 // import "./productIntro.scss";
 //*Imgs //
 import manUsingGlasses from "/src/assets/img/manUsingGlassesV2.avif";
+import manUsingPhone from "/src/assets/img/manUsingPhoneWithAV.webp";
 import amberLensesSideDesktop from "/src/assets/img/product/amberLensesSide.avif";
 import amberLensesSideMobile from "/src/assets/img/product/amberLensesSide.avif";
 import womanUsingGlassesDesktop from "/src/assets/img/womanUsingAV.avif";
@@ -10,9 +11,12 @@ import amberLensesSideTwoMobile from "/src/assets/img/product/amberLensesSideTwo
 import amberLensesFrontDesktop from "/src/assets/img/product/amberLensesFrontMobile.avif";
 import amberLensesFrontMobile from "/src/assets/img/product/amberLensesFrontMobile.avif";
 import manUsingGlassesMini from "/src/assets/img/manUsingGlassesMiniV2.webp";
+import manUsingPhoneMini from "/src/assets/img/manUsingPhoneWithAVMini.webp";
 import womanUsingGlassesMini from "/src/assets/img/womanUsingAV-mini.avif";
 import amberLensesSideMini from "/src/assets/img/product/amberLensesSideMini.avif";
 import amberLensesSideTwoMini from "/src/assets/img/product/amberLensesSideTwoMini.avif";
+import coupleWatchingMovies from "/src/assets/img/coupleWatchingTVAVLogo.webp";
+import coupleWatchingMoviesMini from "/src/assets/img/coupleWatchingTVAVLogoMini.webp";
 import amberLensesFrontMini from "/src/assets/img/product/amberLensesFrontMini.avif";
 import type { JSX } from "preact/jsx-runtime";
 
@@ -67,7 +71,7 @@ const ProductIntro = () => {
             >
               <div id="slide1" className="carousel-item relative w-full h-full">
                 <img
-                  src={manUsingGlasses.src}
+                  src={manUsingPhone.src}
                   className="w-full"
                   alt="allModels"
                   loading="eager"
@@ -198,17 +202,17 @@ const ProductIntro = () => {
                   {/* <!-- Mobile --> */}
                   <source
                     media="(max-width: 480px)"
-                    srcSet={amberLensesSideTwoMobile.src}
+                    srcSet={coupleWatchingMovies.src}
                     rel="preload"
                   />
                   {/* <!-- Desktop --> */}
                   <source
                     media="(min-width: 1200px)"
-                    srcSet={amberLensesSideTwoDesktop.src}
+                    srcSet={coupleWatchingMovies.src}
                     rel="preload"
                   />
                   <img
-                    src={amberLensesSideTwoDesktop.src}
+                    src={coupleWatchingMovies.src}
                     className="w-full slide2"
                     alt="Amber lenses Side"
                     loading="lazy"
@@ -232,11 +236,11 @@ const ProductIntro = () => {
             </div>
             <div className="flex w-full gap-2 mt-2 xl:mt-8">
               {[
-                manUsingGlassesMini,
+                manUsingPhoneMini,
                 amberLensesSideMini,
                 womanUsingGlassesMini,
                 amberLensesFrontMini,
-                amberLensesSideTwoMini,
+                coupleWatchingMoviesMini,
               ].map((img, i) => (
                 <div
                   key={i}
