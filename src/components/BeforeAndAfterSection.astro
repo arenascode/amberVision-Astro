@@ -8,12 +8,12 @@ import comfortableMan from "../assets/img/manUssingGlassesV3.webp";
   <!-- Header Section - More Compelling -->
   <div class="w-full flex flex-col items-center text-center gap-4 mb-8">
     <FadeIn delay={100} client:load>    
-      <h2 class="text-4xl md:text-5xl xl:text-6xl font-bold tracking-tight">
+      <h2 class="text-4xl md:text-5xl xl:text-6xl font-bold tracking-tight text-brand-headline">
         La Diferencia es <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-400">Inmediata</span>
       </h2>
     </FadeIn>
     
-    <p class="text-xl lg:text-2xl max-w-[900px] leading-relaxed text-brand-body">
+    <p class="text-xl lg:text-2xl max-w-[900px] text-brand-body">
       Descubre cómo nuestras gafas de bloqueo de luz azul pueden transformar tu día y mejorar tu descanso. <strong class="text-brand-headline">¿Listo para el cambio?</strong>
     </p>
   </div>
@@ -22,15 +22,15 @@ import comfortableMan from "../assets/img/manUssingGlassesV3.webp";
   <div class="grid gap-6 md:grid-cols-2 mb-10 xl:px-20 max-w-full">
     
     <!-- WITHOUT Protection Card - Emphasized Pain Points -->
-    <div class="rounded-2xl p-3 shadow-2xl bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border-white/20  xl:flex xl:flex-col xl:place-items-center hover:border-red-500/50 transition-all duration-300">
+    <div class="rounded-2xl p-3 shadow-xl bg-bg-card-glass border-white/20  xl:flex xl:flex-col xl:place-items-center hover:border-red-500/50 transition-all duration-300">
       
       <!-- Badge for emphasis -->
       <div class="flex justify-center mb-3">
-        <span class="inline-block bg-red-500/30 border border-red-400/50 rounded-full px-4 py-1 text-sm font-bold">
+        <span class="inline-block bg-red-500/30 border border-red-400/50 rounded-full px-4 py-1 text-sm font-bold text-red-500">
           ❌ SIN PROTECCIÓN
         </span>
       </div>
-      <h3 class="text-red-300 text-center mb-6 text-xl font-semibold">
+      <h3 class="text-brand-headline text-center mb-6 text-xl font-semibold">
         Estrés Visual que Afecta Tu Vida
       </h3>
       
@@ -52,35 +52,35 @@ import comfortableMan from "../assets/img/manUssingGlassesV3.webp";
           { text: 'Dolores de cabeza constantes', icon: '🤕' },
           { text: 'Productividad reducida', icon: '📉' }
         ].map((item) => (
-          <li class="flex items-start gap-3 text-white text-base md:text-lg bg-red-500/10 p-3 rounded-lg border border-red-500/20">
+          <li class="flex items-start gap-3 text-white text-base md:text-lg bg-red-500/20 p-3 rounded-lg border border-red-500/20">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-0.5">
               <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
               <path d="M18 6l-12 12" />
               <path d="M6 6l12 12" />
             </svg>
-            <span><strong>{item.text}</strong> {item.icon}</span>
+            <span class="text-brand-headline"><strong>{item.text}</strong> {item.icon}</span>
           </li>
         ))}
       </ul>
       
       <!-- Added pain amplifier -->
-      <div class="mt-6 p-4 bg-red-500/20 border border-red-400/30 rounded-lg">
-        <p class="text-sm md:text-base text-center italic">
+      <div class="mt-6 p-4 bg-red-500/30 border border-red-400/30 rounded-lg">
+        <p class="text-sm md:text-base text-center italic text-brand-body">
           <strong>¿Te suena familiar?</strong> Esto es lo que la luz azul artificial le hace a tu cuerpo cada día.
         </p>
       </div>
     </div>
 
     <!-- WITH Protection Card - Emphasized Benefits -->
-    <div class="rounded-2xl p-3 shadow-2xl bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border-white/20 xl:flex xl:flex-col xl:place-items-center hover:border-green-400/60 transition-all duration-300 hover:scale-[1.02]">
+    <div class="rounded-2xl p-3 shadow-2xl bg-bg-card-glass border-white/20 xl:flex xl:flex-col xl:place-items-center hover:border-green-400/60 transition-all duration-300 hover:scale-[1.02]">
       
       <!-- Success badge -->
       <div class="flex justify-center mb-3">
-        <span class="bg-green-500/30 border border-green-400/50 rounded-full px-4 py-1 text-sm font-bold flex gap-1 items-center">
+        <span class="bg-green-500/20 border border-green-400/50 rounded-full px-4 py-1 text-sm font-bold flex gap-1 items-center text-green-500">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="#05df72" class="icon icon-tabler icons-tabler-filled icon-tabler-shield-check"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M11.998 2l.118 .007l.059 .008l.061 .013l.111 .034a.993 .993 0 0 1 .217 .112l.104 .082l.255 .218a11 11 0 0 0 7.189 2.537l.342 -.01a1 1 0 0 1 1.005 .717a13 13 0 0 1 -9.208 16.25a1 1 0 0 1 -.502 0a13 13 0 0 1 -9.209 -16.25a1 1 0 0 1 1.005 -.717a11 11 0 0 0 7.531 -2.527l.263 -.225l.096 -.075a.993 .993 0 0 1 .217 -.112l.112 -.034a.97 .97 0 0 1 .119 -.021l.115 -.007zm3.71 7.293a1 1 0 0 0 -1.415 0l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.32 1.497l2 2l.094 .083a1 1 0 0 0 1.32 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"></path></svg> CON AMBER VISION
         </span>
       </div>
-      <p class="text-green-300 text-center mb-6 text-lg font-semibold">
+      <p class="text-green-500 text-center mb-6 text-lg font-semibold">
         Bienestar Visual Garantizado
       </p>
       
@@ -102,22 +102,22 @@ import comfortableMan from "../assets/img/manUssingGlassesV3.webp";
           { text: "Adiós a los dolores de cabeza", benefit: "91% reducción" },
           { text: "Mayor enfoque en tus tareas", benefit: "+40% productivo" }
         ].map((item) => (
-          <li class="flex items-start gap-3 text-white text-base md:text-lg bg-green-500/15 p-3 rounded-lg border border-green-400/30 hover:bg-green-500/20 transition-colors">
+          <li class="flex items-start gap-3 bg-green-100 text-base md:text-lg  p-3 rounded-lg border border-green-400/30 hover:bg-green-500/20 transition-colors">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="#10b981" class="flex-shrink-0 mt-0.5">
               <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
               <path d="M11.998 2l.118 .007l.059 .008l.061 .013l.111 .034a.993 .993 0 0 1 .217 .112l.104 .082l.255 .218a11 11 0 0 0 7.189 2.537l.342 -.01a1 1 0 0 1 1.005 .717a13 13 0 0 1 -9.208 16.25a1 1 0 0 1 -.502 0a13 13 0 0 1 -9.209 -16.25a1 1 0 0 1 1.005 -.717a11 11 0 0 0 7.531 -2.527l.263 -.225l.096 -.075a.993 .993 0 0 1 .217 -.112l.112 -.034a.97 .97 0 0 1 .119 -.021l.115 -.007zm3.71 7.293a1 1 0 0 0 -1.415 0l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.32 1.497l2 2l.094 .083a1 1 0 0 0 1.32 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z" />
             </svg>
             <div>
-              <strong class="block">{item.text}</strong>
-              <span class="text-xs text-green-300 font-semibold">{item.benefit}</span>
+              <strong class="block text-brand-headline">{item.text}</strong>
+              <span class="text-xs text-brand-body font-semibold">{item.benefit}</span>
             </div>
           </li>
         ))}
       </ul>
       
       <!-- Added success amplifier with urgency -->
-      <div class="mt-6 p-4 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border-2 border-green-400/40 rounded-lg">
-        <p class="text-sm md:text-base text-center font-semibold tracking-wider">
+      <div class="mt-6 p-4 bg-green-500/30 border-2 border-green-400/40 rounded-lg">
+        <p class="text-sm md:text-base text-center tracking-wide text-brand-body">
           ⚡ <strong>Resultados desde el primer día.</strong> Sin complicaciones, sin esperas.
         </p>
       </div>
@@ -128,9 +128,9 @@ import comfortableMan from "../assets/img/manUssingGlassesV3.webp";
   <div class="beforeAndAfter-container lg:flex lg:flex-row lg:mt-26">
   <BeforeAfterTransition client:load />
   <div class="scienceBehind mt-4 lg:mt-0 px-2 md:px-6 lg:pl-4 lg:pr-0 xl:px-12 max-w-4xl mx-auto text-left lg:flex-1">
-    <img src="/assets/img/Wave-Icon-White.svg" alt="wave icon" class="self-start w-1/2 md:w-1/3" loading="lazy" />
+    <img src="/assets/img/Wave-Icon.svg" alt="wave icon" class="self-start w-1/2 md:w-1/3" loading="lazy" />
     <FadeIn delay={100} client:load>
-      <h3 class="text-2xl md:text-3xl lg:text-2xl font-bold mb-4 mt-3 lg:mt-0">
+      <h3 class="text-2xl md:text-3xl lg:text-2xl font-bold mb-4 mt-3 lg:mt-0 text-brand-headline">
         La Ciencia Detrás de Amber Vision
       </h3>
     </FadeIn>

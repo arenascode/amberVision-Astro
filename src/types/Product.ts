@@ -4,7 +4,10 @@ export type Product = {
   price: number;
   priceBefore: number;
   image: string;
-  gift1: string;
-  gift2: string;
-  gift3: string;
+  gift1: {name: string, desc?: string, price: number};
+  gift2: {name: string, desc?: string, price: number};
+  gift3: { name: string, desc?: string, price: number };
+  freeDelivery: {
+    desc: string, price: number
+  }
 };

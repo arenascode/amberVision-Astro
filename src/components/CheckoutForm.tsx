@@ -10,7 +10,12 @@ import accessories from "/src/assets/img/accessories.webp";
 import freeDelivery from "/src/assets/img/freeDelivery.webp";
 // Define the product type
 import type { Product } from "../types/Product";
-import { isCheckoutModalOpen, isSuccessModalOpen, successfulOrderNumber } from "../state";
+import {
+  isCheckoutModalOpen,
+  isSuccessModalOpen,
+  successfulOrderNumber,
+} from "../state";
+import { formatCurrency } from "../utils/helpers";
 
 export interface CheckOutFormProps {
   product: Product;
@@ -132,7 +137,7 @@ export interface CheckOutFormProps {
 //         setIsLoading(true);
 //         const res = await makeRequest
 //           .post("/purchase/newPurchase", formData)
-        
+
 //           if (res.status === 201) {
 //             handleOrderNumberFromChild(formData.numero_orden);
 //             successfulOrderNumber.value = formData.numero_orden;
@@ -604,6 +609,7 @@ export interface CheckOutFormProps {
 //     </div>
 //   );
 // };
+
 const SimpleCheckoutForm: FunctionComponent<CheckOutFormProps> = ({
   product,
   setSuccessPage,
@@ -719,21 +725,23 @@ const SimpleCheckoutForm: FunctionComponent<CheckOutFormProps> = ({
     }
   };
 
-  const subtotal = product.price;
-  const totalValue = subtotal + product.priceBefore + 30000 + 59900 + 49900;
+  const subtotal = product.price + product.gift1.price + product.gift2.price + product.gift3.price + product.freeDelivery.price;
+
+  const totalValue = product.price;
 
   return (
     <div className="grid lg:grid-cols-[1fr_400px] gap-6 lg:gap-8">
       {/* Left Column - Form */}
       <div className="order-2 lg:order-1">
-        <div className="bg-white rounded-xl p-6 md:p-8 shadow-lg">
+        <div className="bg-white rounded-xl p-3 md:p-8 shadow-lg">
           {/* Form Header */}
-          <div className="mb-6">
+          <div className="mb-5">
             <h3 className="text-2xl font-bold text-gray-900 mb-2">
               Datos de Envío
             </h3>
             <p className="text-sm text-gray-600">
-              Completa la información para recibir tu pedido en 3-5 días
+              Completa tus datos para poder enviar tu pedido directamente a tu
+              casa <strong>3-5 días </strong>
               hábiles.
             </p>
           </div>
@@ -742,15 +750,15 @@ const SimpleCheckoutForm: FunctionComponent<CheckOutFormProps> = ({
           <div className="mb-6 bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg">
             <div className="flex items-start gap-3">
               <svg
-                className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
                 fill="currentColor"
-                viewBox="0 0 20 20"
+                class="text-amber-500 icon icon-tabler icons-tabler-filled icon-tabler-alert-triangle"
               >
-                <path
-                  fillRule="evenodd"
-                  d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"
-                  clipRule="evenodd"
-                />
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 1.67c.955 0 1.845 .467 2.39 1.247l.105 .16l8.114 13.548a2.914 2.914 0 0 1 -2.307 4.363l-.195 .008h-16.225a2.914 2.914 0 0 1 -2.582 -4.2l.099 -.185l8.11 -13.538a2.914 2.914 0 0 1 2.491 -1.403zm.01 13.33l-.127 .007a1 1 0 0 0 0 1.986l.117 .007l.127 -.007a1 1 0 0 0 0 -1.986l-.117 -.007zm-.01 -7a1 1 0 0 0 -.993 .883l-.007 .117v4l.007 .117a1 1 0 0 0 1.986 0l.007 -.117v-4l-.007 -.117a1 1 0 0 0 -.993 -.883z" />
               </svg>
               <div className="flex-1">
                 <p className="text-sm font-semibold text-amber-800 mb-1">
@@ -777,7 +785,7 @@ const SimpleCheckoutForm: FunctionComponent<CheckOutFormProps> = ({
                   value={formData.nombre}
                   onChange={handleChange}
                   placeholder="Juan Pérez"
-                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
+                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:border-transparent transition-all"
                 />
                 {errors.nombre && (
                   <p className="text-xs text-red-500 mt-1">{errors.nombre}</p>
@@ -794,14 +802,13 @@ const SimpleCheckoutForm: FunctionComponent<CheckOutFormProps> = ({
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="tu@email.com"
-                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
+                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:border-transparent transition-all"
                 />
                 {errors.email && (
                   <p className="text-xs text-red-500 mt-1">{errors.email}</p>
                 )}
               </div>
             </div>
-
             {/* Contact */}
             <div className="grid sm:grid-cols-2 gap-4">
               <div>
@@ -814,7 +821,7 @@ const SimpleCheckoutForm: FunctionComponent<CheckOutFormProps> = ({
                   onChange={handleChange}
                   onBlur={handleOnBlur}
                   placeholder="320 123 4567"
-                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
+                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:border-transparent transition-all"
                 />
                 {errors.telefono && (
                   <p className="text-xs text-red-500 mt-1">{errors.telefono}</p>
@@ -830,14 +837,13 @@ const SimpleCheckoutForm: FunctionComponent<CheckOutFormProps> = ({
                   value={formData.cedula}
                   onChange={handleChange}
                   placeholder="123456789"
-                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
+                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:border-transparent transition-all"
                 />
                 {errors.cedula && (
                   <p className="text-xs text-red-500 mt-1">{errors.cedula}</p>
                 )}
               </div>
             </div>
-
             {/* Location */}
             <div className="grid sm:grid-cols-2 gap-4">
               <div>
@@ -848,7 +854,7 @@ const SimpleCheckoutForm: FunctionComponent<CheckOutFormProps> = ({
                   name="departamento"
                   value={formData.departamento}
                   onChange={handleChange}
-                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
+                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:border-transparent transition-all"
                 >
                   <option value="">Selecciona</option>
                   <option value="Amazonas">Amazonas</option>
@@ -903,14 +909,13 @@ const SimpleCheckoutForm: FunctionComponent<CheckOutFormProps> = ({
                   value={formData.ciudad}
                   onChange={handleChange}
                   placeholder="Bogotá"
-                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
+                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:border-transparent transition-all"
                 />
                 {errors.ciudad && (
                   <p className="text-xs text-red-500 mt-1">{errors.ciudad}</p>
                 )}
               </div>
             </div>
-
             {/* Address */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1.5">
@@ -921,13 +926,12 @@ const SimpleCheckoutForm: FunctionComponent<CheckOutFormProps> = ({
                 value={formData.direccion}
                 onChange={handleChange}
                 placeholder="Calle 123 #45-67, Apto 89"
-                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
+                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:border-transparent transition-all"
               />
               {errors.direccion && (
                 <p className="text-xs text-red-500 mt-1">{errors.direccion}</p>
               )}
             </div>
-
             {/* Additional Info */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1.5">
@@ -940,24 +944,68 @@ const SimpleCheckoutForm: FunctionComponent<CheckOutFormProps> = ({
                 onChange={handleChange}
                 placeholder="Barrio, referencias, instrucciones de entrega..."
                 rows={3}
-                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all resize-none"
+                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:border-transparent transition-all resize-none"
               />
             </div>
-
             {/* Error Message */}
-            {someError && (
+            
+            {/* Commitment Message - Empathetic & Professional */}
+            <div className="bg-blue-50 border-l-4 border-blue-400 rounded-r-lg p-2 mb-2">
+              <div className="flex items-start gap-3 pl-2">
+                {/* <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-run"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 4a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M4 17l5 1l.75 -1.5" /><path d="M15 21l0 -4l-4 -3l1 -6" /><path d="M7 12l0 -3l5 -1l3 3l3 1" /></svg> */}
+                <div className="flex-1">
+                  <h4 className="font-bold mb-2 text-blue-400 text-base">
+                    Una Solicitud de Nuestro Equipo
+                  </h4>
+                  <p className="text-sm text-gray-700 leading-relaxed mb-3">
+                    Cuando confirmas tu pedido,{" "}
+                    <strong>activamos todo nuestro equipo</strong>: preparamos
+                    tu paquete con cuidado, coordinamos el envío gratis y
+                    separamos tus bonos digitales.
+                  </p>
+                  <p className="text-sm text-gray-700 leading-relaxed mb-3">
+                    Por eso te pedimos confirmar{" "}
+                    <strong>solo si estás seguro de recibirlo</strong>. Esto nos
+                    ayuda a evitar los costos de las devoluciones para seguir
+                    ofreciendo envío gratis a más personas como tú.
+                  </p>
+                  <div className="flex items-center gap-2 mt-4 pt-3 border-t border-blue-200">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-heart-handshake text-blue-500"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+                      <path d="M12 6l-3.293 3.293a1 1 0 0 0 0 1.414l.543 .543c.69 .69 1.81 .69 2.5 0l1 -1a3.182 3.182 0 0 1 4.5 0l2.25 2.25" />
+                      <path d="M12.5 15.5l2 2" />
+                      <path d="M15 13l2 2" />
+                    </svg>
+                    <p className="text-sm font-semibold text-blue-400">
+                      Gracias por ser parte de nuestra comunidad responsable
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        {someError && (
               <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded-r-lg">
                 <p className="text-sm text-red-700">
                   Por favor revisa los campos marcados en rojo.
                 </p>
               </div>
-            )}
-
-            {/* Submit Button */}
+            )}{" "}
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold py-4 rounded-xl shadow-lg transition-all hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
+              className="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold py-3 rounded-xl shadow-lg transition-all hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3 mb-1"
             >
               {isLoading ? (
                 <>
@@ -977,7 +1025,7 @@ const SimpleCheckoutForm: FunctionComponent<CheckOutFormProps> = ({
                       d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                     />
                   </svg>
-                  <span>Procesando...</span>
+                  <span>Procesando tu pedido...</span>
                 </>
               ) : (
                 <>
@@ -995,15 +1043,18 @@ const SimpleCheckoutForm: FunctionComponent<CheckOutFormProps> = ({
                 </>
               )}
             </button>
+            <p className="text-xs lg:text-sm text-center">
+              🔒 Solo pagas al recibir!
+            </p>
           </form>
         </div>
       </div>
 
       {/* Right Column - Order Summary */}
       <div className="order-1 lg:order-2">
-        <div className="bg-white rounded-xl p-6 shadow-lg lg:sticky lg:top-4">
+        <div className="bg-white rounded-xl p-3 shadow-lg lg:sticky lg:top-4">
           <h3 className="text-xl font-bold text-gray-900 mb-6">
-            Resumen del Pedido
+            Resumen de tu Pedido
           </h3>
 
           {/* Product */}
@@ -1016,7 +1067,7 @@ const SimpleCheckoutForm: FunctionComponent<CheckOutFormProps> = ({
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="flex-1">
+              <div className="flex-1 text-right">
                 <p className="font-semibold text-gray-900 text-sm">
                   {product.name}
                 </p>
@@ -1032,24 +1083,112 @@ const SimpleCheckoutForm: FunctionComponent<CheckOutFormProps> = ({
             </div>
 
             {/* Bonuses - Collapsed */}
-            <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+            <div className="bg-green-50 border border-green-200 rounded-lg p-1">
               <div className="flex items-center justify-between mb-2">
                 <p className="font-semibold text-green-800 text-sm">
                   🎁 Bonos Incluidos
                 </p>
-                <span className="text-green-600 font-bold text-sm">GRATIS</span>
               </div>
-              <ul className="text-xs text-green-700 space-y-1">
-                <li>• {product.gift1}</li>
-                <li>• {product.gift2}</li>
-                <li>• {product.gift3}</li>
-                <li>• Envío gratis (2-4 días)</li>
-              </ul>
+              <div class="flex flex-col items-center gap-4 text-gray-900">
+                <div class="box flex gap-1 border p-2 rounded-sm bg-gray-100">
+                  <div class="h-22 w-22 md:w-50 md:h-48 lg:w-30 lg:h-30 xl:w-40 xl:h-40 flex items-center justify-center overflow-hidden">
+                    <img
+                      src={accessories.src}
+                      alt="(Estuche Carcasa Dura + Estuche Tela + Paño Microfibra + Tarjeta de Prueba Anti Luz Azul) X 2"
+                      class="h-full w-full object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="flex-1 flex items-center gap-1">
+                    <span class="font-medium text-left text-[13px] md:text-lg">
+                      {product.gift1.name} <br />
+                    </span>
+                    <div class="font-medium text-center text-sm md:text-lg flex flex-col">
+                      <span class="italic line-through text-end">
+                        ${product.gift1.price.toLocaleString()}
+                      </span>
+                      <span class="font-bold text-green-600">GRATIS</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="box flex gap-1 border p-2 rounded-sm bg-gray-100">
+                  <div class="h-22 w-22  md:w-50 md:h-48 lg:w-30 lg:h-30 xl:w-40 xl:h-40 flex items-center justify-center overflow-hidden">
+                    <img
+                      src={ebook1.src}
+                      alt="2 Pares de Gafas Amber Vision con filtro de luz azul"
+                      class="h-full w-full object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="flex-1 flex items-center gap-1">
+                    <span class="font-medium text-left text-[13px] md:text-lg">
+                      {product.gift2.name} - {""}
+                      <span class="text-gray-700 font-normal text-xs">
+                         {product.gift2.desc}
+                      </span>
+                    </span>
+                    <div class="font-medium text-center flex flex-col md:text-lg">
+                      <span class="italic line-through text-end">
+                        ${product.gift2.price.toLocaleString()}
+                      </span>
+                      <span class="font-bold text-green-600">GRATIS</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="box flex gap-1 border p-2 rounded-sm bg-gray-100">
+                  <div class="h-22 w-22  md:w-50 md:h-48 lg:w-30 lg:h-30 xl:w-40 xl:h-40 flex items-center justify-center overflow-hidden">
+                    <img
+                      src={ebook2.src}
+                      alt="2 Pares de Gafas Amber Vision con filtro de luz azul"
+                      class="h-full w-full object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="flex-1 flex items-center gap-1">
+                    <span class="font-medium text-left text-[13px] md:text-lg">
+                      {product.gift3.name} -
+                      <small class="text-gray-700 font-normal text-xs  leading-0.5">
+                        {product.gift3.desc}
+                      </small>
+                    </span>
+                    <div class="font-medium text-center flex flex-col md:text-lg">
+                      <span class="italic line-through text-end">
+                        ${product.gift3.price.toLocaleString()}
+                      </span>
+                      <span class="font-bold text-green-600">GRATIS</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="box flex gap-4 border p-2 rounded-sm bg-gray-100 w-full justify-between">
+                  <div class="h-22 w-22 md:w-50 md:h-48 lg:w-30 lg:h-30 xl:w-40 xl:h-40 flex items-center justify-center overflow-hidden rounded-md border border-gray-400">
+                    <img
+                      src={freeDelivery.src}
+                      alt="Delivery Gratis"
+                      class="h-full w-full object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="flex-1 flex items-center gap-1 justify-between">
+                    <span class="font-medium text-left text-[13px] md:text-lg flex flex-col">
+                      {product.freeDelivery.desc.toUpperCase()}
+                      <small class="font-italic text-gray-700">
+                        Dependiendo de tu ciudad
+                      </small>
+                    </span>
+                    <div class="font-medium text-center flex flex-col md:text-lg">
+                      <span class="italic line-through text-end">
+                        ${product.freeDelivery.price.toLocaleString()}
+                      </span>
+                      <span class="font-bold text-green-600">GRATIS</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
           {/* Totals */}
-          <div className="space-y-3 pt-4 border-t border-gray-200">
+          <div className="space-y-3 pt-4 px-3 border-t border-gray-200">
             <div className="flex justify-between text-sm">
               <span className="text-gray-600">Subtotal</span>
               <span className="font-medium">
@@ -1066,14 +1205,14 @@ const SimpleCheckoutForm: FunctionComponent<CheckOutFormProps> = ({
             </div>
             <div className="flex justify-between pt-3 border-t border-gray-200">
               <span className="font-bold text-gray-900">Total a Pagar</span>
-              <span className="text-2xl font-bold text-gray-900">
-                ${subtotal.toLocaleString("es-CO")}
+              <span className="text-xl font-bold text-green-500">
+                ${totalValue.toLocaleString("es-CO")}
               </span>
             </div>
           </div>
 
           {/* Value Summary */}
-          <div className="mt-6 bg-amber-50 border border-amber-200 rounded-lg p-4">
+          {/* <div className="mt-6 bg-amber-50 border border-amber-200 rounded-lg p-4">
             <div className="flex items-start gap-2">
               <svg
                 className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5"
@@ -1095,7 +1234,7 @@ const SimpleCheckoutForm: FunctionComponent<CheckOutFormProps> = ({
                 </p>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

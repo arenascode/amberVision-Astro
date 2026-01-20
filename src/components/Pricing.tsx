@@ -16,12 +16,24 @@ const Pricing = () => {
       price: 109999,
       priceBefore: 150000,
       image: amberLensesSingle.src,
-      gift1:
-        "+ Estuche Carcasa Dura + Estuche Tela + Paño Microfibra + Tarjeta de Prueba Anti Luz Azul",
-      gift2:
-        "RECUPERA TU SUEÑO - Tu Sistema de Biohacking para despertar lleno de energía",
-      gift3:
-        "CUIDADO VISUAL EN LA ERA DIGITAL - Estrategias simples para reducir el daño ocular frente a pantallas y mantener tu visión saludable por años",
+      gift1: {
+        name: "Estuche Carcasa Dura + Estuche Tela + Paño Microfibra + Tarjeta de Prueba Anti Luz Azul",
+        price: 39900,
+      },
+      gift2: {
+        name: "RECUPERA TU SUEÑO",
+        desc: "Tu Sistema de Biohacking para despertar lleno de energía",
+        price: 59900,
+      },
+      gift3: {
+        name: "CUIDADO VISUAL EN LA ERA DIGITAL",
+        desc: "Estrategias simples para reducir el daño ocular frente a pantallas y mantener tu visión saludable por años",
+        price: 49900,
+      },
+      freeDelivery: {
+        desc: "Entrega de 2 a 4 días",
+        price: 18000,
+      },
     },
     {
       id: "promo",
@@ -29,12 +41,24 @@ const Pricing = () => {
       price: 199999,
       priceBefore: 300000,
       image: amberLensesPairPromo.src,
-      gift1:
-        "(+ Estuche Carcasa Dura + Estuche Tela + Paño Microfibra + Tarjeta de Prueba Anti Luz Azul) X 2",
-      gift2:
-        "RECUPERA TU SUEÑO - Tu Sistema de Biohacking para despertar lleno de energía",
-      gift3:
-        "CUIDADO VISUAL EN LA ERA DIGITAL - Estrategias simples para reducir el daño ocular frente a pantallas y mantener tu visión saludable por años",
+      gift1: {
+        name: "(Estuche Carcasa Dura + Estuche Tela + Paño Microfibra + Tarjeta de Prueba Anti Luz Azul) X 2",
+        price: 39900,
+      },
+      gift2: {
+        name: "RECUPERA TU SUEÑO",
+        desc: "Tu Sistema de Biohacking para despertar lleno de energía",
+        price: 59900,
+      },
+      gift3: {
+        name: "CUIDADO VISUAL EN LA ERA DIGITAL",
+        desc: "Estrategias simples para reducir el daño ocular frente a pantallas y mantener tu visión saludable por años",
+        price: 49900,
+      },
+      freeDelivery: {
+        desc: "Entrega de 2 a 4 días",
+        price: 18000,
+      },
     },
   ];
 
@@ -59,9 +83,9 @@ const Pricing = () => {
     >
       <div className="container px-4 md:px-6">
         {/* Urgency & Headline */}
-        <div className="flex flex-col items-center text-center gap-4 mb-12 lg:mb-16">
+        <div className="flex flex-col items-center text-center gap-4 mb-10 lg:mb-16">
           {/* Urgency Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-500 rounded-full animate-pulse shadow-lg">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-500 rounded-full shadow-lg">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
               <path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z" />
             </svg>
@@ -72,30 +96,30 @@ const Pricing = () => {
 
           {/* Main Headline */}
           <FadeIn delay={100}>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-              <span className="text-white">Ahorra</span>{" "}
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-brand-headline">
+              <span>Ahorra</span>{" "}
               <span className="text-amber-400">27%</span>{" "}
-              <span className="text-white">en Tu Primer Pedido</span>
+              <span>en Tu Primer Pedido</span>
             </h2>
           </FadeIn>
 
           {/* Subheadline with Specific Value */}
           <div className="space-y-1">
-            <p className="text-xl md:text-2xl text-gray-200 font-medium">
+            <p className="text-xl md:text-2xl text-brand-body font-medium">
               Precio normal:{" "}
-              <span className="line-through text-gray-400">$150.000</span>
+              <span className="line-through text-gray-500">$150.000</span>
             </p>
-            <p className="text-2xl md:text-3xl font-bold">
-              Hoy solo: <span class="text-green-400">$109.999</span>
+            <p className="text-2xl md:text-3xl font-bold text-brand-headline">
+              Hoy solo: <span class="text-green-500">$109.999</span>
             </p>
           </div>
 
           {/* Countdown Timer */}
-          <div className="mt-4">
+          <div className="mt-5">
             <CountdownTimer />
           </div>
           {/* Social Proof Mini */}
-          <div className="flex items-center justify-center text-sm text-gray-300">
+          <div className="flex items-center justify-center text-sm text-brand-body">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -117,14 +141,14 @@ const Pricing = () => {
               <path d="M3 13v-1a2 2 0 0 1 2 -2h2" />
             </svg>
             <span class="text-balance w-[60%]">
-              <strong className="text-white">
+              <strong className="text-brand-headline">
                 {randomBuyersCount()} personas
               </strong>{" "}
               compraron a este precio en las últimas 48 horas
             </span>
           </div>
           {/* Reason for Discount */}
-          <p className="text-sm text-gray-400 max-w-2xl">
+          <p className="text-sm text-brand-muted max-w-2xl">
             *Promoción válida solo para nuevos clientes mientras dure el
             inventario.
           </p>
@@ -132,15 +156,15 @@ const Pricing = () => {
         {/* Pricing Section */}
         <div className="grid gap-8 lg:gap-12 md:grid-cols-2 max-w-6xl mx-auto">
           {/* Package 1 - Single Pair */}
-          <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border-2 border-white/20 rounded-2xl overflow-hidden shadow-2xl hover:border-white/30 transition-all group">
+          <div className="relative bg-bg-card-glass border-2 rounded-xl overflow-hidden shadow-2xl hover:border-white/30 transition-all group">
             {/* Card Header */}
             <div className="p-3 lg:p-8">
               <div className="flex items-start justify-between mb-4">
                 <div>
-                  <h3 className="text-2xl lg:text-3xl font-bold text-white mb-2">
+                  <h3 className="text-2xl lg:text-3xl font-bold text-brand-headline">
                     Protección Individual
                   </h3>
-                  <p className="text-gray-300 text-base lg:text-lg">
+                  <p className="text-brand-body text-base lg:text-lg">
                     Perfecto para uso personal
                   </p>
                 </div>
@@ -159,15 +183,15 @@ const Pricing = () => {
               {/* Pricing */}
               <div className="mb-6">
                 <div className="flex items-end gap-3 mb-2">
-                  <span className="text-3xl lg:text-5xl font-bold text-white">
+                  <span className="text-3xl lg:text-5xl font-bold text-brand-headline">
                     $109.999
                   </span>
-                  <span className="text-xl text-gray-400 line-through mb-2">
+                  <span className="text-xl text-brand-muted line-through mb-2">
                     $150.000
                   </span>
                 </div>
                 <div className="inline-flex items-center gap-2 px-3 py-1 bg-green-500/20 border border-green-500/40 rounded-full">
-                  <span className="text-green-300 font-semibold text-sm">
+                  <span className="text-green-500 font-semibold text-sm">
                     Ahorras $40.000 (27% OFF)
                   </span>
                 </div>
@@ -175,10 +199,10 @@ const Pricing = () => {
 
               {/* What's Included */}
               <div className="mb-6">
-                <p className="text-white font-semibold text-lg mb-4">
+                <p className="text-brand-headline font-semibold text-lg mb-4">
                   ✨ Qué Incluye:
                 </p>
-                <ul className="space-y-3">
+                <ul className="space-y-3 text-brand-body">
                   {[
                     { text: "1 Par de Gafas Amber Vision", bold: true },
                     { text: "Estuche rígido + funda protectora" },
@@ -200,8 +224,8 @@ const Pricing = () => {
                       <span
                         className={`text-base lg:text-lg ${
                           item.bold
-                            ? "text-white font-semibold"
-                            : "text-gray-300"
+                            ? "text-brand-headline font-semibold"
+                            : "text-brand-body"
                         }`}
                       >
                         {item.text}
@@ -238,7 +262,7 @@ const Pricing = () => {
               </button>
 
               {/* Trust Badges */}
-              <div className="flex items-center justify-center gap-4 mt-4 text-sm text-gray-400">
+              <div className="flex items-center justify-center gap-4 mt-4 text-sm text-brand-muted">
                 <span className="flex items-center gap-1">
                   <svg
                     width="16"
@@ -303,10 +327,10 @@ const Pricing = () => {
             <div className="p-3 lg:p-8 pt-9">
               <div className="flex items-start justify-between mb-4">
                 <div>
-                  <h3 className="text-2xl lg:text-3xl font-bold text-white mb-2">
+                  <h3 className="text-2xl lg:text-3xl font-bold text-brand-headline">
                     Pack Pareja/Familia
                   </h3>
-                  <p className="text-gray-200 text-base lg:text-lg font-medium">
+                  <p className="text-brand-body text-base lg:text-lg">
                     Comparte la protección visual
                   </p>
                 </div>
@@ -325,10 +349,10 @@ const Pricing = () => {
               {/* Pricing */}
               <div className="mb-6">
                 <div className="flex items-end gap-3 mb-3">
-                  <span className="text-3xl lg:text-5xl font-bold text-white">
+                  <span className="text-3xl lg:text-5xl font-bold text-brand-headline">
                     $199.999
                   </span>
-                  <span className="text-xl text-gray-300 line-through mb-2">
+                  <span className="text-xl text-brand-muted line-through mb-2">
                     $300.000
                   </span>
                 </div>
@@ -356,7 +380,7 @@ const Pricing = () => {
                   >
                     <path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z" />
                   </svg>
-                  <span className="text-green-300 font-semibold text-sm">
+                  <span className="text-green-500 font-semibold text-sm">
                     Ahorro de $50.000 en cada par
                   </span>
                 </div>
@@ -364,7 +388,7 @@ const Pricing = () => {
 
               {/* What's Included */}
               <div className="mb-6">
-                <p className="text-white font-semibold text-lg mb-4">
+                <p className="text-brand-headline font-semibold text-lg mb-4">
                   ✨ Qué Incluye:
                 </p>
                 <ul className="space-y-3">
@@ -390,8 +414,8 @@ const Pricing = () => {
                       <span
                         className={`text-base lg:text-lg ${
                           item.bold
-                            ? "text-white font-semibold"
-                            : "text-gray-200"
+                            ? "text-brand-headline font-semibold"
+                            : "text-brand-body"
                         }`}
                       >
                         {item.text}
@@ -428,8 +452,8 @@ const Pricing = () => {
               </button>
 
               {/* Social Proof */}
-              <div className="mt-4 bg-green-500/10 border border-green-500/30 rounded-lg p-3">
-                <div className="flex items-center gap-2 text-sm text-green-300">
+              <div className="mt-4 bg-green-500/20 border border-green-500/30 rounded-lg p-3">
+                <div className="flex items-center gap-2 text-sm text-green-500">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -460,7 +484,7 @@ const Pricing = () => {
         </div>
 
         {/* Additional Benefits */}
-        <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm md:text-sm text-gray-300 mt-3">
+        <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm md:text-sm text-brand-muted mt-3">
           <div class="flex items-center gap-1.5">
             <svg
               width="16"

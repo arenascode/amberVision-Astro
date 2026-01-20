@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import "tailwindcss";
 @import "tailwindcss/theme.css" layer(theme);
 @import "tailwindcss/preflight.css" layer(base);
@@ -9,6 +9,7 @@ html {
   font-family: 'Inter', sans-serif;
   scroll-behavior: smooth;
   scroll-padding-top: 80px; /* Adjust this value to match your navbar height */
+  scrollbar-width: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -22,15 +23,30 @@ html {
 @import "tailwindcss";
 
 @theme {
-  /* Colores de marca */
+  /* Brand colors */
   --color-brand-midnight: #0a0c10;
   --color-brand-dark: #020202;
-  --color-brand-headline: #f8fafc;
-  --color-brand-body: #cbd5e1;
-  --color-brand-muted: #94a3b8;
+
+  --color-brand-headline: #1F2328;
+  --color-brand-body: #2B2E34;
+  --color-brand-muted: #6B7280;
+
   --color-brand-accent: #fbbf24;
   --color-brand-accent-dark: #d97706;
 
-  /* Sombra personalizada */
-  --shadow-glow-accent: 0 0 20px -5px rgba(251, 191, 36, 0.5);
+  /* Page background */
+  --color-bg-page: #EEF1F4;
+
+  /* Glass card background (KEY CHANGE) */
+  --color-bg-card-glass: rgba(255, 255, 255, 0.70);
+  --color-bg-card-solid: #FFFFFF;
+
+  /* Card border (very subtle) */
+  --color-border-card: rgba(255, 255, 255, 0.4);
+
+  /* Shadows */
+  --shadow-card-soft: 0 6px 20px rgba(0, 0, 0, 0.06);
+  --shadow-card-hover: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  --shadow-glow-accent: 0 0 20px -5px rgba(251, 191, 36, 0.45);
 }

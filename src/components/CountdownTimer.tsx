@@ -31,9 +31,9 @@ export default function CountdownTimer() {
 
   return (
     <div className="flex flex-col items-center gap-2">
-      <div className="flex flex-col items-center gap-2 text-sidebar-primary-foreground">
+      <div className="flex flex-col items-center gap-2 text-brand-headline font-semibold">
         
-        <span className="text-lg lg:text-lg font-medium flex items-center gap-2">
+        <span className="text-lg lg:text-lg font-semibold flex items-center gap-2 text-brand-headline">
          <svg
           className="h-4 w-4"
           viewBox="0 0 24 24"
@@ -56,14 +56,14 @@ export default function CountdownTimer() {
           </div>
           <div className="text-xs uppercase">Horas</div>
         </div>
-        <div className="text-xl font-bold pt-2">:</div>
+        <div className="text-xl font-bold pt-2 text-brand-headline">:</div>
         <div className="bg-gradient-to-r from-amber-500 to-orange-600 text-primary-foreground rounded-md px-3 py-2 min-w-[64px] xl:min-w-[84px] xl:h-auto">
           <div className="text-2xl xl:text-3xl font-bold">
             {formatTime(timeLeft.minutes)}
           </div>
           <div className="text-xs uppercase">Minutos</div>
         </div>
-        <div className="text-xl font-bold pt-2">:</div>
+        <div className="text-xl font-bold pt-2 text-brand-headline">:</div>
         <div className="bg-gradient-to-r from-amber-500 to-orange-600 text-primary-foreground rounded-md px-3 py-2 min-w-[64px] xl:min-w-[84px] xl:h-auto">
           <div className="text-2xl xl:text-3xl font-bold">
             {formatTime(timeLeft.seconds)}

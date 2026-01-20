@@ -5,28 +5,28 @@ import FadeIn from "./FadeIn";
 
   <div class="container px-4 md:px-6 relative z-10">
     <FadeIn delay={100} client:visible>
-      <div class="max-w-[900px] mx-auto rounded-2xl p-6 sm:p-8 md:p-10 text-center border-2 shadow-2xl backdrop-blur-lg bg-gradient-to-br from-white/15 to-white/5 border-amber-400/40 relative">
+      <div class="max-w-[900px] mx-auto rounded-2xl p-6 sm:p-8 md:p-10 text-center border-2 shadow-2xl bg-bg-card-glass border-amber-400/40 relative">
         
         <!-- Urgency badge at top -->
         <div class="inline-flex items-center gap-2 bg-red-500/25 border-2 border-red-400/50 rounded-full px-4 py-2 mb-6 animate-pulse">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="#ff0000">
             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
           </svg>
-          <span class="text-sm md:text-base font-bold text-red-100">Solo quedan 23 unidades en stock</span>
+          <span class="text-sm md:text-base font-bold text-red-500">Solo quedan 23 unidades en stock</span>
         </div>
 
         <!-- Main headline - More direct and urgent -->
-        <h2 class="text-3xl md:text-4xl xl:text-5xl font-bold tracking-tight mb-4 leading-tight">
+        <h2 class="text-3xl md:text-4xl xl:text-5xl font-bold tracking-tight mb-4 leading-tight text-brand-headline">
           Recupera Tu Sueño <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-400">Esta Misma Noche</span>
         </h2>
         
         <!-- Subheadline - Benefit-focused with social proof -->
-        <p class="text-lg md:text-xl xl:text-2xl mb-3 text-gray-100 font-semibold">
-          Más de 3,000 colombianos ya duermen mejor y trabajan sin fatiga
+        <p class="text-lg md:text-xl xl:text-2xl mb-3 text-brand-muted font-semibold">
+          Más de 3,147 colombianos ya duermen mejor y trabajan sin fatiga
         </p>
         
-        <p class="text-base md:text-lg mb-8 text-gray-200 max-w-[700px] mx-auto leading-relaxed">
-          No más noches en vela. No más dolores de cabeza. Solo descanso profundo y ojos protegidos — <strong class="text-white">desde tu primera noche usando Amber Vision</strong>.
+        <p class="text-base md:text-lg mb-8 text-brand-body max-w-[700px] mx-auto leading-relaxed">
+          No más noches en vela. No más dolores de cabeza. Solo descanso profundo y ojos protegidos — <strong class="text-brand-headline">desde tu primera noche usando Amber Vision</strong>.
         </p>
 
         <!-- Main CTA Button - Enhanced -->
@@ -60,14 +60,12 @@ import FadeIn from "./FadeIn";
         </div>
 
         <!-- Secondary micro-CTA text -->
-        <p class="text-sm md:text-base mb-8 text-amber-200 font-semibold">
-          <p class="text-sm md:text-base mb-8 text-amber-200 font-semibold">
+          <p class="text-sm md:text-base mb-4 text-amber-400 font-semibold">
   ⚡ Envío express disponible — Recíbelas en 24-48 horas y empieza a dormir mejor
 </p>
-        </p>
 
         <!-- Trust badges - Enhanced with specifics -->
-        <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs md:text-sm text-gray-300">
+        <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs md:text-sm text-brand-muted">
                 <div class="flex items-center gap-1.5">
                   <svg
                     width="16"

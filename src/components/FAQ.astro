@@ -16,7 +16,7 @@ import FadeIn from "./FadeIn";
 <section id="faq" class="py-6 md:py-16 lg:py-20">
   <div class="container mx-auto px-4 md:px-6 max-w-5xl">
     {/* Header */}
-    <div class="text-center mb-8">
+    <div class="text-center text-brand-headline mb-8">
       <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/30 mb-4">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="#a855f7">
           <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
@@ -32,20 +32,20 @@ import FadeIn from "./FadeIn";
         </h2>
       </FadeIn>
       
-      <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
-        Todo lo que necesitas saber antes de ordenar. Si tienes otra duda, <a href="https://wa.me/573001234567" class="text-amber-400 underline hover:text-amber-300">escríbenos</a>.
+      <p class="text-lg md:text-xl text-brand-body max-w-2xl mx-auto">
+        Todo lo que necesitas saber antes de ordenar. Si tienes otra duda, <a href="https://wa.link/9om15w" target="_blank" class="text-amber-400 underline hover:text-amber-300">escríbenos</a>.
       </p>
     </div>
 
     {/* FAQ Accordion */}
-    <div class="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border border-white/20 rounded-2xl p-3 md:p-8 lg:p-10 shadow-2xl">
+    <div class="bg-bg-card-glass rounded-2xl md:p-8 lg:p-10 shadow-2xl">
       <div class="space-y-4">
         
         {/* Question 1: Shipping */}
-        <details class="bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl overflow-hidden hover:border-white/30 transition-all">
+        <details class="bg-white/5 backdrop-blur-sm border-b border-gray-500/20 rounded-xl overflow-hidden hover:border-white/30 transition-all">
           <summary class="flex items-start justify-between gap-4 p-5 cursor-pointer group">
             <div class="flex items-start gap-3 flex-1">
-              <span class="text-base md:text-lg font-semibold text-white group-hover:text-amber-400 transition-colors">
+              <span class="text-base md:text-lg font-semibold text-brand-headline group-hover:text-amber-400 transition-colors">
                 ¿Cuánto tiempo tarda el envío y cuánto cuesta?
               </span>
             </div>
@@ -55,24 +55,24 @@ import FadeIn from "./FadeIn";
           </summary>
           <div class="px-5 pb-5">
             <div class="pt-3 border-t border-white/10 space-y-3">
-              <p class="text-gray-200">
-                <strong class="text-white">Envío gratis a toda Colombia</strong>. Tu pedido llega en:
+              <p class="text-brand-body">
+                <strong class="text-brand-headline">Envío gratis a toda Colombia</strong>. Tu pedido llega en:
               </p>
               <ul class="space-y-2">
                 <li class="flex items-start gap-2">
                   <span class="text-green-400 mt-1">✓</span>
-                  <span class="text-gray-200"><strong class="text-white">Bogotá, Medellín, Cali:</strong> 2-3 días hábiles</span>
+                  <span class="text-brand-body"><strong class="text-brand-headline">Bogotá, Medellín, Cali:</strong> 2-3 días hábiles</span>
                 </li>
                 <li class="flex items-start gap-2">
                   <span class="text-green-400 mt-1">✓</span>
-                  <span class="text-gray-200"><strong class="text-white">Otras ciudades principales:</strong> 3-5 días hábiles</span>
+                  <span class="text-brand-body"><strong class="text-brand-headline">Otras ciudades principales:</strong> 3-5 días hábiles</span>
                 </li>
                 <li class="flex items-start gap-2">
                   <span class="text-green-400 mt-1">✓</span>
-                  <span class="text-gray-200"><strong class="text-white">Zonas rurales:</strong> 7 días hábiles aprox</span>
+                  <span class="text-brand-body"><strong class="text-brand-headline">Zonas rurales:</strong> 7 días hábiles aprox</span>
                 </li>
               </ul>
-              <p class="text-sm text-gray-400 italic">
+              <p class="text-sm text-brand-body italic">
                 Recibirás el código de seguimiento por wtsp para rastrear tu pedido en tiempo real.
               </p>
             </div>
@@ -80,10 +80,10 @@ import FadeIn from "./FadeIn";
         </details>
 
         {/* Question 2: Payment */}
-        <details class="bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl overflow-hidden hover:border-white/30 transition-all">
+        <details class="bg-white/5 backdrop-blur-sm border-b border-gray-500/20 rounded-xl overflow-hidden hover:border-white/30 transition-all">
           <summary class="flex items-start justify-between gap-4 p-5 cursor-pointer group">
             <div class="flex items-start gap-3 flex-1">
-              <span class="text-base md:text-lg font-semibold text-white group-hover:text-amber-400 transition-colors">
+              <span class="text-base md:text-lg font-semibold text-brand-headline group-hover:text-amber-400 transition-colors">
                 ¿Qué métodos de pago aceptan?
               </span>
             </div>
@@ -93,25 +93,25 @@ import FadeIn from "./FadeIn";
           </summary>
           <div class="px-5 pb-5">
             <div class="pt-3 border-t border-white/10 space-y-3">
-              <p class="text-gray-200">
+              <p class="text-brand-body">
                 Aceptamos todas las siguientes formas de pago para tu comodidad:
               </p>
               <div class="grid grid-cols-2 gap-3">
                 <div class="flex items-center gap-2 bg-white/5 p-3 rounded-lg">
                   <span class="text-2xl">🏦</span>
-                  <span class="text-white font-semibold text-sm">Transferencia</span>
+                  <span class="text-brand-headline font-semibold text-sm">Transferencia</span>
                 </div>
                 <div class="flex items-center gap-2 bg-white/5 p-3 rounded-lg">
                   <span class="text-2xl">📱</span>
-                  <span class="text-white font-semibold text-sm">Nequi</span>
+                  <span class="text-brand-headline font-semibold text-sm">Nequi</span>
                 </div>
                 <div class="flex items-center gap-2 bg-white/5 p-3 rounded-lg">
                   <span class="text-2xl">🚚</span>
-                  <span class="text-white font-semibold text-sm">Pago Contraentrega </span>
+                  <span class="text-brand-headline font-semibold text-sm">Pago Contraentrega </span>
                 </div>
                 <div class="flex items-center gap-2 bg-white/5 p-3 rounded-lg">
                   <span class="text-2xl">🔐</span>
-                  <span class="text-white font-semibold text-sm">Llave Bancolombia </span>
+                  <span class="text-brand-headline font-semibold text-sm">Llave Bancolombia </span>
                 </div>
               </div>
               <p class="text-sm text-green-400 flex items-center text-center gap-2 self-center justify-center">
@@ -125,10 +125,10 @@ import FadeIn from "./FadeIn";
         </details>
 
         {/* Question 3: Amber vs Clear */}
-        <details class="bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl overflow-hidden hover:border-white/30 transition-all">
+        <details class="bg-white/5 backdrop-blur-sm border-b border-gray-500/20 rounded-xl overflow-hidden hover:border-white/30 transition-all">
           <summary class="flex items-start justify-between gap-4 p-5 cursor-pointer group">
             <div class="flex items-start gap-3 flex-1">
-              <span class="text-base md:text-lg font-semibold text-white group-hover:text-amber-400 transition-colors">
+              <span class="text-base md:text-lg font-semibold text-brand-headline group-hover:text-amber-400 transition-colors">
                 ¿Cuál es la diferencia entre estas gafas y las 'transparentes' de luz azul?
               </span>
             </div>
@@ -138,13 +138,13 @@ import FadeIn from "./FadeIn";
           </summary>
           <div class="px-5 pb-5">
             <div class="pt-3 border-t border-white/10 space-y-4">
-              <p class="text-gray-200">
-                La diferencia es <strong class="text-white">enorme</strong> y explica por qué nuestras gafas funcionan mejor:
+              <p class="text-brand-body">
+                La diferencia es <strong class="text-brand-headline">enorme</strong> y explica por qué nuestras gafas funcionan mejor:
               </p>
               <div class="grid md:grid-cols-2 gap-4">
                 <div class="bg-red-500/10 border border-red-500/30 rounded-lg p-4">
                   <p class="text-red-400 font-bold mb-2">❌ Gafas Transparentes</p>
-                  <ul class="space-y-2 text-sm text-gray-300">
+                  <ul class="space-y-2 text-sm text-brand-muted">
                     <li>• Bloquean solo 20-30% de luz azul</li>
                     <li>• No filtran el rango más dañino</li>
                     <li>• Efecto mínimo en melatonina</li>
@@ -153,7 +153,7 @@ import FadeIn from "./FadeIn";
                 </div>
                 <div class="bg-green-500/10 border border-green-500/30 rounded-lg p-4">
                   <p class="text-green-400 font-bold mb-2">✓ Nuestras Gafas Ámbar</p>
-                  <ul class="space-y-2 text-sm text-gray-200">
+                  <ul class="space-y-2 text-sm text-brand-body">
                     <li>• Bloquean hasta 99% de luz azul</li>
                     <li>• Filtran TODO el rango dañino</li>
                     <li>• Restauran producción de melatonina</li>
@@ -161,18 +161,18 @@ import FadeIn from "./FadeIn";
                   </ul>
                 </div>
               </div>
-              <p class="text-sm text-gray-300">
-                <strong class="text-white">Sí, verás un tinte cálido</strong>, pero es precisamente ese filtrado profundo lo que protege tus ojos y te ayuda a dormir.
+              <p class="text-sm text-brand-muted">
+                <strong class="text-brand-headline">Sí, verás un tinte cálido</strong>, pero es precisamente ese filtrado profundo lo que protege tus ojos y te ayuda a dormir.
               </p>
             </div>
           </div>
         </details>
 
         {/* Question 4: Unisex fit */}
-        <details class="bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl overflow-hidden hover:border-white/30 transition-all">
+        <details class="bg-white/5 backdrop-blur-sm border-b border-gray-500/20 rounded-xl overflow-hidden hover:border-white/30 transition-all">
           <summary class="flex items-start justify-between gap-4 p-5 cursor-pointer group">
             <div class="flex items-start gap-3 flex-1">
-              <span class="text-base md:text-lg font-semibold text-white group-hover:text-amber-400 transition-colors">
+              <span class="text-base md:text-lg font-semibold text-brand-headline group-hover:text-amber-400 transition-colors">
                 ¿Son para hombres o mujeres? ¿Me quedarán bien?
               </span>
             </div>
@@ -182,25 +182,25 @@ import FadeIn from "./FadeIn";
           </summary>
           <div class="px-5 pb-5">
             <div class="pt-3 border-t border-white/10 space-y-3">
-              <p class="text-gray-200">
-                <strong class="text-white">Diseño unisex</strong> con estilo clásico que se ve profesional en todos. Las monturas tienen:
+              <p class="text-brand-body">
+                <strong class="text-brand-headline">Diseño unisex</strong> con estilo clásico que se ve profesional en todos. Las monturas tienen:
               </p>
               <ul class="space-y-2 ml-4">
                 <li class="flex items-start gap-2">
                   <span class="text-green-400 mt-1">✓</span>
-                  <span class="text-gray-200"><strong class="text-white">Ancho universal:</strong> Se adaptan a la mayoría de rostros</span>
+                  <span class="text-brand-body"><strong class="text-brand-headline">Ancho universal:</strong> Se adaptan a la mayoría de rostros</span>
                 </li>
                 <li class="flex items-start gap-2">
                   <span class="text-green-400 mt-1">✓</span>
-                  <span class="text-gray-200"><strong class="text-white">Varillas flexibles:</strong> Se ajustan sin presionar</span>
+                  <span class="text-brand-body"><strong class="text-brand-headline">Varillas flexibles:</strong> Se ajustan sin presionar</span>
                 </li>
                 <li class="flex items-start gap-2">
                   <span class="text-green-400 mt-1">✓</span>
-                  <span class="text-gray-200"><strong class="text-white">Material TR90:</strong> Ligeras y cómodas</span>
+                  <span class="text-brand-body"><strong class="text-brand-headline">Material TR90:</strong> Ligeras y cómodas</span>
                 </li>
               </ul>
-              <div class="bg-blue-500/10 border border-blue-500/30 rounded-lg p-3 mt-3">
-                <p class="text-blue-300 text-sm flex items-center gap-2">
+              <div class="bg-green-500/20 border border-green-500/30 rounded-lg p-3 mt-3">
+                <p class="text-green-500 text-sm flex items-center gap-2">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
                   </svg>
@@ -212,10 +212,10 @@ import FadeIn from "./FadeIn";
         </details>
 
         {/* Question 5: When to use */}
-        <details class="bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl overflow-hidden hover:border-white/30 transition-all">
+        <details class="bg-white/5 backdrop-blur-sm border-b border-gray-500/20 rounded-xl overflow-hidden hover:border-white/30 transition-all">
           <summary class="flex items-start justify-between gap-4 p-5 cursor-pointer group">
   <div class="flex items-start gap-3 flex-1">
-    <span class="text-base md:text-lg font-semibold text-white group-hover:text-amber-400 transition-colors">
+    <span class="text-base md:text-lg font-semibold text-brand-headline group-hover:text-amber-400 transition-colors">
       ¿Cuándo debo usarlas y cuándo NO?
     </span>
   </div>
@@ -231,8 +231,8 @@ import FadeIn from "./FadeIn";
       <p class="text-purple-300 font-bold mb-2 flex items-center gap-2">
         <span class="text-xl">🌙</span> Para Dormir Profundo
       </p>
-      <p class="text-gray-100 text-sm md:text-base leading-relaxed">
-        Úsalas <strong class="text-white">2-3 horas antes de acostarte</strong> (generalmente desde las 7-8 PM). Esto le da tiempo a tu cuerpo para producir melatonina naturalmente y prepararse para un sueño reparador.
+      <p class="text-brand-muted text-sm md:text-base leading-relaxed">
+        Úsalas <strong class="text-brand-headline">2-3 horas antes de acostarte</strong> (generalmente desde las 7-8 PM). Esto le da tiempo a tu cuerpo para producir melatonina naturalmente y prepararse para un sueño reparador.
       </p>
     </div>
     
@@ -241,14 +241,14 @@ import FadeIn from "./FadeIn";
       <p class="text-blue-300 font-bold mb-2 flex items-center gap-2">
         <span class="text-xl">💻</span> Durante Trabajo o Estudio
       </p>
-      <p class="text-gray-100 text-sm md:text-base leading-relaxed mb-3">
-        Úsalas cuando estés en <strong class="text-white">espacios cerrados con luz artificial</strong> (oficinas, bibliotecas, cuartos sin ventanas). Muchos clientes las usan 8-12 horas diarias sin molestias.
+      <p class="text-brand-muted text-sm md:text-base leading-relaxed mb-3">
+        Úsalas cuando estés en <strong class="text-brand-headline">espacios cerrados con luz artificial</strong> (oficinas, bibliotecas, cuartos sin ventanas). Muchos clientes las usan 8-12 horas diarias sin molestias.
       </p>
       <div class="bg-yellow-500/20 border border-yellow-400/40 rounded-md p-3 mt-3">
-        <p class="text-yellow-100 text-sm md:text-base font-semibold mb-1.5">
+        <p class="text-yellow-500 text-sm md:text-base font-semibold mb-1.5">
           ⚠️ Importante: Tus ojos necesitan luz natural
         </p>
-        <p class="text-gray-200 text-xs md:text-sm leading-relaxed">
+        <p class="text-brand-body text-xs md:text-sm leading-relaxed">
           <strong>NO las uses al aire libre durante el día.</strong> La luz solar natural es esencial para tu salud visual y ritmo circadiano. Sal a caminar, trabaja cerca de una ventana, o toma descansos al exterior — tus ojos necesitan ese contacto con luz natural.
         </p>
       </div>
@@ -259,29 +259,29 @@ import FadeIn from "./FadeIn";
       <p class="text-green-300 font-bold mb-2 flex items-center gap-2">
         <span class="text-xl">☀️</span> Exposición a Luz Natural (Clave)
       </p>
-      <p class="text-gray-100 text-sm md:text-base leading-relaxed mb-2">
-        <strong class="text-white">Quítate las gafas durante el día</strong> cuando estés al aire libre o cerca de ventanas con luz natural directa.
+      <p class="text-brand-muted text-sm md:text-base leading-relaxed mb-2">
+        <strong class="text-brand-headline">Quítate las gafas durante el día</strong> cuando estés al aire libre o cerca de ventanas con luz natural directa.
       </p>
-      <p class="text-gray-200 text-xs md:text-sm leading-relaxed">
+      <p class="text-brand-body text-xs md:text-sm leading-relaxed">
         La luz solar regula tu reloj biológico y fortalece tu vista. Idealmente, busca <strong>15-30 minutos de luz natural cada mañana</strong> — esto optimiza los beneficios de usar las gafas por la noche.
       </p>
     </div>
     
     <!-- Quick Reference Guide -->
     <div class="bg-white/5 border border-white/10 rounded-lg p-4">
-      <p class="text-gray-300 font-bold mb-3 text-sm md:text-base">📋 Guía Rápida de Uso</p>
+      <p class="text-brand-muted font-bold mb-3 text-sm md:text-base">📋 Guía Rápida de Uso</p>
       <div class="space-y-2 text-xs md:text-sm">
         <div class="flex items-start gap-2">
           <span class="text-green-400 mt-0.5">✓</span>
-          <span class="text-gray-200"><strong>SÍ úsalas:</strong> En oficinas, frente al computador, viendo TV, usando el celular de noche</span>
+          <span class="text-brand-body"><strong>SÍ úsalas:</strong> En oficinas, frente al computador, viendo TV, usando el celular de noche</span>
         </div>
         <div class="flex items-start gap-2">
           <span class="text-red-400 mt-0.5">✗</span>
-          <span class="text-gray-200"><strong>NO las uses:</strong> Al aire libre de día o conduciendo</span>
+          <span class="text-brand-body"><strong>NO las uses:</strong> Al aire libre de día o conduciendo</span>
         </div>
         <div class="flex items-start gap-2">
           <span class="text-yellow-400 mt-0.5">!</span>
-          <span class="text-gray-200"><strong>Balance ideal:</strong> Luz natural en la mañana + gafas en espacios cerrados + gafas antes de dormir</span>
+          <span class="text-brand-body"><strong>Balance ideal:</strong> Luz natural en la mañana + gafas en espacios cerrados + gafas antes de dormir</span>
         </div>
       </div>
     </div>
@@ -291,10 +291,10 @@ import FadeIn from "./FadeIn";
         </details>
 
         {/* Question 6: Prescription */}
-        <details class="bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl overflow-hidden hover:border-white/30 transition-all">
+        <details class="bg-white/5 backdrop-blur-sm border-b border-gray-500/20 rounded-xl overflow-hidden hover:border-white/30 transition-all">
           <summary class="flex items-start justify-between gap-4 p-5 cursor-pointer group">
             <div class="flex items-start gap-3 flex-1">
-              <span class="text-base md:text-lg font-semibold text-white group-hover:text-amber-400 transition-colors">
+              <span class="text-base md:text-lg font-semibold text-brand-headline group-hover:text-amber-400 transition-colors">
                 ¿Tienen aumento o graduación visual?
               </span>
             </div>
@@ -304,11 +304,11 @@ import FadeIn from "./FadeIn";
           </summary>
           <div class="px-5 pb-5">
             <div class="pt-3 border-t border-white/10 space-y-3">
-              <p class="text-gray-200">
-                <strong class="text-white">No, no tienen ninguna graduación.</strong> Son lentes diseñados exclusivamente para filtrar luz azul.
+              <p class="text-brand-body">
+                <strong class="text-brand-headline">No, no tienen ninguna graduación.</strong> Son lentes diseñados exclusivamente para filtrar luz azul.
               </p>
-              <div class="bg-green-500/10 border border-green-500/30 rounded-lg p-3">
-                <p class="text-green-300 font-semibold flex items-start gap-2 text-sm">
+              <div class="bg-green-500/20 border border-green-500/30 rounded-lg p-3">
+                <p class="text-green-500 font-semibold flex items-start gap-2 text-sm">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="flex-shrink-0 mt-0.5">
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
                   </svg>
@@ -322,10 +322,10 @@ import FadeIn from "./FadeIn";
         </details>
 
         {/* Question 7: Driving */}
-        <details class="bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl overflow-hidden hover:border-white/30 transition-all">
+        <details class="bg-white/5 backdrop-blur-sm border-b border-gray-500/20 rounded-xl overflow-hidden hover:border-white/30 transition-all">
           <summary class="flex items-start justify-between gap-4 p-5 cursor-pointer group">
             <div class="flex items-start gap-3 flex-1">
-              <span class="text-base md:text-lg font-semibold text-white group-hover:text-amber-400 transition-colors">
+              <span class="text-base md:text-lg font-semibold text-brand-headline group-hover:text-amber-400 transition-colors">
                 ¿Puedo usarlas para conducir de noche?
               </span>
             </div>
@@ -342,22 +342,22 @@ import FadeIn from "./FadeIn";
                   </svg>
                   No las recomendamos para conducir de noche
                 </p>
-                <p class="text-gray-200 text-sm">
+                <p class="text-brand-body text-sm">
                   El tinte ámbar puede afectar tu percepción de colores en condiciones de baja luz. Tu seguridad es lo primero.
                 </p>
               </div>
-              <p class="text-gray-300 text-sm">
-                <strong class="text-white">Úsalas con confianza en:</strong> Trabajar, estudiar, gaming, ver TV, y cualquier actividad con pantallas o luces LED.
+              <p class="text-brand-muted text-sm">
+                <strong class="text-brand-headline">Úsalas con confianza en:</strong> Trabajar, estudiar, gaming, ver TV, y cualquier actividad con pantallas o luces LED.
               </p>
             </div>
           </div>
         </details>
 
         {/* Question 8: Guarantee */}
-        <details class="bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl overflow-hidden hover:border-white/30 transition-all">
+        <details class="bg-white/5 backdrop-blur-sm border-b border-gray-500/20 rounded-xl overflow-hidden hover:border-white/30 transition-all">
           <summary class="flex items-start justify-between gap-4 p-5 cursor-pointer group">
             <div class="flex items-start gap-3 flex-1">
-              <span class="text-base md:text-lg font-semibold text-white group-hover:text-amber-400 transition-colors">
+              <span class="text-base md:text-lg font-semibold text-brand-headline group-hover:text-amber-400 transition-colors">
                 ¿Qué pasa si no me funcionan o no me gustan?
               </span>
             </div>
@@ -367,20 +367,16 @@ import FadeIn from "./FadeIn";
           </summary>
           <div class="px-5 pb-5">
             <div class="pt-3 border-t border-white/10 space-y-3">
-              <p class="text-gray-200">
-                <strong class="text-white">Tienes 30 días para probarlas sin riesgo.</strong> Si no notas mejoría:
+              <p class="text-brand-body">
+                <strong class="text-brand-headline">Tienes 30 días para probarlas sin riesgo.</strong> Si no notas mejoría:
               </p>
               <div class="grid md:grid-cols-2 gap-3">
                 <div class="bg-white/5 p-3 rounded-lg">
                   <p class="text-green-400 font-semibold mb-1 text-sm">✓ Reembolso 100%</p>
-                  <p class="text-xs text-gray-300">Sin deducciones</p>
-                </div>
-                <div class="bg-white/5 p-3 rounded-lg">
-                  <p class="text-green-400 font-semibold mb-1 text-sm">✓ Devolución Gratis</p>
-                  <p class="text-xs text-gray-300">Nosotros pagamos envío</p>
+                  <p class="text-xs text-brand-muted">Sin deducciones</p>
                 </div>
               </div>
-              <p class="text-sm text-gray-400">
+              <p class="text-sm text-brand-body">
                 <a href="/PoliticaDeDevoluciones" class="text-amber-400 underline hover:text-amber-300">Ver detalles completos de la garantía</a>
               </p>
             </div>
@@ -388,10 +384,10 @@ import FadeIn from "./FadeIn";
         </details>
 
         {/* Question 9: Cleaning */}
-        <details class="bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl overflow-hidden hover:border-white/30 transition-all">
+        <details class="bg-white/5 backdrop-blur-sm border-b border-gray-500/20 rounded-xl overflow-hidden hover:border-white/30 transition-all">
           <summary class="flex items-start justify-between gap-4 p-5 cursor-pointer group">
             <div class="flex items-start gap-3 flex-1">
-              <span class="text-base md:text-lg font-semibold text-white group-hover:text-amber-400 transition-colors">
+              <span class="text-base md:text-lg font-semibold text-brand-headline group-hover:text-amber-400 transition-colors">
                 ¿Cómo debo limpiar y cuidar mis gafas?
               </span>
             </div>
@@ -403,21 +399,21 @@ import FadeIn from "./FadeIn";
             <div class="pt-3 border-t border-white/10 space-y-3">
               <div class="grid md:grid-cols-2 gap-3">
                 <div class="bg-white/5 p-4 rounded-lg">
-                  <p class="text-white font-semibold mb-2 text-sm">🧼 Limpieza Diaria</p>
-                  <p class="text-xs text-gray-300">
+                  <p class="text-brand-headline font-semibold mb-2 text-sm">🧼 Limpieza Diaria</p>
+                  <p class="text-xs text-brand-muted">
                     Usa el paño de microfibra incluido.
                   </p>
                 </div>
                 <div class="bg-white/5 p-4 rounded-lg">
-                  <p class="text-white font-semibold mb-2 text-sm">💧 Limpieza Profunda</p>
-                  <p class="text-xs text-gray-300">
+                  <p class="text-brand-headline font-semibold mb-2 text-sm">💧 Limpieza Profunda</p>
+                  <p class="text-xs text-brand-muted">
                     Agua tibia + jabón neutro. Seca con paño.
                   </p>
                 </div>
               </div>
               <div class="bg-red-500/10 border border-red-500/30 rounded-lg p-3">
                 <p class="text-red-400 font-semibold text-sm mb-1">⚠️ Evita:</p>
-                <p class="text-gray-300 text-xs">
+                <p class="text-brand-muted text-xs">
                   Papel, pañuelos o productos químicos (pueden rayar).
                 </p>
               </div>
@@ -426,10 +422,10 @@ import FadeIn from "./FadeIn";
         </details>
 
         {/* Question 10: Science */}
-        <details class="bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl overflow-hidden hover:border-white/30 transition-all">
+        <details class="bg-white/5 backdrop-blur-sm border-b border-gray-500/20 rounded-xl overflow-hidden hover:border-white/30 transition-all">
           <summary class="flex items-start justify-between gap-4 p-5 cursor-pointer group">
             <div class="flex items-start gap-3 flex-1">
-              <span class="text-base md:text-lg font-semibold text-white group-hover:text-amber-400 transition-colors">
+              <span class="text-base md:text-lg font-semibold text-brand-headline group-hover:text-amber-400 transition-colors">
                 ¿Realmente funcionan? ¿Hay estudios científicos?
               </span>
             </div>
@@ -439,25 +435,25 @@ import FadeIn from "./FadeIn";
           </summary>
           <div class="px-5 pb-5">
             <div class="pt-3 border-t border-white/10 space-y-3">
-              <p class="text-gray-200">
-                <strong class="text-white">Sí, están respaldadas por ciencia.</strong> Estudios demuestran que el filtrado de luz azul mejora:
+              <p class="text-brand-body">
+                <strong class="text-brand-headline">Sí, están respaldadas por ciencia.</strong> Estudios demuestran que el filtrado de luz azul mejora:
               </p>
               <ul class="space-y-2 ml-4">
                 <li class="flex items-start gap-2">
                   <span class="text-green-400 mt-1">✓</span>
-                  <span class="text-gray-200 text-sm"><strong class="text-white">Producción de melatonina</strong></span>
+                  <span class="text-brand-body text-sm"><strong class="text-brand-headline">Producción de melatonina</strong></span>
                 </li>
                 <li class="flex items-start gap-2">
                   <span class="text-green-400 mt-1">✓</span>
-                  <span class="text-gray-200 text-sm"><strong class="text-white">Reducción de fatiga ocular</strong></span>
+                  <span class="text-brand-body text-sm"><strong class="text-brand-headline">Reducción de fatiga ocular</strong></span>
                 </li>
                 <li class="flex items-start gap-2">
                   <span class="text-green-400 mt-1">✓</span>
-                  <span class="text-gray-200 text-sm"><strong class="text-white">Calidad del sueño</strong></span>
+                  <span class="text-brand-body text-sm"><strong class="text-brand-headline">Calidad del sueño</strong></span>
                 </li>
               </ul>
-              <div class="bg-blue-500/10 border border-blue-500/30 rounded-lg p-3">
-                <p class="text-blue-300 text-sm"> <strong>Mejor que estudios:</strong> +3,000 clientes reportan mejoras en 24-48 horas. <a href="#testimonials" class="text-amber-400 underline hover:text-amber-300">Lee sus historias</a> 
+              <div class="bg-green-500/10 border border-green-500/30 rounded-lg p-3">
+                <p class="text-green-500 text-sm"> <strong>Mejor que estudios:</strong> +3,000 clientes reportan mejoras en 24-48 horas. <a href="#testimonials" class="text-amber-400 underline hover:text-amber-300">Lee sus historias</a> 
               </p> 
               </div>
             </div>

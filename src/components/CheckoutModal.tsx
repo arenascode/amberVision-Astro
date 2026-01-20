@@ -1,13 +1,17 @@
 import { useEffect } from 'preact/hooks';
 import { isCheckoutModalOpen, selectedProduct } from '../state.ts';
 import CheckoutForm from './CheckoutForm.tsx';
+import { useBodyScrollLock } from '../hooks/useBodyScrollLock.tsx';
 
 const CheckoutModal = () => {
-
+  
+  console.log(isCheckoutModalOpen)
+  useBodyScrollLock(isCheckoutModalOpen)
+  
   if (!isCheckoutModalOpen.value) {
     return null;
   }
-
+  
   const closeModal = () => {
     isCheckoutModalOpen.value = false;
   };
@@ -15,14 +19,14 @@ const CheckoutModal = () => {
   return (
     <div
       id="checkout-modal"
-      className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-2 px-2"
+      className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-2 pr-0"
     >
       <div className="relative w-full max-w-4xl h-full overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-2xl shadow-2xl border border-white/10">
         {/* Close Button */}
         <button
           id="close-modal"
           onClick={closeModal}
-          className="absolute right-4 top-4 z-10 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-all group"
+          className="absolute right-2 top-2 z-10 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-all group"
           aria-label="Cerrar"
         >
           <svg
@@ -39,10 +43,10 @@ const CheckoutModal = () => {
         
 
         {/* Form Container */}
-        <div className="overflow-y-auto h-[calc(100dvh-70px)] px-3 py-8 md:px-10 md:py-10">
+        <div className="overflow-y-auto h-[calc(100dvh-70px)] px-2 pt-8 md:px-10 md:py-10">
           <div className="max-w-3xl mx-auto">
             {/* Progress Indicator (Optional) */}
-            <div className="mb-8">
+            <div className="mb-4">
               <div className="flex items-center justify-between mb-2">
                 <span className="text-sm font-medium text-gray-400">
                   Paso 1 de 2
@@ -59,27 +63,7 @@ const CheckoutModal = () => {
               </div>
             </div>
 
-            {/* Info Banner */}
-            <div className="mb-8 bg-blue-500/10 border border-blue-500/30 rounded-xl p-4 flex items-start gap-3">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="#3b82f6"
-                className="flex-shrink-0"
-              >
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" />
-              </svg>
-              <div>
-                <p className="text-white font-semibold mb-1">
-                  Completa tus datos de envío
-                </p>
-                <p className="text-gray-300 text-sm">
-                  Tus gafas llegarán en 3-5 días hábiles. Pagas cuando las
-                  recibas en la puerta de tu casa.
-                </p>
-              </div>
-            </div>
+            
 
             {/* Checkout Form Component */}
             {selectedProduct.value && (

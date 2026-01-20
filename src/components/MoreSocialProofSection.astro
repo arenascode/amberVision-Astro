@@ -99,10 +99,10 @@ const testimonialsSecondSection = [
 <section id="moreSocialProof" class="pt-10 md:py-10 xl:flex xl:justify-center">
   <div class="container px-3 md:px-6">
     <div class="flex flex-col items-center text-center gap-4 mb-12">
-      <h2 class="text-3xl font-bold tracking-tight">
+      <h2 class="text-3xl font-bold tracking-tight text-brand-headline">
         Únete a Miles de Clientes Satisfechos
       </h2>
-      <p class="text-sidebar-primary-foreground md:text-lg xl:text-xl max-w-[800px]">
+      <p class="text-brand-body md:text-lg xl:text-xl max-w-[800px]">
         Descubre lo que dicen las personas sobre su experiencia con nuestras
         gafas
       </p>
@@ -111,17 +111,14 @@ const testimonialsSecondSection = [
     <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
       {testimonialsSecondSection.map((testimonial) => (
         <div
-            class="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border border-white/20 rounded-2xl p-4 hover:border-amber-500/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-amber-500/20 group flex flex-col"
+            class="relative bg-bg-card-glass border border-white/20 rounded-2xl p-4 hover:border-amber-500/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-amber-500/20 group flex flex-col"
             
           >
             {/* Verified Badge */}
             {testimonial.verified && (
               <div class="absolute -top-1 -right-0 z-10">
-                <div class="bg-green-500 rounded-full shadow-lg border-2 border-white/20">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
-                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-circle-check text-green-500"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z" /></svg>
+                
               </div>
             )}
 
@@ -143,7 +140,7 @@ const testimonialsSecondSection = [
             </div>
 
             {/* Testimonial Content */}
-            <p class="text-gray-200 text-base leading-relaxed mb-6 flex-grow">
+            <p class="text-brand-body text-base leading-relaxed mb-6 flex-grow">
               "{testimonial.content}"
             </p>
 
@@ -160,7 +157,7 @@ const testimonialsSecondSection = [
             </div>
 
             {/* Author Info */}
-            <div class="flex items-center gap-3 pt-4 border-t border-white/10">
+            <div class="flex items-center gap-3 pt-4 border-t border-gray-500/30">
               <div class="relative">
                 <div class="h-12 w-12 rounded-full overflow-hidden ring-2 ring-amber-500/30">
                   <img
@@ -173,7 +170,7 @@ const testimonialsSecondSection = [
               </div>
               <div class="flex-1">
                 <div class="flex items-center gap-2 mb-0.5">
-                  <p class="font-semibold text-white text-sm">
+                  <p class="font-semibold text-brand-headline text-sm">
                     {testimonial.name}
                   </p>
                   {testimonial.verified && (

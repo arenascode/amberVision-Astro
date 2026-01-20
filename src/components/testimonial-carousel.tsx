@@ -132,17 +132,23 @@ export default function TestimonialCarousel() {
         {currentTestimonials.map((testimonial, index) => (
           <div
             key={testimonial.id}
-            className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border border-white/20 rounded-2xl p-4 hover:border-amber-500/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-amber-500/20 group flex flex-col"
+            className="relative bg-bg-card-glass border border-white/20 rounded-2xl p-4 hover:border-amber-500/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-amber-500/10 group flex flex-col shadow-lg"
             style={{ animationDelay: `${index * 100}ms` }}
           >
             {/* Verified Badge */}
             {testimonial.verified && (
               <div className="absolute -top-1 -right-0 z-10">
-                <div className="bg-green-500 rounded-full shadow-lg border-2 border-white/20">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
-                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="icon icon-tabler icons-tabler-filled icon-tabler-circle-check text-green-500"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z" />
+                </svg>
               </div>
             )}
 
@@ -165,7 +171,7 @@ export default function TestimonialCarousel() {
             </div>
 
             {/* Testimonial Content */}
-            <p className="text-gray-200 text-base leading-relaxed mb-6 flex-grow">
+            <p className="text-brand-body text-base leading-relaxed mb-6 flex-grow">
               "{testimonial.content}"
             </p>
 
@@ -182,9 +188,9 @@ export default function TestimonialCarousel() {
             </div>
 
             {/* Author Info */}
-            <div className="flex items-center gap-3 pt-4 border-t border-white/10">
+            <div className="flex items-center gap-3 pt-4 border-t border-gray-500/30">
               <div className="relative">
-                <div className="h-12 w-12 rounded-full overflow-hidden ring-2 ring-amber-500/30">
+                <div className="h-12 w-12 rounded-full overflow-hidden ring-2 ring-amber-500/50">
                   <img
                     src={testimonial.img}
                     alt={testimonial.name}
@@ -195,7 +201,7 @@ export default function TestimonialCarousel() {
               </div>
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-0.5">
-                  <p className="font-semibold text-white text-sm">
+                  <p className="font-semibold text-brand-headline text-sm">
                     {testimonial.name}
                   </p>
                   {testimonial.verified && (
@@ -209,7 +215,7 @@ export default function TestimonialCarousel() {
                     </svg>
                   )}
                 </div>
-                <p className="text-xs text-gray-400">{testimonial.role}</p>
+                <p className="text-xs text-brand-body">{testimonial.role}</p>
                 <p className="text-xs text-gray-500 flex items-center gap-1">
                   <svg
                     width="12"
@@ -230,7 +236,7 @@ export default function TestimonialCarousel() {
       {/* Navigation Controls */}
       <div className="flex justify-center items-center gap-4">
         <button
-          className="group h-10 w-10 rounded-full bg-white/10 hover:bg-amber-500/80 border border-white/20 hover:border-amber-500 transition-all flex items-center justify-center"
+          className="group h-10 w-10 rounded-full bg-brand-body hover:bg-amber-500/80 border border-white/20 hover:border-amber-500 transition-all flex items-center justify-center"
           onClick={prevPage}
           aria-label="Previous testimonials"
         >
@@ -241,7 +247,7 @@ export default function TestimonialCarousel() {
             fill="none"
             stroke="currentColor"
             strokeWidth="2"
-            className="group-hover:translate-x-[-2px] transition-transform"
+            className="group-hover:translate-x-[-2px] transition-transform text-white"
           >
             <path d="M15 18l-6-6 6-6" />
           </svg>
@@ -255,7 +261,7 @@ export default function TestimonialCarousel() {
               className={`h-2.5 rounded-full transition-all ${
                 i === currentPage
                   ? "w-8 bg-amber-500"
-                  : "w-2.5 bg-white/30 hover:bg-white/50"
+                  : "w-2.5 bg-black/40 hover:bg-white/50"
               }`}
               onClick={() => setCurrentPage(i)}
               aria-label={`Go to page ${i + 1}`}
@@ -264,7 +270,7 @@ export default function TestimonialCarousel() {
         </div>
 
         <button
-          className="group h-10 w-10 rounded-full bg-white/10 hover:bg-amber-500/80 border border-white/20 hover:border-amber-500 transition-all flex items-center justify-center"
+          className="group h-10 w-10 rounded-full bg-brand-body hover:bg-amber-500/80 border border-white/20 hover:border-amber-500 transition-all flex items-center justify-center"
           onClick={nextPage}
           aria-label="Next testimonials"
         >
@@ -275,7 +281,7 @@ export default function TestimonialCarousel() {
             fill="none"
             stroke="currentColor"
             strokeWidth="2"
-            className="group-hover:translate-x-[2px] transition-transform"
+            className="group-hover:translate-x-[2px] transition-transform text-white"
           >
             <path d="M9 18l6-6-6-6" />
           </svg>
