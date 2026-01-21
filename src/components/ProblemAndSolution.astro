@@ -3,11 +3,11 @@ import FadeIn from "./FadeIn.tsx"
 import imageSolution from "/src/assets/img/manUsingGlasses2-v2.avif";
 ---
 
-<section id="benefits" class="py-10 mt-3 md:pt-0 lg:py-16 xl:pb-5 lg:flex lg:justify-center">
+<section id="benefits" class="py-10 mt-3 lg:mt-0 md:pt-0 lg:py-16 xl:pb-5 lg:flex lg:justify-center">
   <div class="container px-4 md:px-6 lg:flex lg:flex-col lg:items-center">
-    <div class="flex flex-col items-center text-start gap-5 mb-5 lg:text-center lg:self-center lg:w-[70%]">
+    <div class="flex flex-col items-center text-start gap-5 mb-5 lg:mb-0 lg:text-center lg:self-center lg:w-[70%]">
     {/* Header Section */}
-    <div class="flex flex-col items-center text-center gap-6 mb-6 lg:mb-20 max-w-4xl mx-auto">
+    <div class="flex flex-col items-center text-center gap-6 mb-6 lg:mb-14 max-w-4xl mx-auto">
           <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/30">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#f59e0b" class="icon icon-tabler icons-tabler-filled icon-tabler-clipboard-check"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17.997 4.17a3 3 0 0 1 2.003 2.83v12a3 3 0 0 1 -3 3h-10a3 3 0 0 1 -3 -3v-12a3 3 0 0 1 2.003 -2.83a4 4 0 0 0 3.997 3.83h4a4 4 0 0 0 3.98 -3.597zm-3.704 7.123l-3.293 3.292l-1.293 -1.292a1 1 0 1 0 -1.414 1.414l2 2a1 1 0 0 0 1.414 0l4 -4a1 1 0 0 0 -1.414 -1.414m-.293 -9.293a2 2 0 1 1 0 4h-4a2 2 0 1 1 0 -4z" /></svg>
             <span class="text-xs lg:text-sm font-semibold text-amber-400 uppercase tracking-wide">
@@ -17,7 +17,7 @@ import imageSolution from "/src/assets/img/manUsingGlasses2-v2.avif";
         <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center text-brand-headline">
           3 Problemas Que Desaparecen al Usar Tus Gafas
         </h2>
-        <p class="text-lg text-center mt-1 lg:text-2xl lg:tracking-wider text-brand-body">
+        <p class="text-lg text-center mt-1 lg:text-xl lg:tracking-wider text-brand-body">
           Miles de profesionales, estudiantes y gamers ya recuperaron su bienestar visual. Los resultados son inmediatos y medibles.
         </p>
     </div>
@@ -79,10 +79,10 @@ import imageSolution from "/src/assets/img/manUsingGlasses2-v2.avif";
                    91% reducción
                   </span>
           </div>
-          <p class="text-base leading-relaxed text-brand-body">
+          <p class="text-base leading-relaxed text-brand-body lg:grow">
             Despídete de las migrañas por tensión visual. Trabaja, estudia o mira series sin molestias.
           </p>
-          <div class="flex items-center gap-2 text-sm text-amber-400 font-medium">
+          <div class="flex items-center gap-2 text-sm text-amber-400 font-medium ">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm0 5a1 1 0 0 0-.993.883L11 8v4l.007.117a1 1 0 0 0 .876.876L12 13h3l.117-.007a1 1 0 0 0 0-1.986L12.883 11H13v-3l-.007-.117A1 1 0 0 0 12 7z" />
                 </svg>
@@ -92,9 +92,9 @@ import imageSolution from "/src/assets/img/manUsingGlasses2-v2.avif";
       </FadeIn>
     </div>
 
-    <div class="mt-14 xl:mt-20 rounded-xl p-1 shadow-lg bg-bg-card-glass border-white/20 group">
+    <div class="mt-14 xl:mt-20 rounded-xl p-1 lg:p-2 shadow-lg bg-bg-card-glass group">
       <div class="grid gap-2 lg:grid-cols-2 items-center">
-        <div class="relative h-[300px] md:h-[400px] xl:h-[450px] rounded-lg overflow-hidden">
+        <div class="relative h-[300px] md:h-[400px] lg:h-[500px] rounded-lg overflow-hidden">
           <img
             src={imageSolution.src}
             alt="Persona usando gafas con filtro de luz azul"
@@ -108,7 +108,7 @@ import imageSolution from "/src/assets/img/manUsingGlasses2-v2.avif";
           </h3>
           <ul class="space-y-8 text-brand-body">
             <li class="flex items-start gap-2">
-              <svg  width="60"  height="60"   viewBox="0 0 24 24"  fill="#05df72"  class="icon icon-tabler icons-tabler-filled icon-tabler-shield-check"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M11.998 2l.118 .007l.059 .008l.061 .013l.111 .034a.993 .993 0 0 1 .217 .112l.104 .082l.255 .218a11 11 0 0 0 7.189 2.537l.342 -.01a1 1 0 0 1 1.005 .717a13 13 0 0 1 -9.208 16.25a1 1 0 0 1 -.502 0a13 13 0 0 1 -9.209 -16.25a1 1 0 0 1 1.005 -.717a11 11 0 0 0 7.531 -2.527l.263 -.225l.096 -.075a.993 .993 0 0 1 .217 -.112l.112 -.034a.97 .97 0 0 1 .119 -.021l.115 -.007zm3.71 7.293a1 1 0 0 0 -1.415 0l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.32 1.497l2 2l.094 .083a1 1 0 0 0 1.32 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z" /></svg>
+              <svg  width="60"  height="60"   viewBox="0 0 24 24"  fill="#05df72"  class="icon icon-tabler icons-tabler-filled icon-tabler-shield-check max-w-[4rem]"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M11.998 2l.118 .007l.059 .008l.061 .013l.111 .034a.993 .993 0 0 1 .217 .112l.104 .082l.255 .218a11 11 0 0 0 7.189 2.537l.342 -.01a1 1 0 0 1 1.005 .717a13 13 0 0 1 -9.208 16.25a1 1 0 0 1 -.502 0a13 13 0 0 1 -9.209 -16.25a1 1 0 0 1 1.005 -.717a11 11 0 0 0 7.531 -2.527l.263 -.225l.096 -.075a.993 .993 0 0 1 .217 -.112l.112 -.034a.97 .97 0 0 1 .119 -.021l.115 -.007zm3.71 7.293a1 1 0 0 0 -1.415 0l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.32 1.497l2 2l.094 .083a1 1 0 0 0 1.32 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z" /></svg>
               <div class="xl:flex xl:flex-col xl:gap-2">
                 <span class="font-semibold text-[17px] xl:text-lg">
                   Bloquean hasta el 99% de la Luz Azul Más Dañina
@@ -130,7 +130,7 @@ import imageSolution from "/src/assets/img/manUsingGlasses2-v2.avif";
               </div>
             </li>
             <li class="flex items-start gap-2">
-              <svg width="60"  height="60"  viewBox="0 0 24 24"  fill="#05df72"  class="icon icon-tabler icons-tabler-filled icon-tabler-shield-check"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M11.998 2l.118 .007l.059 .008l.061 .013l.111 .034a.993 .993 0 0 1 .217 .112l.104 .082l.255 .218a11 11 0 0 0 7.189 2.537l.342 -.01a1 1 0 0 1 1.005 .717a13 13 0 0 1 -9.208 16.25a1 1 0 0 1 -.502 0a13 13 0 0 1 -9.209 -16.25a1 1 0 0 1 1.005 -.717a11 11 0 0 0 7.531 -2.527l.263 -.225l.096 -.075a.993 .993 0 0 1 .217 -.112l.112 -.034a.97 .97 0 0 1 .119 -.021l.115 -.007zm3.71 7.293a1 1 0 0 0 -1.415 0l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.32 1.497l2 2l.094 .083a1 1 0 0 0 1.32 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z" /></svg>
+              <svg width="60"  height="60"  viewBox="0 0 24 24"  fill="#05df72"  class="icon icon-tabler icons-tabler-filled icon-tabler-shield-check max-w-[1rem]"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M11.998 2l.118 .007l.059 .008l.061 .013l.111 .034a.993 .993 0 0 1 .217 .112l.104 .082l.255 .218a11 11 0 0 0 7.189 2.537l.342 -.01a1 1 0 0 1 1.005 .717a13 13 0 0 1 -9.208 16.25a1 1 0 0 1 -.502 0a13 13 0 0 1 -9.209 -16.25a1 1 0 0 1 1.005 -.717a11 11 0 0 0 7.531 -2.527l.263 -.225l.096 -.075a.993 .993 0 0 1 .217 -.112l.112 -.034a.97 .97 0 0 1 .119 -.021l.115 -.007zm3.71 7.293a1 1 0 0 0 -1.415 0l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.32 1.497l2 2l.094 .083a1 1 0 0 0 1.32 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z" /></svg>
               <div class="xl:flex xl:flex-col xl:gap-2">
                 <span class="font-semibold text-[17px] xl:text-lg">
                   Reducen la Fatiga Ocular y los Dolores de Cabeza

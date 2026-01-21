@@ -63,9 +63,8 @@ const Pricing = () => {
   ];
 
   const randomBuyersCount = () => {
-
-    return Math.round(Math.random() * (100 - 50) + 80)
-  }
+    return Math.round(Math.random() * (100 - 50) + 80);
+  };
 
   const openCheckout = (productId: string) => {
     const product = products.find((p) => p.id === productId);
@@ -79,11 +78,11 @@ const Pricing = () => {
   return (
     <section
       id="pricing"
-      className="py-6 pt-12 md:py-10 xl:flex xl:justify-center"
+      className="py-6 pt-12 md:py-10 lg:pt-20 xl:flex xl:justify-center"
     >
       <div className="container px-4 md:px-6">
         {/* Urgency & Headline */}
-        <div className="flex flex-col items-center text-center gap-4 mb-10 lg:mb-16">
+        <div className="flex flex-col items-center text-center gap-4 lg:gap-7 mb-10 lg:mb-20">
           {/* Urgency Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-500 rounded-full shadow-lg">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
@@ -97,8 +96,7 @@ const Pricing = () => {
           {/* Main Headline */}
           <FadeIn delay={100}>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-brand-headline">
-              <span>Ahorra</span>{" "}
-              <span className="text-amber-400">27%</span>{" "}
+              <span>Ahorra</span> <span className="text-amber-400">27%</span>{" "}
               <span>en Tu Primer Pedido</span>
             </h2>
           </FadeIn>
@@ -115,11 +113,11 @@ const Pricing = () => {
           </div>
 
           {/* Countdown Timer */}
-          <div className="mt-5">
+          <div className="mt-5 xl:mt-8">
             <CountdownTimer />
           </div>
           {/* Social Proof Mini */}
-          <div className="flex items-center justify-center text-sm text-brand-body">
+          <div className="flex items-center justify-center text-sm xl:text-base text-brand-body">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -140,7 +138,7 @@ const Pricing = () => {
               <path d="M5 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
               <path d="M3 13v-1a2 2 0 0 1 2 -2h2" />
             </svg>
-            <span class="text-balance w-[60%]">
+            <span class="text-balance w-[60%] xl:text-lg">
               <strong className="text-brand-headline">
                 {randomBuyersCount()} personas
               </strong>{" "}
@@ -148,7 +146,7 @@ const Pricing = () => {
             </span>
           </div>
           {/* Reason for Discount */}
-          <p className="text-sm text-brand-muted max-w-2xl">
+          <p className="text-sm xl:text-base text-brand-muted max-w-2xl">
             *Promoción válida solo para nuevos clientes mientras dure el
             inventario.
           </p>
@@ -156,9 +154,8 @@ const Pricing = () => {
         {/* Pricing Section */}
         <div className="grid gap-8 lg:gap-12 md:grid-cols-2 max-w-6xl mx-auto">
           {/* Package 1 - Single Pair */}
-          <div className="relative bg-bg-card-glass border-2 rounded-xl overflow-hidden shadow-2xl hover:border-white/30 transition-all group">
-            {/* Card Header */}
-            <div className="p-3 lg:p-8">
+          <div className="relative bg-bg-card-glass border-2 rounded-xl overflow-hidden shadow-2xl transition-all group">
+            <div className="p-3 lg:p-8 lg:flex lg:flex-col lg:gap-3 lg:h-full">
               <div className="flex items-start justify-between mb-4">
                 <div>
                   <h3 className="text-2xl lg:text-3xl font-bold text-brand-headline">
@@ -183,7 +180,7 @@ const Pricing = () => {
               {/* Pricing */}
               <div className="mb-6">
                 <div className="flex items-end gap-3 mb-2">
-                  <span className="text-3xl lg:text-5xl font-bold text-brand-headline">
+                  <span className="text-3xl lg:text-4xl font-bold text-brand-headline">
                     $109.999
                   </span>
                   <span className="text-xl text-brand-muted line-through mb-2">
@@ -198,7 +195,7 @@ const Pricing = () => {
               </div>
 
               {/* What's Included */}
-              <div className="mb-6">
+              <div className="mb-6 lg:grow lg:mb-0">
                 <p className="text-brand-headline font-semibold text-lg mb-4">
                   ✨ Qué Incluye:
                 </p>
@@ -235,75 +232,77 @@ const Pricing = () => {
                 </ul>
               </div>
 
-              {/* CTA Button */}
-              <button
-                onClick={() => openCheckout("basic")}
-                className="w-full bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white font-bold text-lg py-4 rounded-xl shadow-lg transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-3 hover:cursor-pointer"
-              >
-                Comprar Ahora
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart"
+              <div className="cta-container">
+                {/* CTA Button */}
+                <button
+                  onClick={() => openCheckout("basic")}
+                  className="w-full bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white font-bold text-lg py-4 rounded-xl shadow-lg transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-3 hover:cursor-pointer"
                 >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M4 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-                  <path d="M15 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-                  <path d="M17 17h-11v-14h-2" />
-                  <path d="M6 5l14 1l-1 7h-13" />
-                </svg>
-              </button>
-
-              {/* Trust Badges */}
-              <div className="flex items-center justify-center gap-4 mt-4 text-sm text-brand-muted">
-                <span className="flex items-center gap-1">
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#10b981"
-                    stroke-width="2"
-                    class="icon icon-tabler icons-tabler-outline icon-tabler-truck-delivery"
-                  >
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M5 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-                    <path d="M15 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-                    <path d="M5 17h-2v-4m-1 -8h11v12m-4 0h6m4 0h2v-6h-8m0 -5h5l3 5" />
-                    <path d="M3 9l4 0" />
-                  </svg>
-                  Envío Gratis
-                </span>
-                <span>•</span>
-                <span className="flex items-center gap-1">
+                  Comprar Ahora
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
+                    width="24"
+                    height="24"
                     viewBox="0 0 24 24"
                     fill="none"
-                    stroke="#10b981"
+                    stroke="currentColor"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    class="icon icon-tabler icons-tabler-outline icon-tabler-coins"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart"
                   >
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M9 14c0 1.657 2.686 3 6 3s6 -1.343 6 -3s-2.686 -3 -6 -3s-6 1.343 -6 3" />
-                    <path d="M9 14v4c0 1.656 2.686 3 6 3s6 -1.344 6 -3v-4" />
-                    <path d="M3 6c0 1.072 1.144 2.062 3 2.598s4.144 .536 6 0c1.856 -.536 3 -1.526 3 -2.598c0 -1.072 -1.144 -2.062 -3 -2.598s-4.144 -.536 -6 0c-1.856 .536 -3 1.526 -3 2.598" />
-                    <path d="M3 6v10c0 .888 .772 1.45 2 2" />
-                    <path d="M3 11c0 .888 .772 1.45 2 2" />
+                    <path d="M4 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                    <path d="M15 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                    <path d="M17 17h-11v-14h-2" />
+                    <path d="M6 5l14 1l-1 7h-13" />
                   </svg>
-                  Pago Contra Entrega
-                </span>
+                </button>
+
+                {/* Trust Badges */}
+                <div className="flex items-center justify-center gap-4 mt-4 text-sm text-brand-muted">
+                  <span className="flex items-center gap-1">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#10b981"
+                      stroke-width="2"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-truck-delivery"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M5 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                      <path d="M15 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                      <path d="M5 17h-2v-4m-1 -8h11v12m-4 0h6m4 0h2v-6h-8m0 -5h5l3 5" />
+                      <path d="M3 9l4 0" />
+                    </svg>
+                    Envío Gratis
+                  </span>
+                  <span>•</span>
+                  <span className="flex items-center gap-1">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#10b981"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-coins"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M9 14c0 1.657 2.686 3 6 3s6 -1.343 6 -3s-2.686 -3 -6 -3s-6 1.343 -6 3" />
+                      <path d="M9 14v4c0 1.656 2.686 3 6 3s6 -1.344 6 -3v-4" />
+                      <path d="M3 6c0 1.072 1.144 2.062 3 2.598s4.144 .536 6 0c1.856 -.536 3 -1.526 3 -2.598c0 -1.072 -1.144 -2.062 -3 -2.598s-4.144 -.536 -6 0c-1.856 .536 -3 1.526 -3 2.598" />
+                      <path d="M3 6v10c0 .888 .772 1.45 2 2" />
+                      <path d="M3 11c0 .888 .772 1.45 2 2" />
+                    </svg>
+                    Pago Contra Entrega
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -324,7 +323,7 @@ const Pricing = () => {
               </div>
             </div>
 
-            <div className="p-3 lg:p-8 pt-9">
+            <div className="p-3 lg:p-8 pt-9 lg:flex lg:flex-col lg:gap-3 lg:h-full">
               <div className="flex items-start justify-between mb-4">
                 <div>
                   <h3 className="text-2xl lg:text-3xl font-bold text-brand-headline">
@@ -347,9 +346,9 @@ const Pricing = () => {
               </div>
 
               {/* Pricing */}
-              <div className="mb-6">
+              <div className="mb-6 lg:mb-0">
                 <div className="flex items-end gap-3 mb-3">
-                  <span className="text-3xl lg:text-5xl font-bold text-brand-headline">
+                  <span className="text-3xl lg:text-4xl font-bold text-brand-headline">
                     $199.999
                   </span>
                   <span className="text-xl text-brand-muted line-through mb-2">
@@ -365,13 +364,12 @@ const Pricing = () => {
                       <p className="text-sm text-green-100">Ahorras $100.000</p>
                     </div>
                     <div className="text-right">
-                      <p className="text-3xl font-bold">33%</p>
-                      <p className="text-xs">OFF</p>
+                      <p className="text-xl font-bold">33% OFF</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="inline-flex items-center gap-2 px-3 py-1 bg-green-500/20 border border-green-500/40 rounded-full">
+                {/* <div className="inline-flex items-center gap-2 px-3 py-1 bg-green-500/20 border border-green-500/40 rounded-full">
                   <svg
                     width="16"
                     height="16"
@@ -383,7 +381,7 @@ const Pricing = () => {
                   <span className="text-green-500 font-semibold text-sm">
                     Ahorro de $50.000 en cada par
                   </span>
-                </div>
+                </div> */}
               </div>
 
               {/* What's Included */}
@@ -452,7 +450,7 @@ const Pricing = () => {
               </button>
 
               {/* Social Proof */}
-              <div className="mt-4 bg-green-500/20 border border-green-500/30 rounded-lg p-3">
+              <div className="mt-4 lg:mt-0 bg-green-500/20 border border-green-500/30 rounded-lg p-3">
                 <div className="flex items-center gap-2 text-sm text-green-500">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -484,7 +482,7 @@ const Pricing = () => {
         </div>
 
         {/* Additional Benefits */}
-        <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm md:text-sm text-brand-muted mt-3">
+        <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm md:text-sm lg:text-base text-brand-muted mt-3 lg:mt-5">
           <div class="flex items-center gap-1.5">
             <svg
               width="16"

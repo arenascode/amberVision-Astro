@@ -17,19 +17,16 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      class="relative overflow-hidden  pt-6 lg:py-5 items-center lg:flex justify-center mt-10 xl:mt-12 "
+      class="relative pt-6 lg:py-5 xl:pt-12 items-center lg:flex justify-center mt-10 xl:mt-16 2xl:mt-10"
     >
       <div class="container px-2 md:px-6 lg:px-4 lg:w-full justify-center">
-        <div class="flex flex-col gap-8 md:gap-10 lg:gap-0 lg:flex-row items-center lg:justify-between  xl:gap-20 xl:w-full xl:px-10">
-          <div class="flex flex-col justify-between w-full lg:w-[55%] gap-5 xl:gap-6 px-2">
-            {/* <span class="w-fit border-1 border-amber-500 text-sm xl:text-lg text-brand-headline p-1 px-2 rounded-full font-semibold bg-[#FFFFFF]">
-              +3,147 Personas ya recuperaron su sueño natural
-            </span> */}
-            <h1 class="text-2xl font-bold sm:text-2xl text-center md:text-3xl lg:text-2xl xl:text-[2.2rem] xl:text-start capitalize fade-in-up leading-tight text-brand-headline text-shadow-xs">
-              ¿Sabías Que Tu Celular Destruye Tu Sueño Cada Noche Sin Que Lo
-              Notes?
+        <div class="flex flex-col gap-8 md:gap-10 lg:gap-0 lg:flex-row items-center lg:justify-between xl:gap-20 xl:w-full xl:px-10">
+          <div class="flex flex-col justify-between w-full lg:w-[55%] 1.5xl:w-[60%] gap-5 xl:gap-6 px-2">
+            <h1 class="text-2xl font-bold sm:text-2xl text-center md:text-3xl lg:text-3xl xl:-mt-5 xl:text-[2.2rem] 2xl:text-5xl xl:text-start capitalize fade-in-up leading-tight text-brand-headline text-shadow-xs">
+              ¿Sabías que tu celular destruye tu sueño cada noche sin que lo
+              notes?
             </h1>
-            <p class="text-lg md:text-xl mt-2 text-brand-body tracking-wider text-pretty">
+            <p class="text-lg md:text-xl 2xl:text-2xl mt-2 text-brand-body tracking-wider text-pretty">
               Mientras lees esto, la luz azul de tu pantalla le dice a tu
               cerebro que es de día, incluso a medianoche.{" "}
               <strong className="text-brand-headline">
@@ -48,9 +45,9 @@ const Hero = () => {
               {isMobile && <ProductIntro />}
             </div>
             {/* Key Benefits - Lentes Bloqueadores */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-6 mt-2 bg-bg-card-glass p-3 lg:p-4 xl:p-5 xl:gap-4 rounded-xl shadow-xl">
               {[
-              {
+                {
                   icon: (
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -89,7 +86,7 @@ const Hero = () => {
                   ), // O Lucide.Moon para enfocar en sueño
                   text: "Descanso y Sueño Profundo desde la 1ª Noche",
                 },
-                
+
                 {
                   icon: (
                     <svg
@@ -131,14 +128,14 @@ const Hero = () => {
               ].map((item, idx) => (
                 <div key={idx} className="flex items-center gap-2">
                   <div className={`w-5 h-5 flex-shrink-0`}>{item.icon}</div>
-                  <span className="text-brand-body text-sm font-medium">
+                  <span className="text-brand-body text-sm xl:text-[16px] 2xl:text-xl font-medium">
                     {item.text}
                   </span>
                 </div>
               ))}
             </div>
-            <div class="flex flex-col items-center lg:flex-row lg:flex-wrap items-flex-start gap-2 pt-2">
-              <div class="stars_qty_sold flex self-start md:self-center items-center lg:hidden gap-2">
+            <div class="flex flex-col items-center lg:flex-row lg:flex-wrap items-flex-start gap-2 pt-2 lg:hidden">
+              <div class="stars_qty_sold flex self-start md:self-center items-center gap-2">
                 <div class="flex gap-1">
                   {[...Array(5)].map((_, i) => (
                     <svg
@@ -153,13 +150,9 @@ const Hero = () => {
                     </svg>
                   ))}
                 </div>
-                {/* <span class="text-lg lg:text-xl font-medium xl:text-nowrap text-brand-midnight">
-                  + 3147 Vendidas
-                </span> */}
               </div>
-
               {/* Testimonial Quote */}
-              <div className="bg-[var(--color-bg-card-glass)] border border-gray/50 rounded-lg p-4 lg:p-5 shadow-lg">
+              <div className="bg-bg-card-glass border border-gray/50 rounded-lg p-4 lg:p-5 shadow-lg">
                 {/* Verified Badge */}
                 <div className="flex items-center gap-1.5 mb-1">
                   <svg
@@ -184,7 +177,7 @@ const Hero = () => {
                 </p>
                 <div className="flex items-center gap-3 mt-2">
                   {/* Avatar with Initials */}
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center font-bold text-white shadow-md ">
+                  <div className="w-16 h-16 lg:w-12 lg:h-12 rounded-full bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center font-bold text-white shadow-md ">
                     <img
                       src={testimonialPic.src}
                       alt="testimonial picture"
@@ -193,7 +186,7 @@ const Hero = () => {
                   </div>
                   <div>
                     <p className="text-sm md:text-base font-semibold text-brand-headline">
-                      Carlos C.
+                      Miguel A.
                     </p>
                     <p className="text-xs md:text-sm text-brand-muted">
                       Ingeniero de Software • Bogotá
@@ -202,14 +195,14 @@ const Hero = () => {
                 </div>
               </div>
               <span className="text-brand-headline font-bold text-center mt-4 text-lg">
-                Bloquea La Luz Nociva En 3 Segundos Y Recupera Hasta un 25% Más De
-                Sueño Profundo — Desde Esta Noche
+                Bloquea La Luz Nociva En 3 Segundos Y Recupera Hasta un 25% Más
+                De Sueño Profundo — Desde Esta Noche
               </span>
             </div>
-            <div class="flex flex-col sm:flex-row lg:flex-col gap-3 pt-1 md:justify-center">
-              <div className="CTA-container flex flex-col justify-center mt-2 mb-1 xl:flex xl:justify-center">
+            <div class="flex flex-col sm:flex-row lg:flex-col gap-3 pt-1 lg:pt-0 md:justify-center">
+              <div className="CTA-container flex flex-col justify-center mt-2 lg:mt-0 mb-1 xl:flex xl:justify-center">
                 <button
-                  className="bg-gradient-to-r from-amber-500 to-red-500 hover:from-amber-500 hover:to-red-500  font-semibold py-3 sm:px-2 sm:py-3 lg:mt-8 xl:py-6 shadow-lg transform flex items-center justify-center gap-2 w-[85%] md:w-full
+                  className="bg-gradient-to-r from-amber-500 to-red-500 hover:from-amber-500 hover:to-red-500  font-semibold py-3 sm:px-2 sm:py-3 lg:mt-2 xl:py-6 shadow-lg transform flex items-center justify-center gap-2 w-[85%] md:w-full
             lg:w-[80%] xl:w-max xl:h-[4rem] mx-auto md:self-center text-white 
   bg-brand-accent rounded-full 
   transition-all duration-300 ease-in-out 
@@ -218,7 +211,7 @@ const Hero = () => {
                 >
                   <a
                     href="#pricing"
-                    className="flex items-center gap-3 text-[16px] lg:text-xl xl:p-2 flex-row w-full justify-center"
+                    className="flex items-center gap-3 text-[16px] lg:text-xl 2xl:text-2xl xl:p-2 flex-row w-full justify-center"
                   >
                     Ver Precios y Opciones
                     <svg
@@ -239,7 +232,7 @@ const Hero = () => {
                   </a>
                 </button>
               </div>
-              <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs md:text-sm text-brand-body">
+              <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs md:text-sm 2xl:text-lg text-brand-body">
                 <div className="flex items-center gap-1.5">
                   <svg
                     width="16"
@@ -288,7 +281,7 @@ const Hero = () => {
               </div>
 
               {/* Money-Back Guarantee - Versión Optimizada */}
-              <div className="flex items-center gap-3 mt-4 py-3 px-4 bg-green-500/10 border border-emerald-500/20 rounded-xl max-w-md mx-auto">
+              <div className="flex lg:hidden items-center gap-3 mt-4 py-3 px-4 bg-green-500/10 border border-emerald-500/20 rounded-xl max-w-md mx-auto">
                 <div className="flex-shrink-0">
                   <svg
                     width="24"
@@ -308,14 +301,39 @@ const Hero = () => {
                   <span className="font-bold block text-green-500 text-lg">
                     Garantía de Satisfacción:
                   </span>
-                  Pruébalas por 30 días. Si no sientes el alivio y duermes mejor, te devolvemos
-                  tu dinero.
+                  Pruébalas por 30 días. Si no sientes el alivio y duermes
+                  mejor, te devolvemos tu dinero.
                 </p>
               </div>
             </div>
           </div>
-          <div class="hidden md:flex md:justify-center xl:h-[600px] w-[60%] lg:w-[40%] xl:w-[45%]">
+          <div class="hidden md:flex md:justify-center lg:self-start lg:flex-col xl:h-[600px] 2xl:h-[800px] w-[60%] lg:w-[40%] xl:w-[45%]">
             {!isMobile && <ProductIntro />}
+
+            <div className="hidden lg:flex items-center gap-3 mt-4 py-3 px-4 bg-green-500/10 border border-emerald-500/20 rounded-xl max-w-md xl:max-w-lg mx-auto 2xl:mt-7">
+              <div className="flex-shrink-0">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#10b981"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  <path d="M9 12l2 2 4-4" />
+                </svg>
+              </div>
+              <p className="text-sm md:text-base 2xl:text-xl text-brand-body leading-tight" >
+                <span className="font-bold block text-green-500 text-lg 2xl:text-xl">
+                  Garantía de Satisfacción:
+                </span>
+                Pruébalas por 30 días. Si no sientes el alivio y duermes mejor,
+                te devolvemos tu dinero.
+              </p>
+            </div>
           </div>
         </div>
       </div>

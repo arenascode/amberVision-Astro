@@ -4,26 +4,25 @@ import FadeIn from "./FadeIn";
 import tiredMan from "../assets/img/manWithoutGlasses.webp";
 import comfortableMan from "../assets/img/manUssingGlassesV3.webp";
 ---
-<section id="beforeAndAfter" class="container pt-7 pb-4 px-4 md:px-6">
+<section id="beforeAndAfter" class="container pt-7 lg:pt-16 pb-4 px-4 md:px-6 xl:mx-auto">
   <!-- Header Section - More Compelling -->
-  <div class="w-full flex flex-col items-center text-center gap-4 mb-8">
+  <div class="w-full flex flex-col items-center text-center gap-4 mb-8 lg:mb-14">
     <FadeIn delay={100} client:load>    
       <h2 class="text-4xl md:text-5xl xl:text-6xl font-bold tracking-tight text-brand-headline">
         La Diferencia es <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-400">Inmediata</span>
       </h2>
     </FadeIn>
     
-    <p class="text-xl lg:text-2xl max-w-[900px] text-brand-body">
-      Descubre cómo nuestras gafas de bloqueo de luz azul pueden transformar tu día y mejorar tu descanso. <strong class="text-brand-headline">¿Listo para el cambio?</strong>
+    <p class="text-lg max-w-md lg:text-xl text-brand-body lg:mt-4 lg:max-w-2xl">
+      Descubre cómo nuestras gafas de bloqueo de luz azul pueden transformar tu día y mejorar tu descanso. <br> <strong class="text-brand-headline">¿Listo para el cambio?</strong>
     </p>
   </div>
 
   <!-- Comparison Cards - Enhanced Visual Hierarchy -->
-  <div class="grid gap-6 md:grid-cols-2 mb-10 xl:px-20 max-w-full">
+  <div class="grid gap-6 md:grid-cols-2 mb-10 lg:px-4 xl:gap-10 xl:px-6 max-w-full">
     
     <!-- WITHOUT Protection Card - Emphasized Pain Points -->
-    <div class="rounded-2xl p-3 shadow-xl bg-bg-card-glass border-white/20  xl:flex xl:flex-col xl:place-items-center hover:border-red-500/50 transition-all duration-300">
-      
+    <div class="rounded-2xl p-3 shadow-xl bg-bg-card-glass border-white/20  xl:flex xl:flex-col xl:place-items-center hover:border-red-500/50 transition-all duration-300 ">
       <!-- Badge for emphasis -->
       <div class="flex justify-center mb-3">
         <span class="inline-block bg-red-500/30 border border-red-400/50 rounded-full px-4 py-1 text-sm font-bold text-red-500">
@@ -34,7 +33,7 @@ import comfortableMan from "../assets/img/manUssingGlassesV3.webp";
         Estrés Visual que Afecta Tu Vida
       </h3>
       
-      <div class="relative h-[320px] xl:h-[400px] w-full xl:w-[400px] rounded-xl overflow-hidden mb-6">
+      <div class="relative h-[320px] lg:h-[400px] w-full xl:w-[500px] rounded-xl overflow-hidden mb-6">
         <img 
           src={tiredMan.src} 
           alt="Persona con fatiga ocular y agotamiento por luz azul" 
@@ -45,7 +44,7 @@ import comfortableMan from "../assets/img/manUssingGlassesV3.webp";
         <!-- <div class="absolute inset-0 bg-gradient-to-t from-red-900/20 to-transparent"></div> -->
       </div>
       
-      <ul class="w-full space-y-3 xl:grid xl:grid-cols-2 xl:gap-4 xl:p-4">
+      <ul class="w-full grid xl:grid-cols-2 gap-5 xl:gap-4 xl:p-4">
         {[
           { text: 'Ojos cansados e irritados', icon: '😓' },
           { text: 'Insomnio y sueño irregular', icon: '😴' },
@@ -64,7 +63,7 @@ import comfortableMan from "../assets/img/manUssingGlassesV3.webp";
       </ul>
       
       <!-- Added pain amplifier -->
-      <div class="mt-6 p-4 bg-red-500/30 border border-red-400/30 rounded-lg">
+      <div class="mt-6 lg:mt-32 xl:mt-16 p-4 bg-red-500/30 border border-red-400/30 rounded-lg self-end">
         <p class="text-sm md:text-base text-center italic text-brand-body">
           <strong>¿Te suena familiar?</strong> Esto es lo que la luz azul artificial le hace a tu cuerpo cada día.
         </p>
@@ -80,11 +79,11 @@ import comfortableMan from "../assets/img/manUssingGlassesV3.webp";
           <svg width="16" height="16" viewBox="0 0 24 24" fill="#05df72" class="icon icon-tabler icons-tabler-filled icon-tabler-shield-check"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M11.998 2l.118 .007l.059 .008l.061 .013l.111 .034a.993 .993 0 0 1 .217 .112l.104 .082l.255 .218a11 11 0 0 0 7.189 2.537l.342 -.01a1 1 0 0 1 1.005 .717a13 13 0 0 1 -9.208 16.25a1 1 0 0 1 -.502 0a13 13 0 0 1 -9.209 -16.25a1 1 0 0 1 1.005 -.717a11 11 0 0 0 7.531 -2.527l.263 -.225l.096 -.075a.993 .993 0 0 1 .217 -.112l.112 -.034a.97 .97 0 0 1 .119 -.021l.115 -.007zm3.71 7.293a1 1 0 0 0 -1.415 0l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.32 1.497l2 2l.094 .083a1 1 0 0 0 1.32 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"></path></svg> CON AMBER VISION
         </span>
       </div>
-      <p class="text-green-500 text-center mb-6 text-lg font-semibold">
+      <p class="text-green-500 text-center mb-6 text-xl font-semibold">
         Bienestar Visual Garantizado
       </p>
       
-      <div class="relative h-[320px] xl:h-[400px] w-full xl:w-[400px] rounded-xl overflow-hidden mb-6 ">
+      <div class="relative h-[320px] lg:h-[400px] w-full xl:w-[500px] rounded-xl overflow-hidden mb-6 ">
         <img 
           src={comfortableMan.src} 
           alt="Persona relajada con visión protegida usando Amber Vision" 
@@ -95,7 +94,7 @@ import comfortableMan from "../assets/img/manUssingGlassesV3.webp";
         <div class="absolute inset-0 bg-gradient-to-t from-green-900/30 to-transparent"></div>
       </div>
       
-      <ul class="space-y-3 xl:grid xl:grid-cols-2 xl:gap-4 xl:p-4">
+      <ul class="w-full grid xl:grid-cols-2 lg:gap-5 gap-4 xl:gap-4 xl:p-4">
         {[
           { text: "Ojos descansados todo el día", benefit: "+70% confort" },
           { text: "Duermes profundo y sin interrupciones", benefit: "Desde el primer día" },
@@ -116,7 +115,7 @@ import comfortableMan from "../assets/img/manUssingGlassesV3.webp";
       </ul>
       
       <!-- Added success amplifier with urgency -->
-      <div class="mt-6 p-4 bg-green-500/30 border-2 border-green-400/40 rounded-lg">
+      <div class="mt-6 xl:mt-2 p-4 bg-green-500/20 border-2 border-green-400/40 rounded-lg">
         <p class="text-sm md:text-base text-center tracking-wide text-brand-body">
           ⚡ <strong>Resultados desde el primer día.</strong> Sin complicaciones, sin esperas.
         </p>
@@ -125,9 +124,9 @@ import comfortableMan from "../assets/img/manUssingGlassesV3.webp";
   </div>
 
   <!-- Before/After Interactive + Science Section -->
-  <div class="beforeAndAfter-container lg:flex lg:flex-row lg:mt-26">
+  <div class="beforeAndAfter-container lg:flex lg:flex-row lg:mt-26 xl:mt-32 xl:gap-4 xl:px-5">
   <BeforeAfterTransition client:load />
-  <div class="scienceBehind mt-4 lg:mt-0 px-2 md:px-6 lg:pl-4 lg:pr-0 xl:px-12 max-w-4xl mx-auto text-left lg:flex-1">
+  <div class="scienceBehind mt-4 lg:mt-0 px-2 md:px-6 lg:pl-4 lg:pr-0 max-w-4xl mx-auto text-left lg:flex-1">
     <img src="/assets/img/Wave-Icon.svg" alt="wave icon" class="self-start w-1/2 md:w-1/3" loading="lazy" />
     <FadeIn delay={100} client:load>
       <h3 class="text-2xl md:text-3xl lg:text-2xl font-bold mb-4 mt-3 lg:mt-0 text-brand-headline">
@@ -146,70 +145,3 @@ import comfortableMan from "../assets/img/manUssingGlassesV3.webp";
   </div>
 </div> 
 </section>
-<!-- old section -->
-<!-- <section id="beforeAndAfter" class="container pt-8 px-4 md:px-6 ">
- <div class="w-full flex flex-col items-center text-center gap-4 mb-12">
-  <FadeIn delay={100} client:load>
-    <h2 class="text-3xl xl:text-4xl font-bold tracking-tight xl:mb-5">
-      Antes y Después de Usarlas
-    </h2>
-  </FadeIn>
-  <p class="text-lg lg:text-xl max-w-[800px]">
-    Descubre cómo nuestras gafas de bloqueo de luz azul pueden transformar tu día y mejorar tu descanso.
-  </p>
-</div>
-
-<div class="grid gap-8 md:grid-cols-2 mb-8 xl:px-20 max-w-full">
-  <div class="rounded-xl p-2 shadow-md backdrop-blur-lg bg-white/10 border border-white/10 xl:flex xl:flex-col xl:place-items-center">
-    <h3 class="text-xl font-bold mb-4 text-center ">
-      Sin Protección: <br /> <span class="text-red-500">Estrés Visual Constante</span> 
-    </h3>
-    <div class="relative h-[320px] xl:h-[400px] w-full xl:w-[400px] rounded-lg overflow-hidden mb-4">
-      <img src={tiredMan.src} alt="Persona con ojos cansados e irritados" class="w-full h-full object-cover" loading="lazy" />
-    </div>
-    <ul class="w-full space-y-2 xl:grid xl:grid-cols-2 xl:gap-4 xl:p-4">
-      {['Vista cansada e irritada.', 'Dificultad para dormir.', 'Dolores de cabeza frecuentes.', 'Falta de concentración y fatiga.'].map((item) => (
-        <li class="flex items-center gap-2 text-white text-lg xl:text-lg">
-          <svg width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="#ff0000"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg> <strong>{item}</strong> 
-        </li>
-      ))}
-    </ul>
-  </div>
-
-  <div class="rounded-xl p-2 shadow-md backdrop-blur-lg bg-white/10 border-white/10 border xl:flex xl:flex-col xl:place-items-center">
-    <h3 class="text-xl font-bold mb-4 text-center ">
-      Con Gafas Amber Vision: <br /> <span class="text-[#05df72]">Comodidad y Descanso Total</span> 
-    </h3>
-    <div class="relative h-[320px] xl:h-[400px] w-full xl:w-[400px] rounded-lg overflow-hidden mb-4">
-      <img src={comfortableMan.src} alt="Persona con visión relajada y enfocada" class="object-cover h-full w-full" loading="lazy" />
-    </div>
-    <ul class="space-y-2 xl:grid xl:grid-cols-2 xl:gap-4 xl:p-4">
-      {["Ojos descansados y sin tensión.", "Sueño profundo y reparador.", "Menos dolores de cabeza.", "Mayor enfoque y productividad."].map((item) => (
-        <li class="flex items-center gap-2 text-white text-lg xl:text-lg">
-          <svg  width="20"  height="20"   viewBox="0 0 24 24"  fill="#05df72"  class="icon icon-tabler icons-tabler-filled icon-tabler-shield-check"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M11.998 2l.118 .007l.059 .008l.061 .013l.111 .034a.993 .993 0 0 1 .217 .112l.104 .082l.255 .218a11 11 0 0 0 7.189 2.537l.342 -.01a1 1 0 0 1 1.005 .717a13 13 0 0 1 -9.208 16.25a1 1 0 0 1 -.502 0a13 13 0 0 1 -9.209 -16.25a1 1 0 0 1 1.005 -.717a11 11 0 0 0 7.531 -2.527l.263 -.225l.096 -.075a.993 .993 0 0 1 .217 -.112l.112 -.034a.97 .97 0 0 1 .119 -.021l.115 -.007zm3.71 7.293a1 1 0 0 0 -1.415 0l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.32 1.497l2 2l.094 .083a1 1 0 0 0 1.32 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z" /></svg> <strong>{item}</strong>
-        </li>
-      ))}
-    </ul>
-  </div>
-</div>
-<div class="beforeAndAfter-container lg:flex lg:flex-row lg:mt-26">
-  <BeforeAfterTransition client:load />
-  <div class="scienceBehind mt-4 lg:mt-0 px-2 md:px-6 lg:pl-4 lg:pr-0 xl:px-12 max-w-4xl mx-auto text-left lg:flex-1">
-    <img src="/assets/img/Wave-Icon-White.svg" alt="wave icon" class="self-start w-1/2 md:w-1/3" loading="lazy" />
-    <FadeIn delay={100} client:load>
-      <h3 class="text-2xl md:text-3xl lg:text-2xl font-bold mb-4 mt-3 lg:mt-0">
-        La Ciencia Detrás de Amber Vision
-      </h3>
-    </FadeIn>
-    <p class="text-base md:text-lg mb-3">
-      La luz azul y verde —especialmente entre los <span class="font-semibold">400 y 520 nanómetros</span>— altera tu capacidad para relajarte y <span class="font-semibold">afecta tu ritmo circadiano</span>, el reloj interno que regula tu descanso.
-    </p>
-    <p class="text-base md:text-lg mb-3">
-      En esta era digital, estamos expuestos a fuentes de <span class="font-semibold">luz artificial como celulares, computadores o luces LED.</span> Aunque parezcan inofensivas, incluso niveles bajos de esta luz impiden la correcta producción de melatonina.
-    </p>
-    <p class="text-base md:text-lg mb-3">
-      Nuestras gafas <span class="font-semibold">Amber Vision</span> filtran selectivamente esta luz nociva, creando un entorno visual más cálido y natural. Al usarlas en las últimas horas del día, <span class="font-semibold">tu cuerpo se relajará, dormirás mejor y le dirás adiós a la fatiga ocular</span>.
-    </p>
-  </div>
-</div> 
-</section> -->

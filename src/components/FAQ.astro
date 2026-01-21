@@ -13,7 +13,7 @@ import FadeIn from "./FadeIn";
   }
 </style>
 
-<section id="faq" class="py-6 md:py-16 lg:py-20">
+<section id="faq" class="py-6 md:py-16 lg:py-10 lg:pb-14">
   <div class="container mx-auto px-4 md:px-6 max-w-5xl">
     {/* Header */}
     <div class="text-center text-brand-headline mb-8">
@@ -167,8 +167,36 @@ import FadeIn from "./FadeIn";
             </div>
           </div>
         </details>
-
-        {/* Question 4: Unisex fit */}
+        {/* Question 4: Science */}
+        <details class="bg-white/5 backdrop-blur-sm border-b border-gray-500/20 rounded-xl overflow-hidden hover:border-white/30 transition-all">
+          <summary class="flex items-start justify-between gap-4 p-5 cursor-pointer group">
+            <div class="flex items-start gap-3 flex-1">
+              <span class="text-base md:text-lg font-semibold text-brand-headline group-hover:text-amber-400 transition-colors">
+                ¿Realmente funcionan? ¿Hay estudios científicos?
+              </span>
+            </div>
+            <svg class="chevron-icon w-6 h-6 text-amber-400 flex-shrink-0 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="px-5 pb-5">
+            <div class="pt-3 border-t border-white/10 space-y-3">
+              <p class="text-brand-body">
+                <strong class="text-brand-headline">Sí, están respaldadas por ciencia.</strong> Estudios demuestran que el filtrado de luz azul mejora:
+              </p>
+              <ul class="space-y-2 ml-4">
+                 <li class="flex items-start gap-2"> <span class="text-green-400 mt-1">✓</span> <span class="text-brand-body text-sm"> <strong class="text-brand-headline">Producción de melatonina:</strong> Se ha demostrado que el bloqueo del 99% de la luz azul previene la supresión de esta hormona vital, manteniendo niveles similares a los de la oscuridad total <a href="https://www.researchgate.net/publication/8018850_Blocking_Low-Wavelength_Light_Prevents_Nocturnal_Melatonin_Suppression_with_No_Adverse_Effect_on_Performance_during_Simulated_Shift_Work" class="text-blue-400 underline" target="_blank">[Estudio Kayumov et al.]</a>.  </span> </li>
+                 <li class="flex items-start gap-2"> <span class="text-green-400 mt-1">✓</span> <span class="text-brand-body text-sm"> <strong class="text-brand-headline">Reducción de fatiga ocular:</strong> El uso de lentes de alta densidad (ámbar) reduce significativamente los síntomas de ardor, pesadez e irritación asociados al uso intensivo de pantallas <a href="https://digitalcommons.wustl.edu/cgi/viewcontent.cgi?article=6908&context=open_access_pubs" class="text-blue-400 underline" target="_blank">[Estudio Lin et al.]</a>.  </span> </li>
+                  <li class="flex items-start gap-2"> <span class="text-green-400 mt-1">✓</span> <span class="text-brand-body text-sm"> <strong class="text-brand-headline">Calidad del sueño:</strong> Investigaciones de la Universidad de Columbia confirman que estas lentes proporcionan hasta un 25% más de sueño profundo (Fase N3) y reducen el insomnio <a href="https://www.cuimc.columbia.edu/news/amber-tinted-glasses-may-provide-relief-insomnia" class="text-blue-400 underline" target="_blank">[Estudio Lin et al.]</a>.</span> </li> 
+                </ul>
+              <div class="bg-green-500/10 border border-green-500/30 rounded-lg p-3">
+                <p class="text-green-500 text-sm"> <strong>Mejor que estudios:</strong> +3,000 clientes reportan mejoras en 24-48 horas. <a href="#testimonials" class="text-amber-400 underline hover:text-amber-300">Lee sus historias</a> 
+              </p> 
+              </div>
+            </div>
+          </div> 
+        </details>
+        {/* Question 5: Unisex fit */}
         <details class="bg-white/5 backdrop-blur-sm border-b border-gray-500/20 rounded-xl overflow-hidden hover:border-white/30 transition-all">
           <summary class="flex items-start justify-between gap-4 p-5 cursor-pointer group">
             <div class="flex items-start gap-3 flex-1">
@@ -211,19 +239,19 @@ import FadeIn from "./FadeIn";
           </div>
         </details>
 
-        {/* Question 5: When to use */}
+        {/* Question 6: When to use */}
         <details class="bg-white/5 backdrop-blur-sm border-b border-gray-500/20 rounded-xl overflow-hidden hover:border-white/30 transition-all">
           <summary class="flex items-start justify-between gap-4 p-5 cursor-pointer group">
-  <div class="flex items-start gap-3 flex-1">
+            <div class="flex items-start gap-3 flex-1">
     <span class="text-base md:text-lg font-semibold text-brand-headline group-hover:text-amber-400 transition-colors">
       ¿Cuándo debo usarlas y cuándo NO?
     </span>
-  </div>
-  <svg class="chevron-icon w-6 h-6 text-amber-400 flex-shrink-0 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-  </svg>
-</summary>
-<div class="px-5 pb-5">
+            </div>
+            <svg class="chevron-icon w-6 h-6 text-amber-400 flex-shrink-0 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="px-5 pb-5">
   <div class="pt-3 border-t border-white/10 space-y-4">
     
     <!-- Sleep Section -->
@@ -287,10 +315,10 @@ import FadeIn from "./FadeIn";
     </div>
     
   </div>
-</div>
+          </div>
         </details>
 
-        {/* Question 6: Prescription */}
+        {/* Question 7: Prescription */}
         <details class="bg-white/5 backdrop-blur-sm border-b border-gray-500/20 rounded-xl overflow-hidden hover:border-white/30 transition-all">
           <summary class="flex items-start justify-between gap-4 p-5 cursor-pointer group">
             <div class="flex items-start gap-3 flex-1">
@@ -321,7 +349,7 @@ import FadeIn from "./FadeIn";
           </div>
         </details>
 
-        {/* Question 7: Driving */}
+        {/* Question 8: Driving */}
         <details class="bg-white/5 backdrop-blur-sm border-b border-gray-500/20 rounded-xl overflow-hidden hover:border-white/30 transition-all">
           <summary class="flex items-start justify-between gap-4 p-5 cursor-pointer group">
             <div class="flex items-start gap-3 flex-1">
@@ -353,7 +381,7 @@ import FadeIn from "./FadeIn";
           </div>
         </details>
 
-        {/* Question 8: Guarantee */}
+        {/* Question 9: Guarantee */}
         <details class="bg-white/5 backdrop-blur-sm border-b border-gray-500/20 rounded-xl overflow-hidden hover:border-white/30 transition-all">
           <summary class="flex items-start justify-between gap-4 p-5 cursor-pointer group">
             <div class="flex items-start gap-3 flex-1">
@@ -383,7 +411,7 @@ import FadeIn from "./FadeIn";
           </div>
         </details>
 
-        {/* Question 9: Cleaning */}
+        {/* Question 10: Cleaning */}
         <details class="bg-white/5 backdrop-blur-sm border-b border-gray-500/20 rounded-xl overflow-hidden hover:border-white/30 transition-all">
           <summary class="flex items-start justify-between gap-4 p-5 cursor-pointer group">
             <div class="flex items-start gap-3 flex-1">
@@ -421,44 +449,7 @@ import FadeIn from "./FadeIn";
           </div>
         </details>
 
-        {/* Question 10: Science */}
-        <details class="bg-white/5 backdrop-blur-sm border-b border-gray-500/20 rounded-xl overflow-hidden hover:border-white/30 transition-all">
-          <summary class="flex items-start justify-between gap-4 p-5 cursor-pointer group">
-            <div class="flex items-start gap-3 flex-1">
-              <span class="text-base md:text-lg font-semibold text-brand-headline group-hover:text-amber-400 transition-colors">
-                ¿Realmente funcionan? ¿Hay estudios científicos?
-              </span>
-            </div>
-            <svg class="chevron-icon w-6 h-6 text-amber-400 flex-shrink-0 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </summary>
-          <div class="px-5 pb-5">
-            <div class="pt-3 border-t border-white/10 space-y-3">
-              <p class="text-brand-body">
-                <strong class="text-brand-headline">Sí, están respaldadas por ciencia.</strong> Estudios demuestran que el filtrado de luz azul mejora:
-              </p>
-              <ul class="space-y-2 ml-4">
-                <li class="flex items-start gap-2">
-                  <span class="text-green-400 mt-1">✓</span>
-                  <span class="text-brand-body text-sm"><strong class="text-brand-headline">Producción de melatonina</strong></span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-green-400 mt-1">✓</span>
-                  <span class="text-brand-body text-sm"><strong class="text-brand-headline">Reducción de fatiga ocular</strong></span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-green-400 mt-1">✓</span>
-                  <span class="text-brand-body text-sm"><strong class="text-brand-headline">Calidad del sueño</strong></span>
-                </li>
-              </ul>
-              <div class="bg-green-500/10 border border-green-500/30 rounded-lg p-3">
-                <p class="text-green-500 text-sm"> <strong>Mejor que estudios:</strong> +3,000 clientes reportan mejoras en 24-48 horas. <a href="#testimonials" class="text-amber-400 underline hover:text-amber-300">Lee sus historias</a> 
-              </p> 
-              </div>
-            </div>
-          </div> 
-        </details>
+        
       </div>
     </div>
   </div>

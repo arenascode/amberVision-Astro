@@ -59,15 +59,13 @@ const ProductIntro = () => {
         id="product"
       >
         <div
-          className="flex flex-col xl:flex-row gap-4 mt-2 p-2 rounded-[20px] h-full 
-  shadow-[4px_4px_4px_4px_rgba(0,0,0,0.35)] 
-  bg-gradient-to-br from-gray-100 via-[#1e1e1e] to-slate-500 md:self-center"
+          className="flex flex-col xl:flex-row gap-4 mt-2 p-2 rounded-[20px] h-full shadow-[4px_4px_4px_4px_rgba(0,0,0,0.35)] bg-gradient-to-br from-gray-100 via-[#1e1e1e] to-slate-500 md:self-center"
           id="productSlider"
         >
           <div className="flex-1 max-w-full h-full items-center">
             <div
               id="carouselImgs"
-              className="w-full carousel rounded-box xl:h-[450px]"
+              className="w-full carousel rounded-box xl:h-[450px] 2xl:h-[550px]"
             >
               <div id="slide1" className="carousel-item relative w-full h-full">
                 <img
@@ -140,7 +138,7 @@ const ProductIntro = () => {
                     rel="preload"
                   />
                   <img
-                    src={amberLensesFrontDesktop.src}
+                    src={womanUsingGlassesDesktop.src}
                     className="w-full slide2"
                     alt="Amber lenses Side"
                     loading="eager"
@@ -234,7 +232,7 @@ const ProductIntro = () => {
                 </div>
               </div>
             </div>
-            <div className="flex w-full gap-2 mt-2 xl:mt-8">
+            <div className="flex w-full gap-2 mt-2">
               {[
                 manUsingPhoneMini,
                 amberLensesSideMini,
@@ -244,7 +242,7 @@ const ProductIntro = () => {
               ].map((img, i) => (
                 <div
                   key={i}
-                  className="flex-1 h-[60px] w-[60px] rounded-md overflow-hidden border-2 border-[#697172] cursor-pointer hover:border-[#ff9068] transition-all miniImg"
+                  className="flex-1 h-[60px] xl:h-[80px] w-[60px] xl:w-[80px] 2xl:h-[90px] 2xl:w-[90px] rounded-md overflow-hidden border-2 border-[#697172] cursor-pointer hover:border-[#ff9068] transition-all miniImg"
                   data-img={`slide${i + 1}`}
                   onClick={handleMiniImgs}
                 >

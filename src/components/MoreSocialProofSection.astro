@@ -72,7 +72,7 @@ const testimonialsSecondSection = [
   {
     id: 10,
     name: "Diego P.",
-    role: "Programador Full-Stack",
+    role: "Programador Web",
     location: "Bogotá",
     content:
       "Tres monitores, 12 horas diarias de código. Mis ojos estaban destruidos. Probé gotas, descansos cada hora, nada funcionaba. Estas gafas fueron lo único que realmente eliminó la fatiga. Ahora programo hasta tarde sin sentir cansancio visual.",
@@ -85,7 +85,7 @@ const testimonialsSecondSection = [
     id: 11,
     name: "Camilo T.",
     role: "Diseñador UX/UI",
-    location: "Cartagena",
+    location: "Chia",
     content:
       "Trabajo 100% remoto y estaba buscando gafas que pudiera usar todo el día sin que me molestaran. Estas son increíblemente ligeras y el diseño clásico me encanta. Además, funcionan: menos cansancio y duermo mejor desde la primera semana.",
     result: "Comodidad todo el día",
@@ -93,22 +93,34 @@ const testimonialsSecondSection = [
     verified: true,
     img: "/assets/img/person-review12.webp",
   },
+  {
+    id: 12,
+    name: "Miguel A.",
+    role: "Ingeniero de Software",
+    location: "Bogotá",
+    content:
+      "Noté la diferencia desde el primer día trabajando. Mis ojos ya no arden después de pasar tantas horas frente al computador, y por primera vez en meses duermo más profundo.",
+    result: "Concilia el sueño más rápido",
+    rating: 5,
+    verified: true,
+    img: "/assets/img/imageFounder.webp",
+  },
 ];
 ---
 
-<section id="moreSocialProof" class="pt-10 md:py-10 xl:flex xl:justify-center">
+<section id="moreSocialProof" class="pt-10 md:py-10 xl:pt-16 xl:flex xl:justify-center">
   <div class="container px-3 md:px-6">
-    <div class="flex flex-col items-center text-center gap-4 mb-12">
-      <h2 class="text-3xl font-bold tracking-tight text-brand-headline">
+    <div class="flex flex-col items-center text-center gap-4 mb-12 lg:mb-20">
+      <h2 class="text-3xl lg:text-5xl font-bold tracking-tight text-brand-headline">
         Únete a Miles de Clientes Satisfechos
       </h2>
-      <p class="text-brand-body md:text-lg xl:text-xl max-w-[800px]">
+      <p class="text-brand-body md:text-lg lg:text-xl xl:text-2xl lg:mt-4 max-w-[800px] xl:max-w-[900px]">
         Descubre lo que dicen las personas sobre su experiencia con nuestras
         gafas
       </p>
     </div>
 
-    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:px-5">
       {testimonialsSecondSection.map((testimonial) => (
         <div
             class="relative bg-bg-card-glass border border-white/20 rounded-2xl p-4 hover:border-amber-500/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-amber-500/20 group flex flex-col"
