@@ -13,7 +13,7 @@ const Pricing = () => {
     {
       id: "basic",
       name: "1 Par de Gafas Amber Vision con filtro de luz azul",
-      price: 109999,
+      price: 110000,
       priceBefore: 150000,
       image: amberLensesSingle.src,
       gift1: {
@@ -38,7 +38,7 @@ const Pricing = () => {
     {
       id: "promo",
       name: "2 Pares de Gafas Amber Vision con filtro de luz azul",
-      price: 199999,
+      price: 200000,
       priceBefore: 300000,
       image: amberLensesPairPromo.src,
       gift1: {
@@ -63,7 +63,7 @@ const Pricing = () => {
   ];
 
   const randomBuyersCount = () => {
-    return Math.round(Math.random() * (100 - 50) + 80);
+    return Math.round(Math.random() * (100 - 50) + 70);
   };
 
   const openCheckout = (productId: string) => {
@@ -108,14 +108,14 @@ const Pricing = () => {
               <span className="line-through text-gray-500">$150.000</span>
             </p>
             <p className="text-2xl md:text-3xl font-bold text-brand-headline">
-              Hoy solo: <span class="text-green-500">$109.999</span>
+              Hoy solo: <span class="text-green-500">$110.000</span>
             </p>
           </div>
 
           {/* Countdown Timer */}
-          <div className="mt-5 xl:mt-8">
+          {/* <div className="mt-5 xl:mt-8">
             <CountdownTimer />
-          </div>
+          </div> */}
           {/* Social Proof Mini */}
           <div className="flex items-center justify-center text-sm xl:text-base text-brand-body">
             <svg
@@ -181,7 +181,7 @@ const Pricing = () => {
               <div className="mb-6">
                 <div className="flex items-end gap-3 mb-2">
                   <span className="text-3xl lg:text-4xl font-bold text-brand-headline">
-                    $109.999
+                    $110.000
                   </span>
                   <span className="text-xl text-brand-muted line-through mb-2">
                     $150.000
@@ -349,7 +349,7 @@ const Pricing = () => {
               <div className="mb-6 lg:mb-0">
                 <div className="flex items-end gap-3 mb-3">
                   <span className="text-3xl lg:text-4xl font-bold text-brand-headline">
-                    $199.999
+                    $200.000
                   </span>
                   <span className="text-xl text-brand-muted line-through mb-2">
                     $300.000
@@ -360,8 +360,8 @@ const Pricing = () => {
                 <div className="bg-green-500 text-white rounded-xl p-4 mb-3">
                   <div className="flex items-center justify-between">
                     <div>
-                      <p className="font-bold text-lg">Solo $99.999 por par</p>
-                      <p className="text-sm text-green-100">Ahorras $100.000</p>
+                      <p className="font-bold text-lg">Solo $100.000 por par</p>
+                      <p className="text-sm text-green-100">Ahorras $100.000 en total</p>
                     </div>
                     <div className="text-right">
                       <p className="text-xl font-bold">33% OFF</p>

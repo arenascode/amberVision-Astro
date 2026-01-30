@@ -135,24 +135,8 @@ const Hero = () => {
               ))}
             </div>
             <div class="flex flex-col items-center lg:flex-row lg:flex-wrap items-flex-start gap-2 pt-2 lg:hidden">
-              <div class="stars_qty_sold flex self-start md:self-center items-center gap-2">
-                <div class="flex gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="#FFC000"
-                      class="icon icon-tabler icons-tabler-filled icon-tabler-star"
-                    >
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                      <path d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z" />
-                    </svg>
-                  ))}
-                </div>
-              </div>
               {/* Testimonial Quote */}
-              <div className="bg-bg-card-glass border border-gray/50 rounded-lg p-4 lg:p-5 shadow-lg">
+              <div className="relative bg-bg-card-glass border  rounded-2xl p-4 hover:border-amber-500/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-amber-500/10 group flex flex-col shadow-lg">
                 {/* Verified Badge */}
                 <div className="flex items-center gap-1.5 mb-1">
                   <svg
@@ -170,26 +154,72 @@ const Hero = () => {
                     Compra Verificada
                   </span>
                 </div>
+
+                {/* Star Rating */}
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <svg
+                      key={i}
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill={i < 5 ? "#FFC000" : "none"}
+                      stroke={i < 5 ? "#FFC000" : "#666"}
+                      strokeWidth="2"
+                      className="drop-shadow-sm"
+                    >
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                    </svg>
+                  ))}
+                </div>
+
+                {/* Testimonial Content */}
                 <p className="text-sm md:text-base text-brand-body italic leading-relaxed">
                   "Noté la diferencia desde el primer día trabajando. Mis ojos
                   ya no arden después de pasar tantas horas frente al
                   computador, y por primera vez en meses duermo más profundo."
                 </p>
-                <div className="flex items-center gap-3 mt-2">
-                  {/* Avatar with Initials */}
-                  <div className="w-16 h-16 lg:w-12 lg:h-12 rounded-full bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center font-bold text-white shadow-md ">
-                    <img
-                      src={testimonialPic.src}
-                      alt="testimonial picture"
-                      className="h-full w-full rounded-full"
-                    />
+
+
+                {/* Author Info */}
+                <div className="flex items-center gap-3 mt-2 pt-4 border-t border-gray-500/30">
+                  <div className="relative">
+                    <div className="h-12 w-12 rounded-full overflow-hidden ring-2 ring-amber-500/50">
+                      <img
+                        src={testimonialPic.src}
+                        alt="imagen testimonio"
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
                   </div>
-                  <div>
-                    <p className="text-sm md:text-base font-semibold text-brand-headline">
-                      Miguel A.
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 mb-0.5">
+                      <p className="font-semibold text-brand-headline text-sm">
+                        Miguel A.
+                      </p>
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="#10b981"
+                      >
+                        <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                      </svg>
+                    </div>
+                    <p className="text-xs text-brand-body">
+                      Ingeniero de Software
                     </p>
-                    <p className="text-xs md:text-sm text-brand-muted">
-                      Ingeniero de Software • Bogotá
+                    <p className="text-xs text-gray-500 flex items-center gap-1">
+                      <svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                      </svg>
+                      Bogotá
                     </p>
                   </div>
                 </div>
@@ -326,7 +356,7 @@ const Hero = () => {
                   <path d="M9 12l2 2 4-4" />
                 </svg>
               </div>
-              <p className="text-sm md:text-base 2xl:text-xl text-brand-body leading-tight" >
+              <p className="text-sm md:text-base 2xl:text-xl text-brand-body leading-tight">
                 <span className="font-bold block text-green-500 text-lg 2xl:text-xl">
                   Garantía de Satisfacción:
                 </span>

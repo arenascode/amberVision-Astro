@@ -8,20 +8,41 @@ import peopleUsingGlasses from "../assets/img/peopleUsingGlasses-desktop.avif";
 <section id="features" class="py-4 md:pt-0 lg:py-5 xl:flex xl:justify-center">
   <div class="container px-4 md:px-6 lg:px-8">
     <!-- divide here -->
-    <section class="w-full rounded-2xl shadow-xl bg-bg-card-glass group border-2 p-4 px-4 lg:p-8 flex flex-col lg:flex-row xl:px-14 items-center gap-6 lg:gap-8 xl:gap-12 mt-10 mb-6 relative overflow-hidden lg:items-start">
+    <section class="w-full rounded-2xl shadow-xl bg-bg-card-glass group border-2 p-4 px-4 lg:p-8 lg:px-4 flex flex-col lg:flex-row xl:px-14 items-center gap-4 lg:gap-8 xl:gap-12 my-6 relative overflow-hidden lg:items-start">
   <!-- Subtle background effect -->
   
-  <div class="textContainer flex flex-col p-2  lg:flex-1 relative">
-    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center lg:text-left mb-4 leading-tight text-brand-headline">
-      Ve la <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-400">Protección Real</span> en Acción
+  <div class="textContainer flex flex-col p-2  lg:flex-1 lg:gap-3 relative">
+    <h2 class="text-3xl md:text-4xl font-bold text-center lg:text-left mb-4 leading-tight text-brand-headline">
+      ¿Realmente Funcionan?
     </h2>
-    
-    <p class="text-base md:text-lg lg:text-xl text-center lg:text-left max-w-2xl mb-6 leading-relaxed text-brand-body">
-      No confíes solo en nuestra palabra. Esta demostración muestra exactamente cómo nuestras lentes bloquean la luz azul dañina. 
+    <h3 class="text-2xl md:text-3xl font-bold text-center lg:text-left mb-4 leading-tight text-brand-headline">Miralo Tú Mismo</h3>
+    <p class="text-base md:text-lg lg:text-left xl:text-xl max-w-2xl leading-relaxed text-brand-body">
+      Usamos un LED azul intenso y una tarjeta sensible a esta luz. El área sin protección se tiñe de morado — el área protegida permanece intacta. 
     </p>
-    
     <!-- Key benefits list -->
-    <ul class="space-y-3 mb-3 max-w-xl text-brand-body">
+    <ul class="hidden lg:flex lg:gap-4 space-y-3 my-4 max-w-xl text-brand-body">
+      <li class="flex items-start gap-3">
+        <span class="text-green-500 text-xl mt-0.5">✓</span>
+        <span class="text-sm md:text-base xl:text-lg"><strong>Protección visible:</strong> La tarjeta sensible cambia de color donde NO hay protección</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <span class="text-green-500 text-xl mt-0.5">✓</span>
+        <span class="text-sm  md:text-base xl:text-lg"><strong>Área protegida intacta:</strong> Nuestras lentes bloquean completamente la luz azul</span>
+      </li>
+      <!-- <li class="flex items-start gap-3">
+        <span class="text-green-500 text-xl mt-0.5">✓</span>
+        <span class="text-sm md:text-base"><strong>Pruébalo tú mismo:</strong> Incluimos la tarjeta de prueba con el led de luz azul en cada pedido</span>
+      </li> -->
+    </ul>
+  </div>
+
+  <div class="videoContainer flex flex-col items-center justify-center lg:flex-1 xl:flex-1">
+        <video class="rounded-xl shadow-lg w-full max-w-2xl mb-2 md:w-[40%] lg:w-[100%] lg:max-h-[450px] object-cover" autoplay loop muted playsinline>
+          <source src={testingVideo} type="video/mp4"/>
+          Tu navegador no soporta la reproducción de video.
+        </video>
+        <!-- Key benefits list -->
+    <ul class="space-y-3 my-4 max-w-xl text-brand-body lg:hidden">
       <li class="flex items-start gap-3">
         <span class="text-green-500 text-xl mt-0.5">✓</span>
         <span class="text-sm md:text-base"><strong>Protección visible:</strong> La tarjeta sensible cambia de color donde NO hay protección</span>
@@ -30,20 +51,11 @@ import peopleUsingGlasses from "../assets/img/peopleUsingGlasses-desktop.avif";
         <span class="text-green-500 text-xl mt-0.5">✓</span>
         <span class="text-sm md:text-base"><strong>Área protegida intacta:</strong> Nuestras lentes bloquean completamente la luz azul</span>
       </li>
-      <li class="flex items-start gap-3">
+      <!-- <li class="flex items-start gap-3">
         <span class="text-green-500 text-xl mt-0.5">✓</span>
         <span class="text-sm md:text-base"><strong>Pruébalo tú mismo:</strong> Incluimos la tarjeta de prueba con el led de luz azul en cada pedido</span>
-      </li>
+      </li> -->
     </ul>
-    
-    
-  </div>
-
-  <div class="videoContainer flex flex-col items-center justify-center lg:flex-1 xl:flex-1">
-        <video class="rounded-xl shadow-lg w-full max-w-2xl mb-2 md:w-[40%] lg:w-[100%] lg:max-h-[450px] object-cover" autoplay loop muted playsinline>
-          <source src={testingVideo} type="video/mp4"/>
-          Tu navegador no soporta la reproducción de video.
-        </video>
         <!-- Gift callout box -->
     <div class="bg-gradient-to-r from-yellow-600/70 to-orange-600/70 border-2 border-yellow-400/60 rounded-xl p-4 md:p-5 shadow-lg mt-3 lg:hidden">
       <div class="flex items-center justify-center gap-3 mb-2">
@@ -55,8 +67,8 @@ import peopleUsingGlasses from "../assets/img/peopleUsingGlasses-desktop.avif";
       </p>
     </div>
   </div>
-  
-</section>
+
+    </section>
 
   <div class="grid gap-8 mt-12 md:mt-12 lg:grid-cols-4 xl:px-14 md:flex md:flex-col md:items-center">
   <section class="py-5 md:py-14">

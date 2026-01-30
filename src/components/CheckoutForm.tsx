@@ -740,8 +740,8 @@ const SimpleCheckoutForm: FunctionComponent<CheckOutFormProps> = ({
               Datos de Envío
             </h3>
             <p className="text-sm text-gray-600">
-              Completa tus datos para poder enviar tu pedido directamente a tu
-              casa <strong>3-5 días </strong>
+              Completa tus datos para que recibas tu pedido directamente a tu
+              casa en <strong>2-4 días </strong>
               hábiles.
             </p>
           </div>
@@ -784,8 +784,8 @@ const SimpleCheckoutForm: FunctionComponent<CheckOutFormProps> = ({
                   name="nombre"
                   value={formData.nombre}
                   onChange={handleChange}
-                  placeholder="Juan Pérez"
-                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:border-transparent transition-all"
+                  placeholder="Tu nombre"
+                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:border-transparent transition-all text-brand-body placeholder:text-gray-300"
                 />
                 {errors.nombre && (
                   <p className="text-xs text-red-500 mt-1">{errors.nombre}</p>
@@ -802,7 +802,7 @@ const SimpleCheckoutForm: FunctionComponent<CheckOutFormProps> = ({
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="tu@email.com"
-                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:border-transparent transition-all"
+                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:border-transparent transition-all text-brand-body placeholder:text-gray-300"
                 />
                 {errors.email && (
                   <p className="text-xs text-red-500 mt-1">{errors.email}</p>
@@ -821,7 +821,7 @@ const SimpleCheckoutForm: FunctionComponent<CheckOutFormProps> = ({
                   onChange={handleChange}
                   onBlur={handleOnBlur}
                   placeholder="320 123 4567"
-                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:border-transparent transition-all"
+                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:border-transparent transition-all text-brand-body placeholder:text-gray-300"
                 />
                 {errors.telefono && (
                   <p className="text-xs text-red-500 mt-1">{errors.telefono}</p>
@@ -837,7 +837,7 @@ const SimpleCheckoutForm: FunctionComponent<CheckOutFormProps> = ({
                   value={formData.cedula}
                   onChange={handleChange}
                   placeholder="123456789"
-                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:border-transparent transition-all"
+                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:border-transparent transition-all text-brand-body placeholder:text-gray-300"
                 />
                 {errors.cedula && (
                   <p className="text-xs text-red-500 mt-1">{errors.cedula}</p>
@@ -854,7 +854,7 @@ const SimpleCheckoutForm: FunctionComponent<CheckOutFormProps> = ({
                   name="departamento"
                   value={formData.departamento}
                   onChange={handleChange}
-                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:border-transparent transition-all"
+                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:border-transparent transition-all text-brand-body placeholder:text-gray-300"
                 >
                   <option value="">Selecciona</option>
                   <option value="Amazonas">Amazonas</option>
@@ -908,8 +908,8 @@ const SimpleCheckoutForm: FunctionComponent<CheckOutFormProps> = ({
                   name="ciudad"
                   value={formData.ciudad}
                   onChange={handleChange}
-                  placeholder="Bogotá"
-                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:border-transparent transition-all"
+                  placeholder="ej: Bogotá"
+                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:border-transparent transition-all text-brand-body placeholder:text-gray-300"
                 />
                 {errors.ciudad && (
                   <p className="text-xs text-red-500 mt-1">{errors.ciudad}</p>
@@ -925,8 +925,8 @@ const SimpleCheckoutForm: FunctionComponent<CheckOutFormProps> = ({
                 name="direccion"
                 value={formData.direccion}
                 onChange={handleChange}
-                placeholder="Calle 123 #45-67, Apto 89"
-                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:border-transparent transition-all"
+                placeholder="ej: Calle 123 #45-67, Apto 89"
+                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:border-transparent transition-all text-brand-body placeholder:text-gray-300"
               />
               {errors.direccion && (
                 <p className="text-xs text-red-500 mt-1">{errors.direccion}</p>
@@ -944,13 +944,12 @@ const SimpleCheckoutForm: FunctionComponent<CheckOutFormProps> = ({
                 onChange={handleChange}
                 placeholder="Barrio, referencias, instrucciones de entrega..."
                 rows={3}
-                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:border-transparent transition-all resize-none"
+                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:border-transparent transition-all resize-none text-brand-body placeholder:text-gray-300"
               />
             </div>
             {/* Error Message */}
-            
             {/* Commitment Message - Empathetic & Professional */}
-            <div className="bg-blue-50 border-l-4 border-blue-400 rounded-r-lg p-2 mb-2">
+            <div className="bg-blue-50 border-l-4 border-blue-400 rounded-r-lg p-2 mb-4">
               <div className="flex items-start gap-3 pl-2">
                 {/* <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-run"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 4a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M4 17l5 1l.75 -1.5" /><path d="M15 21l0 -4l-4 -3l1 -6" /><path d="M7 12l0 -3l5 -1l3 3l3 1" /></svg> */}
                 <div className="flex-1">
@@ -995,7 +994,7 @@ const SimpleCheckoutForm: FunctionComponent<CheckOutFormProps> = ({
                 </div>
               </div>
             </div>
-        {someError && (
+            {someError && (
               <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded-r-lg">
                 <p className="text-sm text-red-700">
                   Por favor revisa los campos marcados en rojo.
@@ -1005,7 +1004,7 @@ const SimpleCheckoutForm: FunctionComponent<CheckOutFormProps> = ({
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold py-3 rounded-xl shadow-lg transition-all hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3 mb-1"
+              className="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold py-3 rounded-xl shadow-lg transition-all hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3 my-1 cursor-pointer"
             >
               {isLoading ? (
                 <>
@@ -1043,7 +1042,7 @@ const SimpleCheckoutForm: FunctionComponent<CheckOutFormProps> = ({
                 </>
               )}
             </button>
-            <p className="text-xs lg:text-sm text-center">
+            <p className="text-xs lg:text-sm text-center text-brand-body">
               🔒 Solo pagas al recibir!
             </p>
           </form>
@@ -1124,7 +1123,7 @@ const SimpleCheckoutForm: FunctionComponent<CheckOutFormProps> = ({
                     <span class="font-medium text-left text-[13px] md:text-lg">
                       {product.gift2.name} - {""}
                       <span class="text-gray-700 font-normal text-xs">
-                         {product.gift2.desc}
+                        {product.gift2.desc}
                       </span>
                     </span>
                     <div class="font-medium text-center flex flex-col md:text-lg">
@@ -1190,8 +1189,8 @@ const SimpleCheckoutForm: FunctionComponent<CheckOutFormProps> = ({
           {/* Totals */}
           <div className="space-y-3 pt-4 px-3 border-t border-gray-200">
             <div className="flex justify-between text-sm">
-              <span className="text-gray-600">Subtotal</span>
-              <span className="font-medium">
+              <span className="text-brand-body">Subtotal</span>
+              <span className="font-medium text-brand-headline">
                 ${subtotal.toLocaleString("es-CO")}
               </span>
             </div>

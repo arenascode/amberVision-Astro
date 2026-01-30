@@ -92,15 +92,18 @@ import imageSolution from "/src/assets/img/manUsingGlasses2-v2.avif";
       </FadeIn>
     </div>
 
-    <div class="mt-14 xl:mt-20 rounded-xl p-1 lg:p-2 shadow-lg bg-bg-card-glass group">
-      <div class="grid gap-2 lg:grid-cols-2 items-center">
-        <div class="relative h-[300px] md:h-[400px] lg:h-[500px] rounded-lg overflow-hidden">
+    <div class="mt-14 xl:mt-20 rounded-xl p-1 lg:p-4 shadow-lg bg-bg-card-glass group">
+      <div class="grid gap-10 lg:gap-2 lg:grid-cols-2 items-center">
+        <div class="relative h-[300px] md:h-[400px] lg:h-[500px] rounded-lg">
           <img
             src={imageSolution.src}
             alt="Persona usando gafas con filtro de luz azul"
-            class="object-cover w-full h-full"
+            class="object-cover w-full h-full rounded-lg"
             loading="lazy"
           />
+          <p class="caption mt-1 text-brand-body italic text-xs lg:mt-0 lg:text-sm">
+    "Trabajo 12 horas sin dolor de cabeza. El alivio es instantáneo."
+  </p>
         </div>
         <div class="xl:self-baseline xl:pt-2">
           <h3 class="text-2xl text-brand-headline font-bold text-center mb-6 xl:text-3xl">
@@ -140,8 +143,6 @@ import imageSolution from "/src/assets/img/manUsingGlasses2-v2.avif";
                 </p>
               </div>
             </li>
-            
-            
           </ul>
         </div>
       </div>
